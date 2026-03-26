@@ -84,7 +84,7 @@ function CopyableRow({
                             tools.toastSuccess(`${label} copied`);
                         });
                     }}
-                    style={{ cursor: 'pointer', padding: '2px 6px', borderRadius: 4 }}>
+                    style={{ cursor: 'pointer', padding: '2px 6px', borderRadius: 0 }}>
                     <CopyOutlined style={{ fontSize: 12, color: colors.textDim }} />
                 </div>
             </div>
@@ -357,13 +357,13 @@ export default function ReceiveScreen() {
                     <div
                         style={{
                             backgroundColor: colors.bg2,
-                            borderRadius: 16,
+                            borderRadius: 0,
                             padding: 20,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             gap: 16,
-                            border: `1px solid ${colors.border}`
+                            border: `1.5px solid ${colors.border}`
                         }}>
                         {/* --------------------------------------------------------- */}
                         {/* ADDRESS TYPE SELECTOR - BTC mode only */}
@@ -377,12 +377,12 @@ export default function ReceiveScreen() {
                                     display: 'flex',
                                     flexDirection: 'row',
                                     alignItems: 'center',
-                                    border: `1px solid ${colors.bg3}`,
+                                    border: `1.5px solid ${colors.bg3}`,
                                     paddingLeft: 12,
                                     paddingRight: 12,
                                     paddingTop: 8,
                                     paddingBottom: 8,
-                                    borderRadius: 10,
+                                    borderRadius: 0,
                                     gap: 6,
                                     width: '100%',
                                     cursor: 'pointer',
@@ -417,8 +417,8 @@ export default function ReceiveScreen() {
                                             <span
                                                 style={{
                                                     marginLeft: 12,
-                                                    borderRadius: 5,
-                                                    border: `1px solid ${colors.green_dark}`,
+                                                    borderRadius: 0,
+                                                    border: `1.5px solid ${colors.green_dark}`,
                                                     fontSize: 9,
                                                     color: `${colors.text}A0`,
                                                     paddingTop: 2,
@@ -442,8 +442,8 @@ export default function ReceiveScreen() {
                                             left: 0,
                                             right: 0,
                                             backgroundColor: colors.bg3,
-                                            borderRadius: 12,
-                                            border: `1px solid ${colors.border}`,
+                                            borderRadius: 0,
+                                            border: `1.5px solid ${colors.border}`,
                                             marginTop: 4,
                                             zIndex: 100,
                                             overflow: 'hidden'
@@ -554,7 +554,7 @@ export default function ReceiveScreen() {
                                 style={{
                                     padding: 16,
                                     backgroundColor: 'white',
-                                    borderRadius: 16,
+                                    borderRadius: 0,
                                     border: `2px solid ${colors.border}`
                                 }}>
                                 <QRCodeSVG
@@ -599,8 +599,8 @@ export default function ReceiveScreen() {
                             <div
                                 style={{
                                     background: `linear-gradient(135deg, ${colors.warning}15 0%, ${colors.warning}08 100%)`,
-                                    border: `1px solid ${colors.warning}40`,
-                                    borderRadius: 12,
+                                    border: `1.5px solid ${colors.warning}40`,
+                                    borderRadius: 0,
                                     padding: '12px 16px',
                                     width: '100%'
                                 }}>
@@ -626,7 +626,7 @@ export default function ReceiveScreen() {
                                             gap: 4,
                                             cursor: 'pointer',
                                             padding: '4px 8px',
-                                            borderRadius: 6,
+                                            borderRadius: 0,
                                             background: 'rgba(255,255,255,0.05)'
                                         }}>
                                         <Text text="Manage" style={{ fontSize: 11, color: colors.textDim }} />
@@ -654,12 +654,12 @@ export default function ReceiveScreen() {
                             style={{
                                 width: '100%',
                                 backgroundColor: colors.bg3,
-                                borderRadius: 12,
+                                borderRadius: 0,
                                 padding: 14,
                                 gap: 10,
                                 display: 'flex',
                                 flexDirection: 'column',
-                                border: `1px solid ${colors.border}`
+                                border: `1.5px solid ${colors.border}`
                             }}>
                             <Text
                                 text={addressLabel}
@@ -691,7 +691,7 @@ export default function ReceiveScreen() {
                                     justifyContent: 'center',
                                     gap: 8,
                                     backgroundColor: accentColor, // From RECEIVE_CONFIG (orange for BTC, purple for OP_20)
-                                    borderRadius: 10,
+                                    borderRadius: 0,
                                     padding: 10,
                                     marginTop: 2,
                                     cursor: 'pointer'
@@ -712,9 +712,9 @@ export default function ReceiveScreen() {
                         <div
                             style={{
                                 backgroundColor: colors.bg2,
-                                borderRadius: 16,
+                                borderRadius: 0,
                                 padding: '4px 16px',
-                                border: `1px solid ${colors.border}`
+                                border: `1.5px solid ${colors.border}`
                             }}>
                             <CopyableRow label="CSV1 ADDRESS" value={csv1Address} tools={tools} />
                             <CopyableRow label="CSV2 ADDRESS" value={csv2Address} tools={tools} />

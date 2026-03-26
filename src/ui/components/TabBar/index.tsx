@@ -5,15 +5,15 @@ import { Row } from '../Row';
 import './index.less';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     disabled: 'rgba(255, 255, 255, 0.3)'
 };
@@ -72,7 +72,7 @@ export function TabBar(props: TabBarProps) {
                                 style={{
                                     width: '32px',
                                     height: '32px',
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     background: isActive ? colors.main : isPast ? colors.success : colors.buttonHoverBg,
                                     border: `2px solid ${isActive ? colors.main : isPast ? colors.success : colors.containerBorder}`,
                                     color: isActive || isPast ? colors.background : colors.text,
@@ -117,7 +117,7 @@ export function TabBar(props: TabBarProps) {
             <div
                 style={{
                     background: colors.containerBgFaded,
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     padding: '4px',
                     display: 'inline-flex',
                     gap: '4px'
@@ -134,7 +134,7 @@ export function TabBar(props: TabBarProps) {
                                 padding: '8px 16px',
                                 background: isSelected ? colors.main : 'transparent',
                                 border: 'none',
-                                borderRadius: '8px',
+                                borderRadius: '0px',
                                 color: isSelected ? colors.background : isDisabled ? colors.disabled : colors.text,
                                 fontSize: '13px',
                                 fontWeight: isSelected ? 600 : 500,
@@ -215,8 +215,8 @@ export function TabBar(props: TabBarProps) {
             <div
                 style={{
                     display: 'inline-flex',
-                    border: `1px solid ${colors.containerBorder}`,
-                    borderRadius: '10px',
+                    border: `1.5px solid ${colors.containerBorder}`,
+                    borderRadius: '0px',
                     overflow: 'hidden'
                 }}>
                 {items.map((v, index) => {
@@ -296,7 +296,7 @@ export function TabBar(props: TabBarProps) {
                                         right: 0,
                                         height: '2px',
                                         background: colors.main,
-                                        borderRadius: '1px'
+                                        borderRadius: '0px'
                                     }}
                                 />
                             )}
@@ -322,8 +322,8 @@ export function TabBar(props: TabBarProps) {
                             style={{
                                 padding: '6px 14px',
                                 background: isSelected ? `${colors.main}20` : colors.buttonHoverBg,
-                                border: `1px solid ${isSelected ? colors.main : colors.containerBorder}`,
-                                borderRadius: '20px',
+                                border: `1.5px solid ${isSelected ? colors.main : colors.containerBorder}`,
+                                borderRadius: '0px',
                                 color: isSelected ? colors.main : isDisabled ? colors.disabled : colors.text,
                                 fontSize: '12px',
                                 fontWeight: isSelected ? 600 : 500,

@@ -17,13 +17,13 @@ import { useTools } from '@/ui/components/ActionComponent';
 import { usePrivacyModeEnabled } from '@/ui/hooks/useAppConfig';
 
 const colors = {
-    main: '#f37413',
-    mainGradient: 'linear-gradient(135deg, #f37413 0%, #ff8c42 100%)',
+    main: '#C49A3C',
+    mainGradient: 'linear-gradient(135deg, #C49A3C 0%, #ff8c42 100%)',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     warning: '#fbbf24',
     privacyBlue: '#3b82f6'
@@ -125,8 +125,8 @@ export function Step3_RotationMode({
             <div
                 style={{
                     background: `linear-gradient(135deg, ${colors.warning}15 0%, ${colors.warning}08 100%)`,
-                    border: `1px solid ${colors.warning}40`,
-                    borderRadius: 12,
+                    border: `1.5px solid ${colors.warning}40`,
+                    borderRadius: 0,
                     padding: 12,
                     display: 'flex',
                     alignItems: 'flex-start',
@@ -161,7 +161,7 @@ export function Step3_RotationMode({
             <div
                 style={{
                     background: colors.containerBgFaded,
-                    borderRadius: 12,
+                    borderRadius: 0,
                     padding: 14
                 }}>
                 {selectedOption === 'privacy' ? (
@@ -236,7 +236,7 @@ function OptionCard({
             style={{
                 background: bgGradient,
                 border: `2px solid ${borderColor}`,
-                borderRadius: 14,
+                borderRadius: 0,
                 padding: 16,
                 cursor: disabled ? 'not-allowed' : 'pointer',
                 transition: 'all 0.2s',
@@ -255,7 +255,7 @@ function OptionCard({
                         fontSize: 10,
                         fontWeight: 600,
                         padding: '4px 10px',
-                        borderRadius: 10
+                        borderRadius: 0
                     }}>
                     COMING SOON
                 </div>
@@ -271,7 +271,7 @@ function OptionCard({
                             fontSize: 10,
                             fontWeight: 600,
                             padding: '4px 10px',
-                            borderRadius: 10
+                            borderRadius: 0
                         }}>
                         RECOMMENDED
                     </div>
@@ -284,7 +284,7 @@ function OptionCard({
                     style={{
                         width: 56,
                         height: 56,
-                        borderRadius: 14,
+                        borderRadius: 0,
                         background: option.id === 'privacy' ? `${colors.privacyBlue}20` : colors.containerBg,
                         display: 'flex',
                         alignItems: 'center',
@@ -320,7 +320,7 @@ function OptionCard({
                                     style={{
                                         width: 4,
                                         height: 4,
-                                        borderRadius: 2,
+                                        borderRadius: 0,
                                         background: option.id === 'privacy' ? colors.privacyBlue : colors.textFaded
                                     }}
                                 />

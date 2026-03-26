@@ -9,7 +9,7 @@ export interface OPNetLoaderProps {
     text?: string;
 }
 
-const OPNET_ORANGE = '#ee771b';
+const OPNET_ORANGE = '#C49A3C';
 
 export function OPNetLoader({ size = 120, text }: OPNetLoaderProps) {
     const ringSize = size * 1.5;

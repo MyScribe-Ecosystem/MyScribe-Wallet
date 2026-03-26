@@ -11,7 +11,7 @@ export const BottomModal = ({ children, onClose }: { children: React.ReactNode; 
             <div
                 className="fade-in-up"
                 style={{
-                    borderTop: '1px solid #444746',
+                    borderTop: '1px solid #2a4060',
                     backgroundColor: '#1a1a1a',
                     width: '100%',
                     padding: 20,

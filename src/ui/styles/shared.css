@@ -24,18 +24,50 @@
 }
 
 .btn-primary {
-  background: var(--color-main);
-  color: #000;
+  background-image: linear-gradient(135deg, #f5e6b8, #e8c547, #c9a227, #f0dc8a, #a67c1a, #d4af37);
+  background-size: 200% 200%;
+  animation: gold-shimmer 14s ease-in-out infinite;
+  color: #0A1628;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .btn-primary:not(:disabled):hover {
+  filter: brightness(1.1);
   box-shadow: var(--shadow-glow-main);
-  transform: translateY(-1px);
+}
+
+@keyframes gold-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gold-border-glow {
+  0%, 100% {
+    box-shadow: inset 0 0 0 1.5px rgba(196, 154, 60, 0.2),
+                0 0 15px rgba(196, 154, 60, 0.06),
+                0 0 30px rgba(196, 154, 60, 0.03);
+  }
+  50% {
+    box-shadow: inset 0 0 0 1.5px rgba(196, 154, 60, 0.4),
+                0 0 25px rgba(196, 154, 60, 0.12),
+                0 0 50px rgba(196, 154, 60, 0.06);
+  }
+}
+
+/* Gold gradient text utility */
+.gold-gradient-text {
+  background-image: linear-gradient(135deg, #f5e6b8, #e8c547, #c9a227, #f0dc8a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .btn-secondary {
   background: var(--color-container-faded);
-  border: 1px solid var(--color-container-border);
+  border: 1.5px solid var(--color-container-border);
   color: var(--color-text);
 }
 
@@ -45,7 +77,7 @@
 
 .btn-ghost {
   background: transparent;
-  border: 1px solid var(--color-container-border);
+  border: 1.5px solid var(--color-container-border);
   color: var(--color-text-faded);
   font-size: var(--font-base);
   font-weight: var(--font-weight-medium);
@@ -74,7 +106,7 @@
 
 .btn-success {
   background: transparent;
-  border: 1px solid rgba(74, 222, 128, 0.4);
+  border: 1.5px solid rgba(74, 222, 128, 0.4);
   color: var(--color-success);
 }
 
@@ -97,7 +129,7 @@
   width: 100%;
   padding: var(--space-12) var(--space-14);
   background: var(--color-input-bg);
-  border: 1px solid var(--color-container-border);
+  border: 1.5px solid var(--color-container-border);
   border-radius: var(--radius-lg);
   color: var(--color-text);
   font-size: var(--font-lg);
@@ -127,7 +159,7 @@
 .card {
   background: var(--color-container-faded);
   border-radius: var(--radius-xl);
-  border: 1px solid var(--color-container-border);
+  border: 1.5px solid var(--color-container-border);
   padding: var(--space-14);
 }
 
@@ -174,13 +206,13 @@
 
 .alert-info {
   background: rgba(243, 116, 19, 0.06);
-  border: 1px solid rgba(243, 116, 19, 0.15);
+  border: 1.5px solid rgba(243, 116, 19, 0.15);
   color: var(--color-text-faded);
 }
 
 .alert-success {
   background: rgba(74, 222, 128, 0.06);
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  border: 1.5px solid rgba(74, 222, 128, 0.2);
   color: var(--color-text-faded);
 }
 
@@ -199,7 +231,7 @@
 .toggle-track {
   width: 40px;
   height: 22px;
-  border-radius: 11px;
+  border-radius: 0px;
   position: relative;
   flex-shrink: 0;
   cursor: pointer;
@@ -214,7 +246,7 @@
 .toggle-thumb {
   width: 18px;
   height: 18px;
-  border-radius: 9px;
+  border-radius: 0px;
   background: #fff;
   position: absolute;
   top: 2px;
@@ -285,7 +317,7 @@
   gap: var(--space-10);
   padding: var(--space-10) var(--space-12);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-container-border);
+  border: 1.5px solid var(--color-container-border);
   background: var(--color-container-faded);
   cursor: pointer;
   transition: all var(--transition-fast);

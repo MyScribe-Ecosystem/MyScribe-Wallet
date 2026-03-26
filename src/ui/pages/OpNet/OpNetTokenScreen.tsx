@@ -30,13 +30,13 @@ interface LocationState {
 }
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#ffffff',
     textSecondary: '#dbdbdb',
     textFaded: 'rgba(255, 255, 255, 0.5)',
-    cardBg: '#2a2a2a',
-    buttonPrimary: '#f37413',
+    cardBg: '#122240',
+    buttonPrimary: '#C49A3C',
     buttonSecondary: '#3a3a3a',
     border: 'rgba(255, 255, 255, 0.08)',
     success: '#4ade80',
@@ -230,7 +230,7 @@ export default function OpNetTokenScreen() {
                 <div
                     style={{
                         background: colors.cardBg,
-                        borderRadius: 12,
+                        borderRadius: 0,
                         padding: '16px',
                         marginBottom: 16
                     }}>
@@ -241,7 +241,7 @@ export default function OpNetTokenScreen() {
                             style={{
                                 width: 40,
                                 height: 40,
-                                borderRadius: 10,
+                                borderRadius: 0,
                                 overflow: 'hidden',
                                 flexShrink: 0
                             }}>
@@ -290,7 +290,7 @@ export default function OpNetTokenScreen() {
                                             color: colors.warning,
                                             background: 'rgba(245, 158, 11, 0.15)',
                                             padding: '2px 5px',
-                                            borderRadius: 4,
+                                            borderRadius: 0,
                                             flexShrink: 0
                                         }}>
                                         OWNER
@@ -308,7 +308,7 @@ export default function OpNetTokenScreen() {
                                 color: isPegged ? colors.success : colors.main,
                                 background: isPegged ? 'rgba(74, 222, 128, 0.1)' : 'rgba(243, 116, 19, 0.1)',
                                 padding: '4px 8px',
-                                borderRadius: 5,
+                                borderRadius: 0,
                                 flexShrink: 0
                             }}>
                             {isPegged ? 'OP-20S' : 'OP-20'}
@@ -319,7 +319,7 @@ export default function OpNetTokenScreen() {
                     <div
                         style={{
                             background: 'rgba(243, 116, 19, 0.08)',
-                            borderRadius: 8,
+                            borderRadius: 0,
                             padding: '12px',
                             marginBottom: 12,
                             textAlign: 'center'
@@ -346,7 +346,7 @@ export default function OpNetTokenScreen() {
                     <div
                         style={{
                             background: 'rgba(255, 255, 255, 0.03)',
-                            borderRadius: 8,
+                            borderRadius: 0,
                             padding: '10px 12px',
                             cursor: 'pointer'
                         }}
@@ -402,7 +402,7 @@ export default function OpNetTokenScreen() {
                                 padding: '14px',
                                 background: enableTransfer ? colors.buttonPrimary : colors.buttonSecondary,
                                 border: 'none',
-                                borderRadius: 10,
+                                borderRadius: 0,
                                 cursor: enableTransfer ? 'pointer' : 'not-allowed',
                                 opacity: enableTransfer ? 1 : 0.5,
                                 display: 'flex',
@@ -421,8 +421,8 @@ export default function OpNetTokenScreen() {
                                 flex: 1,
                                 padding: '14px',
                                 background: colors.buttonSecondary,
-                                border: `1px solid ${colors.border}`,
-                                borderRadius: 10,
+                                border: `1.5px solid ${colors.border}`,
+                                borderRadius: 0,
                                 cursor: 'pointer',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -440,8 +440,8 @@ export default function OpNetTokenScreen() {
                                     flex: 1,
                                     padding: '14px',
                                     background: 'rgba(245, 158, 11, 0.1)',
-                                    border: `1px solid rgba(245, 158, 11, 0.3)`,
-                                    borderRadius: 10,
+                                    border: `1.5px solid rgba(245, 158, 11, 0.3)`,
+                                    borderRadius: 0,
                                     cursor: 'pointer',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -462,8 +462,8 @@ export default function OpNetTokenScreen() {
                         width: '100%',
                         padding: '12px',
                         background: 'transparent',
-                        border: `1px solid rgba(239, 68, 68, 0.25)`,
-                        borderRadius: 10,
+                        border: `1.5px solid rgba(239, 68, 68, 0.25)`,
+                        borderRadius: 0,
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
@@ -495,7 +495,7 @@ export default function OpNetTokenScreen() {
                     <div
                         style={{
                             background: colors.cardBg,
-                            borderRadius: 14,
+                            borderRadius: 0,
                             padding: 20,
                             width: '100%',
                             maxWidth: 300
@@ -504,7 +504,7 @@ export default function OpNetTokenScreen() {
                             style={{
                                 width: 40,
                                 height: 40,
-                                borderRadius: '50%',
+                                borderRadius: '0px',
                                 background: 'rgba(239, 68, 68, 0.1)',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -542,7 +542,7 @@ export default function OpNetTokenScreen() {
                                     padding: '11px',
                                     background: colors.buttonSecondary,
                                     border: 'none',
-                                    borderRadius: 8,
+                                    borderRadius: 0,
                                     color: colors.textSecondary,
                                     fontSize: 13,
                                     fontWeight: 600,
@@ -557,7 +557,7 @@ export default function OpNetTokenScreen() {
                                     padding: '11px',
                                     background: colors.error,
                                     border: 'none',
-                                    borderRadius: 8,
+                                    borderRadius: 0,
                                     color: '#fff',
                                     fontSize: 13,
                                     fontWeight: 600,

@@ -10,13 +10,13 @@ export interface Props {
 }
 
 const themeColors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     blue: '#1872F6',
     green: '#41B530',
     warning: '#fbbf24'
@@ -133,8 +133,8 @@ export default function SignData({ params: { data, session } }: Props) {
                 <div
                     style={{
                         background: `linear-gradient(135deg, ${themeColors.main}10 0%, ${themeColors.main}05 100%)`,
-                        border: `1px solid ${themeColors.main}20`,
-                        borderRadius: 12,
+                        border: `1.5px solid ${themeColors.main}20`,
+                        borderRadius: 0,
                         padding: 16,
                         marginBottom: 12
                     }}>
@@ -146,7 +146,7 @@ export default function SignData({ params: { data, session } }: Props) {
                                 style={{
                                     width: 40,
                                     height: 40,
-                                    borderRadius: 10,
+                                    borderRadius: 0,
                                     objectFit: 'cover'
                                 }}
                                 onError={(e) => {
@@ -160,7 +160,7 @@ export default function SignData({ params: { data, session } }: Props) {
                             style={{
                                 width: 40,
                                 height: 40,
-                                borderRadius: 10,
+                                borderRadius: 0,
                                 background: themeColors.main,
                                 display: session.icon ? 'none' : 'flex',
                                 alignItems: 'center',
@@ -205,9 +205,9 @@ export default function SignData({ params: { data, session } }: Props) {
                             alignItems: 'center',
                             gap: 6,
                             padding: '4px 12px',
-                            borderRadius: 16,
+                            borderRadius: 0,
                             backgroundColor: `${sigColor}20`,
-                            border: `1px solid ${sigColor}40`
+                            border: `1.5px solid ${sigColor}40`
                         }}>
                         <KeyOutlined style={{ fontSize: 11, color: sigColor }} />
                         <span style={{ fontSize: 12, fontWeight: 600, color: sigColor }}>{sigTypeLabel}</span>
@@ -219,7 +219,7 @@ export default function SignData({ params: { data, session } }: Props) {
                     <div
                         style={{
                             background: themeColors.containerBgFaded,
-                            borderRadius: 12,
+                            borderRadius: 0,
                             padding: 12,
                             marginBottom: 12
                         }}>
@@ -228,8 +228,8 @@ export default function SignData({ params: { data, session } }: Props) {
                             style={{
                                 padding: 10,
                                 background: `${themeColors.blue}10`,
-                                border: `1px solid ${themeColors.blue}20`,
-                                borderRadius: 8
+                                border: `1.5px solid ${themeColors.blue}20`,
+                                borderRadius: 0
                             }}>
                             <JSONDisplay obj={parsedMessage} />
                         </div>
@@ -238,7 +238,7 @@ export default function SignData({ params: { data, session } }: Props) {
                     <div
                         style={{
                             background: themeColors.containerBgFaded,
-                            borderRadius: 12,
+                            borderRadius: 0,
                             padding: 12,
                             marginBottom: 12
                         }}>
@@ -252,8 +252,8 @@ export default function SignData({ params: { data, session } }: Props) {
                                 wordBreak: 'break-word',
                                 padding: 10,
                                 background: themeColors.inputBg,
-                                borderRadius: 8,
-                                border: `1px solid ${themeColors.containerBorder}`,
+                                borderRadius: 0,
+                                border: `1.5px solid ${themeColors.containerBorder}`,
                                 fontSize: 13,
                                 color: themeColors.text,
                                 lineHeight: '1.6'
@@ -267,7 +267,7 @@ export default function SignData({ params: { data, session } }: Props) {
                 <div
                     style={{
                         background: themeColors.containerBgFaded,
-                        borderRadius: 12,
+                        borderRadius: 0,
                         padding: 12,
                         marginBottom: 12
                     }}>
@@ -300,8 +300,8 @@ export default function SignData({ params: { data, session } }: Props) {
                             fontFamily: 'monospace',
                             padding: 10,
                             background: themeColors.inputBg,
-                            borderRadius: 8,
-                            border: `1px solid ${themeColors.containerBorder}`,
+                            borderRadius: 0,
+                            border: `1.5px solid ${themeColors.containerBorder}`,
                             color: themeColors.textFaded,
                             lineHeight: '1.6'
                         }}>
@@ -319,8 +319,8 @@ export default function SignData({ params: { data, session } }: Props) {
                     style={{
                         padding: '10px 12px',
                         background: `${themeColors.warning}10`,
-                        border: `1px solid ${themeColors.warning}30`,
-                        borderRadius: 12,
+                        border: `1.5px solid ${themeColors.warning}30`,
+                        borderRadius: 0,
                         marginBottom: 12
                     }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -343,8 +343,8 @@ export default function SignData({ params: { data, session } }: Props) {
                         preset="default"
                         onClick={handleReject}
                         style={{
-                            background: '#434343',
-                            border: `1px solid ${themeColors.containerBorder}`,
+                            background: '#1a3050',
+                            border: `1.5px solid ${themeColors.containerBorder}`,
                             color: themeColors.text
                         }}
                     />

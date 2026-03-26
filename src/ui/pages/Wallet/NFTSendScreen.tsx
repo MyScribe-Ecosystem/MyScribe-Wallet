@@ -18,16 +18,16 @@ import { AddressTypes, AddressVerificator } from '@btc-vision/transaction';
 import { Action, Features, NFTMetadata, SendNFTParameters } from '@/shared/interfaces/RawTxParameters';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -172,7 +172,7 @@ export default function NFTSendScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px',
                             display: 'flex',
@@ -184,7 +184,7 @@ export default function NFTSendScreen() {
                                 width: '80px',
                                 height: '80px',
                                 background: colors.containerBg,
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 overflow: 'hidden',
                                 flexShrink: 0
                             }}>
@@ -260,7 +260,7 @@ export default function NFTSendScreen() {
                     {/* Recipient Section */}
                     <div
                         style={{
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             marginBottom: '12px'
                         }}>
                         <div
@@ -290,8 +290,8 @@ export default function NFTSendScreen() {
                             autoFocus
                             style={{
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px',
                                 padding: '14px'
                             }}
                         />
@@ -302,8 +302,8 @@ export default function NFTSendScreen() {
                                     marginTop: '8px',
                                     padding: '8px',
                                     background: `${colors.warning}15`,
-                                    border: `1px solid ${colors.warning}30`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.warning}30`,
+                                    borderRadius: '0px',
                                     display: 'flex',
                                     gap: '6px'
                                 }}>
@@ -334,8 +334,8 @@ export default function NFTSendScreen() {
                                     marginTop: '8px',
                                     padding: '8px',
                                     background: `${colors.error}15`,
-                                    border: `1px solid ${colors.error}30`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.error}30`,
+                                    borderRadius: '0px',
                                     display: 'flex',
                                     gap: '6px'
                                 }}>
@@ -364,7 +364,7 @@ export default function NFTSendScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -395,7 +395,7 @@ export default function NFTSendScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -420,8 +420,8 @@ export default function NFTSendScreen() {
                                 width: '100%',
                                 padding: '8px 10px',
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '13px',
                                 outline: 'none',
@@ -442,8 +442,8 @@ export default function NFTSendScreen() {
                             style={{
                                 padding: '8px',
                                 background: `${colors.error}15`,
-                                border: `1px solid ${colors.error}30`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.error}30`,
+                                borderRadius: '0px',
                                 textAlign: 'center',
                                 marginBottom: '12px'
                             }}>
@@ -458,7 +458,7 @@ export default function NFTSendScreen() {
                             padding: '14px',
                             background: disabled ? colors.buttonBg : colors.main,
                             border: 'none',
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             color: disabled ? colors.textFaded : colors.background,
                             fontSize: '14px',
                             fontWeight: 600,

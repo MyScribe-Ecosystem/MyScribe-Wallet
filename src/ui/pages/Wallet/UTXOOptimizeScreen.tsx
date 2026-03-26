@@ -14,13 +14,13 @@ import {
 } from '@ant-design/icons';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    buttonBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -96,9 +96,9 @@ export default function UTXOOptimizeScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         padding: '14px',
-                        border: `1px solid ${colors.containerBorder}`,
+                        border: `1.5px solid ${colors.containerBorder}`,
                         marginBottom: '16px'
                     }}>
                     <div
@@ -145,8 +145,8 @@ export default function UTXOOptimizeScreen() {
                     <div
                         style={{
                             background: `${colors.success}10`,
-                            border: `1px solid ${colors.success}30`,
-                            borderRadius: '12px',
+                            border: `1.5px solid ${colors.success}30`,
+                            borderRadius: '0px',
                             padding: '24px',
                             textAlign: 'center'
                         }}>
@@ -170,8 +170,8 @@ export default function UTXOOptimizeScreen() {
                                 gap: '8px',
                                 padding: '12px',
                                 background: `${colors.warning}10`,
-                                border: `1px solid ${colors.warning}30`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.warning}30`,
+                                borderRadius: '0px',
                                 marginBottom: '16px'
                             }}>
                             <WarningOutlined style={{ fontSize: 14, color: colors.warning, marginTop: '1px', flexShrink: 0 }} />
@@ -189,9 +189,9 @@ export default function UTXOOptimizeScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 padding: '14px',
-                                border: `1px solid ${colors.containerBorder}`,
+                                border: `1.5px solid ${colors.containerBorder}`,
                                 marginBottom: '16px'
                             }}>
                             <div style={{ fontSize: '12px', color: colors.textFaded, marginBottom: '10px', fontWeight: 500 }}>
@@ -211,10 +211,10 @@ export default function UTXOOptimizeScreen() {
                                             selectedSource === SourceType.CURRENT
                                                 ? `${colors.main}20`
                                                 : colors.background,
-                                        border: `1px solid ${
+                                        border: `1.5px solid ${
                                             selectedSource === SourceType.CURRENT ? colors.main : colors.containerBorder
                                         }`,
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         cursor: primaryBalance > 0n ? 'pointer' : 'not-allowed',
                                         opacity: primaryBalance > 0n ? 1 : 0.4,
                                         transition: 'all 0.2s',
@@ -246,10 +246,10 @@ export default function UTXOOptimizeScreen() {
                                             selectedSource === SourceType.CSV1
                                                 ? `${colors.main}20`
                                                 : colors.background,
-                                        border: `1px solid ${
+                                        border: `1.5px solid ${
                                             selectedSource === SourceType.CSV1 ? colors.main : colors.containerBorder
                                         }`,
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         cursor: csv1Balance > 0n ? 'pointer' : 'not-allowed',
                                         opacity: csv1Balance > 0n ? 1 : 0.4,
                                         transition: 'all 0.2s',
@@ -275,9 +275,9 @@ export default function UTXOOptimizeScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 padding: '14px',
-                                border: `1px solid ${colors.containerBorder}`,
+                                border: `1.5px solid ${colors.containerBorder}`,
                                 marginBottom: '16px'
                             }}>
                             <div style={{ fontSize: '12px', color: colors.textFaded, marginBottom: '8px', fontWeight: 500 }}>
@@ -296,8 +296,8 @@ export default function UTXOOptimizeScreen() {
                                     width: '100%',
                                     padding: '10px 12px',
                                     background: colors.background,
-                                    border: `1px solid ${isSplitValid ? colors.containerBorder : colors.error}`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${isSplitValid ? colors.containerBorder : colors.error}`,
+                                    borderRadius: '0px',
                                     color: colors.text,
                                     fontSize: '14px',
                                     outline: 'none',
@@ -328,9 +328,9 @@ export default function UTXOOptimizeScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 padding: '14px',
-                                border: `1px solid ${colors.containerBorder}`,
+                                border: `1.5px solid ${colors.containerBorder}`,
                                 marginBottom: '16px'
                             }}>
                             <div style={{ fontSize: '12px', color: colors.textFaded, marginBottom: '8px', fontWeight: 500 }}>
@@ -347,7 +347,7 @@ export default function UTXOOptimizeScreen() {
                                 padding: '14px',
                                 background: isSplitValid && splitFeeRate > 0 ? colors.main : colors.buttonBg,
                                 border: 'none',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 cursor: isSplitValid && splitFeeRate > 0 ? 'pointer' : 'not-allowed',
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -371,8 +371,8 @@ export default function UTXOOptimizeScreen() {
                                 gap: '8px',
                                 padding: '12px',
                                 background: `${colors.error}10`,
-                                border: `1px solid ${colors.error}30`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.error}30`,
+                                borderRadius: '0px',
                                 marginBottom: '16px'
                             }}>
                             <WarningOutlined style={{ fontSize: 14, color: colors.error, marginTop: '1px', flexShrink: 0 }} />
@@ -393,7 +393,7 @@ export default function UTXOOptimizeScreen() {
                                 padding: '14px',
                                 background: colors.main,
                                 border: 'none',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 cursor: 'pointer',
                                 fontSize: '14px',
                                 fontWeight: 600,

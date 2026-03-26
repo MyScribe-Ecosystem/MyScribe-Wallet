@@ -1,44 +1,44 @@
-// TODO: write documentation for colors and palette in own markdown file and add links from here
+// MyScribe Wallet color palette — navy + gold
 
 const palette = {
     white: '#ffffff',
     white_muted: 'rgba(255, 255, 255, 0.5)',
-    black: '#212121',
+    black: '#0A1628',
     black_muted: 'rgba(0, 0, 0, 0.5)',
     black_muted2: 'rgba(0, 0, 0, 0.)',
 
-    dark: '#1E283C',
+    dark: '#0d1f35',
     grey: '#495361',
     light: '#A2A4AA',
 
-    black_dark: '#212121',
+    black_dark: '#0A1628',
 
     green_dark2: '#2D7E24',
     green_dark: '#379a29',
     green: '#41B530',
     green_light: '#5ec04f',
 
-    yellow_dark: '#d5ac00',
-    yellow: '#ee771b',
-    yellow_light: '#fcd226',
+    yellow_dark: '#a67c1a',
+    yellow: '#C49A3C',
+    yellow_light: '#e8c547',
 
     red_dark: '#c92b40',
     red: '#ED334B',
     red_light: '#f05266',
 
-    blue_dark: '#1461d1',
-    blue: '#1872F6',
-    blue_light: '#c6dcfd',
+    blue_dark: '#003366',
+    blue: '#0066CC',
+    blue_light: '#3399FF',
 
-    orange_dark: '#d9691c',
-    orange: '#f37413',
-    orange_light: '#ff8f42',
+    orange_dark: '#a67c1a',
+    orange: '#C49A3C',
+    orange_light: '#e8c547',
 
     purple_dark: '#7748e2',
     purple: '#8b5cf6',
     purple_light: '#9f7af6',
 
-    gold: '#ee771b'
+    gold: '#C49A3C'
 };
 
 export const colors = Object.assign({}, palette, {
@@ -48,28 +48,28 @@ export const colors = Object.assign({}, palette, {
 
     textDim: palette.white_muted,
 
-    background: '#212121',
+    background: '#0A1628',
 
     error: '#e52937',
 
     danger: 'rgba(245, 84, 84, 0.90)',
 
-    card: '#212121',
+    card: '#0A1628',
     warning: palette.orange,
     primary: palette.yellow,
 
-    bg2: '#2a2a2a',
-    bg3: '#434242',
-    bg4: '#383535',
+    bg2: '#122240',
+    bg3: '#1a3050',
+    bg4: '#1a3050',
 
-    border: 'rgba(255,255,255,0.1)',
+    border: '#3a5575',
 
-    icon_yellow: '#FFBA33',
+    icon_yellow: '#C49A3C',
 
     value_up_color: '#4DA474',
     value_down_color: '#BF3F4D',
 
-    ticker_color: '#ee771b'
+    ticker_color: '#C49A3C'
 });
 
 export type ColorTypes = keyof typeof colors;

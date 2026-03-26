@@ -21,16 +21,16 @@ import { Address } from '@btc-vision/transaction';
 import { RouteTypes, useNavigate } from '../routeTypes';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -130,8 +130,8 @@ export default function Mint() {
                     <div
                         style={{
                             background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                            border: `1px solid ${colors.main}30`,
-                            borderRadius: '14px',
+                            border: `1.5px solid ${colors.main}30`,
+                            borderRadius: '0px',
                             padding: '16px',
                             marginBottom: '16px',
                             textAlign: 'center'
@@ -143,7 +143,7 @@ export default function Mint() {
                                 style={{
                                     width: 56,
                                     height: 56,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     marginBottom: '12px'
                                 }}
                             />
@@ -152,7 +152,7 @@ export default function Mint() {
                                 style={{
                                     width: 56,
                                     height: 56,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     background: `linear-gradient(135deg, ${colors.main} 0%, ${colors.main}80 100%)`,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -193,7 +193,7 @@ export default function Mint() {
                                 gap: '6px',
                                 padding: '6px 12px',
                                 background: colors.containerBgFaded,
-                                borderRadius: '8px'
+                                borderRadius: '0px'
                             }}>
                             <span style={{ fontSize: '11px', color: colors.textFaded }}>Your Balance:</span>
                             <span
@@ -211,7 +211,7 @@ export default function Mint() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -246,7 +246,7 @@ export default function Mint() {
                                         padding: '4px 8px',
                                         background: colors.main,
                                         border: 'none',
-                                        borderRadius: '6px',
+                                        borderRadius: '0px',
                                         color: colors.background,
                                         fontSize: '11px',
                                         fontWeight: 600,
@@ -281,8 +281,8 @@ export default function Mint() {
                             decimalPlaces={prop.divisibility}
                             style={{
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px'
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px'
                             }}
                         />
 
@@ -292,7 +292,7 @@ export default function Mint() {
                                 marginTop: '10px',
                                 padding: '8px',
                                 background: colors.inputBg,
-                                borderRadius: '8px',
+                                borderRadius: '0px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'space-between'
@@ -321,7 +321,7 @@ export default function Mint() {
                                     marginTop: '8px',
                                     padding: '6px',
                                     background: `${colors.error}15`,
-                                    borderRadius: '6px',
+                                    borderRadius: '0px',
                                     textAlign: 'center'
                                 }}>
                                 <span style={{ fontSize: '11px', color: colors.error }}>{error}</span>
@@ -333,7 +333,7 @@ export default function Mint() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -364,8 +364,8 @@ export default function Mint() {
                             onChange={(e) => setNote(e.target.value)}
                             style={{
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px'
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px'
                             }}
                         />
                     </div>
@@ -374,7 +374,7 @@ export default function Mint() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -405,7 +405,7 @@ export default function Mint() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '80px'
                         }}>
@@ -451,7 +451,7 @@ export default function Mint() {
                         padding: '14px',
                         background: disabled || !inputAmount ? colors.buttonBg : colors.main,
                         border: 'none',
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         color: disabled || !inputAmount ? colors.textFaded : colors.background,
                         fontSize: '14px',
                         fontWeight: 600,

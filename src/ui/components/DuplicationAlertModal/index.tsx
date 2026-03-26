@@ -3,14 +3,14 @@ import { ExclamationCircleOutlined, WarningOutlined } from '@ant-design/icons';
 import { DuplicationDetectionResult } from '@/shared/types/Duplication';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    buttonBg: '#1a3050',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     error: '#ef4444',
     warning: '#fbbf24'
 };
@@ -47,7 +47,7 @@ export const DuplicationAlertModal = ({ detection, onResolve }: DuplicationAlert
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     background: colors.containerBg,
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     width: 'calc(100% - 32px)',
                     maxWidth: '320px',
                     maxHeight: 'calc(100vh - 80px)',
@@ -111,8 +111,8 @@ export const DuplicationAlertModal = ({ detection, onResolve }: DuplicationAlert
                                 gap: '10px',
                                 padding: '10px',
                                 background: `${colors.error}15`,
-                                border: `1px solid ${colors.error}40`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.error}40`,
+                                borderRadius: '0px',
                                 marginBottom: hasMldsaDupes ? '8px' : '12px'
                             }}>
                             <WarningOutlined
@@ -155,8 +155,8 @@ export const DuplicationAlertModal = ({ detection, onResolve }: DuplicationAlert
                                 gap: '10px',
                                 padding: '10px',
                                 background: `${colors.warning}15`,
-                                border: `1px solid ${colors.warning}40`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.warning}40`,
+                                borderRadius: '0px',
                                 marginBottom: '12px'
                             }}>
                             <WarningOutlined
@@ -210,7 +210,7 @@ export const DuplicationAlertModal = ({ detection, onResolve }: DuplicationAlert
                             padding: '12px',
                             background: colors.error,
                             border: 'none',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             color: '#fff',
                             fontSize: '13px',
                             fontWeight: 700,

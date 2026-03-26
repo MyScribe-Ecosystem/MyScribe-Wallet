@@ -15,12 +15,12 @@ import { RouteTypes, useNavigate } from '@/ui/pages/routeTypes';
 import { Action, SendBitcoinParameters, SourceType } from '@/shared/interfaces/RawTxParameters';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
@@ -129,7 +129,7 @@ export default function ConsolidationScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '40px 20px',
                                 textAlign: 'center'
                             }}>
@@ -158,8 +158,8 @@ export default function ConsolidationScreen() {
                     <div
                         style={{
                             background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                            border: `1px solid ${colors.main}30`,
-                            borderRadius: '12px',
+                            border: `1.5px solid ${colors.main}30`,
+                            borderRadius: '0px',
                             padding: '12px',
                             display: 'flex',
                             alignItems: 'flex-start',
@@ -176,7 +176,7 @@ export default function ConsolidationScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             padding: '20px',
                             textAlign: 'center'
                         }}>
@@ -184,8 +184,8 @@ export default function ConsolidationScreen() {
                         <div
                             style={{
                                 background: `${colors.hotOrange}15`,
-                                border: `1px solid ${colors.hotOrange}30`,
-                                borderRadius: '12px',
+                                border: `1.5px solid ${colors.hotOrange}30`,
+                                borderRadius: '0px',
                                 padding: '14px'
                             }}>
                             <Row style={{ gap: 8, justifyContent: 'center', marginBottom: 8 }}>
@@ -214,8 +214,8 @@ export default function ConsolidationScreen() {
                         <div
                             style={{
                                 background: `${colors.coldBlue}15`,
-                                border: `1px solid ${colors.coldBlue}30`,
-                                borderRadius: '12px',
+                                border: `1.5px solid ${colors.coldBlue}30`,
+                                borderRadius: '0px',
                                 padding: '14px'
                             }}>
                             <Row style={{ gap: 8, justifyContent: 'center', marginBottom: 8 }}>

@@ -46,15 +46,15 @@ const NOTIFICATION_WINDOW_MODES: { id: NotificationWindowMode; label: string; de
 ];
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -89,7 +89,7 @@ function PrivacySection() {
             <div
                 style={{
                     background: colors.containerBgFaded,
-                    borderRadius: '14px',
+                    borderRadius: '0px',
                     overflow: 'hidden'
                 }}>
                 <div
@@ -111,7 +111,7 @@ function PrivacySection() {
                         style={{
                             width: '36px',
                             height: '36px',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             background: `linear-gradient(135deg, ${colors.main}20 0%, ${colors.main}10 100%)`,
                             display: 'flex',
                             alignItems: 'center',
@@ -141,7 +141,7 @@ function PrivacySection() {
                                     color: colors.success,
                                     background: `${colors.success}20`,
                                     padding: '2px 6px',
-                                    borderRadius: '4px',
+                                    borderRadius: '0px',
                                     textTransform: 'uppercase'
                                 }}>
                                 Active
@@ -245,7 +245,7 @@ export default function AdvancedScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '10px',
+                        borderRadius: '0px',
                         padding: '10px',
                         marginBottom: '16px',
                         display: 'flex',
@@ -285,7 +285,7 @@ export default function AdvancedScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '14px',
+                        borderRadius: '0px',
                         overflow: 'hidden'
                     }}>
                     {/* Auto Lock Time Setting */}
@@ -310,7 +310,7 @@ export default function AdvancedScreen() {
                             style={{
                                 width: '36px',
                                 height: '36px',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 background: colors.buttonHoverBg,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -381,7 +381,7 @@ export default function AdvancedScreen() {
                             style={{
                                 width: '36px',
                                 height: '36px',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 background: colors.buttonHoverBg,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -452,7 +452,7 @@ export default function AdvancedScreen() {
                             style={{
                                 width: '36px',
                                 height: '36px',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 background: colors.buttonHoverBg,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -540,7 +540,7 @@ export default function AdvancedScreen() {
                             style={{
                                 width: '36px',
                                 height: '36px',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 background: colors.buttonHoverBg,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -585,7 +585,7 @@ export default function AdvancedScreen() {
                             style={{
                                 width: '44px',
                                 height: '24px',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 background: useSidePanel ? colors.main : colors.buttonBg,
                                 position: 'relative',
                                 transition: 'background 0.2s',
@@ -595,7 +595,7 @@ export default function AdvancedScreen() {
                                 style={{
                                     width: '20px',
                                     height: '20px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: colors.text,
                                     position: 'absolute',
                                     top: '2px',
@@ -635,9 +635,9 @@ export default function AdvancedScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 overflow: 'hidden',
-                                border: `1px solid ${colors.warning}30`
+                                border: `1.5px solid ${colors.warning}30`
                             }}>
                             {/* Create Test Conflicts Button */}
                             <div
@@ -678,7 +678,7 @@ export default function AdvancedScreen() {
                                     style={{
                                         width: '36px',
                                         height: '36px',
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         background: `${colors.warning}15`,
                                         display: 'flex',
                                         alignItems: 'center',
@@ -758,7 +758,7 @@ export default function AdvancedScreen() {
                                     style={{
                                         width: '36px',
                                         height: '36px',
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         background: `${colors.error}15`,
                                         display: 'flex',
                                         alignItems: 'center',
@@ -809,8 +809,8 @@ export default function AdvancedScreen() {
                             style={{
                                 padding: '10px',
                                 background: `${colors.warning}10`,
-                                border: `1px solid ${colors.warning}25`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.warning}25`,
+                                borderRadius: '0px',
                                 marginTop: '10px'
                             }}>
                             <div
@@ -996,8 +996,8 @@ export const LockTimePopover = ({ onNext, onCancel }: { onNext: () => void; onCa
                                         : isHovered
                                           ? colors.buttonBg
                                           : colors.buttonHoverBg,
-                                    border: `1px solid ${isSelected ? colors.main : 'transparent'}`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${isSelected ? colors.main : 'transparent'}`,
+                                    borderRadius: '0px',
                                     cursor: isProcessing ? 'not-allowed' : 'pointer',
                                     transition: 'all 0.15s',
                                     position: 'relative',
@@ -1030,7 +1030,7 @@ export const LockTimePopover = ({ onNext, onCancel }: { onNext: () => void; onCa
                                             bottom: 0,
                                             width: '3px',
                                             background: colors.main,
-                                            borderRadius: '10px 0 0 10px'
+                                            borderRadius: '0px'
                                         }}
                                     />
                                 )}
@@ -1041,7 +1041,7 @@ export const LockTimePopover = ({ onNext, onCancel }: { onNext: () => void; onCa
                                         width: '30px',
                                         height: '30px',
                                         minWidth: '30px',
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         background: isSelected ? `${colors.main}20` : colors.containerBgFaded,
                                         display: 'flex',
                                         alignItems: 'center',
@@ -1127,8 +1127,8 @@ export const LockTimePopover = ({ onNext, onCancel }: { onNext: () => void; onCa
                         width: '100%',
                         padding: '10px',
                         background: colors.buttonHoverBg,
-                        border: `1px solid ${colors.containerBorder}`,
-                        borderRadius: '10px',
+                        border: `1.5px solid ${colors.containerBorder}`,
+                        borderRadius: '0px',
                         color: colors.text,
                         fontSize: '13px',
                         fontWeight: 500,
@@ -1272,8 +1272,8 @@ export const WalletHealthDelayPopover = ({ onNext, onCancel }: { onNext: () => v
                                         : isHovered
                                           ? colors.buttonBg
                                           : colors.buttonHoverBg,
-                                    border: `1px solid ${isSelected ? colors.main : 'transparent'}`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${isSelected ? colors.main : 'transparent'}`,
+                                    borderRadius: '0px',
                                     cursor: isProcessing ? 'not-allowed' : 'pointer',
                                     transition: 'all 0.15s',
                                     position: 'relative',
@@ -1306,7 +1306,7 @@ export const WalletHealthDelayPopover = ({ onNext, onCancel }: { onNext: () => v
                                             bottom: 0,
                                             width: '3px',
                                             background: colors.main,
-                                            borderRadius: '10px 0 0 10px'
+                                            borderRadius: '0px'
                                         }}
                                     />
                                 )}
@@ -1317,7 +1317,7 @@ export const WalletHealthDelayPopover = ({ onNext, onCancel }: { onNext: () => v
                                         width: '30px',
                                         height: '30px',
                                         minWidth: '30px',
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         background: isSelected ? `${colors.main}20` : colors.containerBgFaded,
                                         display: 'flex',
                                         alignItems: 'center',
@@ -1392,8 +1392,8 @@ export const WalletHealthDelayPopover = ({ onNext, onCancel }: { onNext: () => v
                         width: '100%',
                         padding: '10px',
                         background: colors.buttonHoverBg,
-                        border: `1px solid ${colors.containerBorder}`,
-                        borderRadius: '10px',
+                        border: `1.5px solid ${colors.containerBorder}`,
+                        borderRadius: '0px',
                         color: colors.text,
                         fontSize: '13px',
                         fontWeight: 500,
@@ -1484,8 +1484,8 @@ export const WindowModePopover = ({
                                         : isHovered
                                           ? colors.buttonBg
                                           : colors.buttonHoverBg,
-                                    border: `1px solid ${isSelected ? colors.main : 'transparent'}`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${isSelected ? colors.main : 'transparent'}`,
+                                    borderRadius: '0px',
                                     cursor: isProcessing ? 'not-allowed' : 'pointer',
                                     transition: 'all 0.15s',
                                     position: 'relative',
@@ -1517,7 +1517,7 @@ export const WindowModePopover = ({
                                             bottom: 0,
                                             width: '3px',
                                             background: colors.main,
-                                            borderRadius: '10px 0 0 10px'
+                                            borderRadius: '0px'
                                         }}
                                     />
                                 )}
@@ -1528,7 +1528,7 @@ export const WindowModePopover = ({
                                         width: '30px',
                                         height: '30px',
                                         minWidth: '30px',
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         background: isSelected ? `${colors.main}20` : colors.containerBgFaded,
                                         display: 'flex',
                                         alignItems: 'center',
@@ -1594,8 +1594,8 @@ export const WindowModePopover = ({
                         width: '100%',
                         padding: '10px',
                         background: colors.buttonHoverBg,
-                        border: `1px solid ${colors.containerBorder}`,
-                        borderRadius: '10px',
+                        border: `1.5px solid ${colors.containerBorder}`,
+                        borderRadius: '0px',
                         color: colors.text,
                         fontSize: '13px',
                         fontWeight: 500,

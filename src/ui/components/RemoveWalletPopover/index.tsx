@@ -9,12 +9,12 @@ import { shortAddress, useWallet } from '@/ui/utils';
 import { WarningOutlined, WalletOutlined } from '@ant-design/icons';
 
 const colors = {
-    main: '#f37413',
+    main: '#C49A3C',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    buttonBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     error: '#ef4444',
     warning: '#fbbf24'
 };
@@ -81,7 +81,7 @@ export const RemoveWalletPopover = ({ keyring, onClose }: { keyring: WalletKeyri
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     background: '#1a1a1a',
-                    borderRadius: '16px',
+                    borderRadius: '0px',
                     width: '90%',
                     maxWidth: '340px',
                     padding: '20px 16px',
@@ -106,15 +106,15 @@ export const RemoveWalletPopover = ({ keyring, onClose }: { keyring: WalletKeyri
                         gap: '12px',
                         padding: '12px',
                         background: colors.containerBgFaded,
-                        borderRadius: '10px',
-                        border: `1px solid ${colors.containerBorder}`,
+                        borderRadius: '0px',
+                        border: `1.5px solid ${colors.containerBorder}`,
                         marginBottom: '12px'
                     }}>
                     <div
                         style={{
                             width: '36px',
                             height: '36px',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             background: `${colors.error}15`,
                             display: 'flex',
                             alignItems: 'center',
@@ -139,8 +139,8 @@ export const RemoveWalletPopover = ({ keyring, onClose }: { keyring: WalletKeyri
                         gap: '8px',
                         padding: '10px 12px',
                         background: `${colors.warning}10`,
-                        border: `1px solid ${colors.warning}25`,
-                        borderRadius: '10px',
+                        border: `1.5px solid ${colors.warning}25`,
+                        borderRadius: '0px',
                         marginBottom: '20px'
                     }}>
                     <WarningOutlined style={{ fontSize: 13, color: colors.warning, marginTop: '1px', flexShrink: 0 }} />
@@ -159,7 +159,7 @@ export const RemoveWalletPopover = ({ keyring, onClose }: { keyring: WalletKeyri
                             padding: '12px',
                             background: colors.buttonBg,
                             border: 'none',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             color: colors.text,
                             fontSize: '14px',
                             fontWeight: 600,
@@ -175,7 +175,7 @@ export const RemoveWalletPopover = ({ keyring, onClose }: { keyring: WalletKeyri
                             padding: '12px',
                             background: colors.error,
                             border: 'none',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             color: '#fff',
                             fontSize: '14px',
                             fontWeight: 600,

@@ -16,15 +16,15 @@ import { Popover } from '@/ui/components/Popover';
 import { formatAmount } from '@/ui/utils/formatAmount';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -71,7 +71,7 @@ export default function DisplaySettingsScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '10px',
+                        borderRadius: '0px',
                         padding: '10px',
                         marginBottom: '16px',
                         display: 'flex',
@@ -113,7 +113,7 @@ export default function DisplaySettingsScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '14px',
+                        borderRadius: '0px',
                         overflow: 'hidden'
                     }}>
                     {/* Decimal Precision */}
@@ -137,7 +137,7 @@ export default function DisplaySettingsScreen() {
                             style={{
                                 width: '36px',
                                 height: '36px',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 background: colors.buttonHoverBg,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -198,7 +198,7 @@ export default function DisplaySettingsScreen() {
                             style={{
                                 width: '36px',
                                 height: '36px',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 background: colors.buttonHoverBg,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -240,7 +240,7 @@ export default function DisplaySettingsScreen() {
                             style={{
                                 width: '44px',
                                 height: '24px',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 background: displaySettings.useKMBNotation ? colors.main : colors.buttonBg,
                                 position: 'relative',
                                 transition: 'background 0.2s',
@@ -250,7 +250,7 @@ export default function DisplaySettingsScreen() {
                                 style={{
                                     width: '20px',
                                     height: '20px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: colors.text,
                                     position: 'absolute',
                                     top: '2px',
@@ -281,7 +281,7 @@ export default function DisplaySettingsScreen() {
                             style={{
                                 width: '36px',
                                 height: '36px',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 background: colors.buttonHoverBg,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -323,7 +323,7 @@ export default function DisplaySettingsScreen() {
                             style={{
                                 width: '44px',
                                 height: '24px',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 background: displaySettings.useCommas ? colors.main : colors.buttonBg,
                                 position: 'relative',
                                 transition: 'background 0.2s',
@@ -333,7 +333,7 @@ export default function DisplaySettingsScreen() {
                                 style={{
                                     width: '20px',
                                     height: '20px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: colors.text,
                                     position: 'absolute',
                                     top: '2px',
@@ -362,7 +362,7 @@ export default function DisplaySettingsScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '14px',
+                        borderRadius: '0px',
                         padding: '14px',
                         overflow: 'hidden'
                     }}>
@@ -478,8 +478,8 @@ function DecimalPopover({
                                         : isHovered
                                           ? colors.buttonBg
                                           : colors.buttonHoverBg,
-                                    border: `1px solid ${isSelected ? colors.main : 'transparent'}`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${isSelected ? colors.main : 'transparent'}`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     transition: 'all 0.15s',
                                     position: 'relative'
@@ -496,7 +496,7 @@ function DecimalPopover({
                                             bottom: 0,
                                             width: '3px',
                                             background: colors.main,
-                                            borderRadius: '10px 0 0 10px'
+                                            borderRadius: '0px'
                                         }}
                                     />
                                 )}
@@ -534,8 +534,8 @@ function DecimalPopover({
                         width: '100%',
                         padding: '10px',
                         background: colors.buttonHoverBg,
-                        border: `1px solid ${colors.containerBorder}`,
-                        borderRadius: '10px',
+                        border: `1.5px solid ${colors.containerBorder}`,
+                        borderRadius: '0px',
                         color: colors.text,
                         fontSize: '13px',
                         fontWeight: 500,

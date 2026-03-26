@@ -14,7 +14,7 @@ export default function AssetTag(props: AssetTagProps) {
     const { type, small } = props;
     return (
         <Row
-            style={{ backgroundColor: colors[type], borderRadius: small ? 4 : 5 }}
+            style={{ backgroundColor: colors[type], borderRadius: 0 }}
             px={small ? 'sm' : 'md'}
             py={small ? 'zero' : 'xs'}
             itemsCenter>

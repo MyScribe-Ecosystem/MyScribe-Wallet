@@ -16,7 +16,7 @@ export default function Tag(props: AssetTagProps) {
 
     if (type === 'bool-bridge') {
         return (
-            <Row style={{ padding: '2px 4px', borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.15)' }}>
+            <Row style={{ padding: '2px 4px', borderRadius: 0, backgroundColor: 'rgba(255,255,255,0.15)' }}>
                 <Text text={'Bool Bridge'} size={small ? 'xxs' : 'xs'} style={{ color: '#ddd' }} />
             </Row>
         );
@@ -24,7 +24,7 @@ export default function Tag(props: AssetTagProps) {
 
     return (
         <Row
-            style={{ borderColor: colors[type], borderWidth: 1, borderRadius: small ? 4 : 5 }}
+            style={{ borderColor: colors[type], borderWidth: 1.5, borderRadius: 0 }}
             px={small ? 'sm' : 'md'}
             py={small ? 'zero' : 'xs'}
             itemsCenter>

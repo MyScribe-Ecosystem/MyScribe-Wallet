@@ -103,45 +103,28 @@ export function useFaucetUrl() {
 
 export function useWalletConfig() {
     const accountsState = useSettingsState();
-    return accountsState.walletConfig;
+    const config = accountsState.walletConfig;
+    // MyScribe Wallet: filter out OP Wallet version nag messages
+    const versionNagPattern = /wallet version|please update|too low|update to|chrome:\/\/extensions/i;
+    const statusMessage =
+        config.statusMessage && versionNagPattern.test(config.statusMessage)
+            ? ''
+            : config.statusMessage;
+    const chainTip =
+        config.chainTip && versionNagPattern.test(config.chainTip)
+            ? ''
+            : config.chainTip;
+    return { ...config, statusMessage, chainTip };
 }
 
 export function useVersionInfo() {
-    const accountsState = useSettingsState();
-    const walletConfig = accountsState.walletConfig;
-    const newVersion = walletConfig.version;
-    const skippedVersion = accountsState.skippedVersion;
     const currentVesion = VERSION;
-    let skipped = false;
-    let latestVersion = '';
-    // skip if new version is empty
-    if (!newVersion) {
-        skipped = true;
-    }
-
-    // skip if skipped
-    if (newVersion == skippedVersion) {
-        skipped = true;
-    }
-
-    // skip if current version is greater or equal to new version
-    if (newVersion) {
-        if (compareVersions(currentVesion, newVersion) >= 0) {
-            skipped = true;
-        } else {
-            latestVersion = newVersion;
-        }
-    }
-
-    // skip if current version is 0.0.0
-    if (currentVesion === '0.0.0') {
-        skipped = true;
-    }
+    // MyScribe Wallet: disable OP Wallet version checking entirely
     return {
         currentVesion,
-        newVersion,
-        latestVersion,
-        skipped
+        newVersion: '',
+        latestVersion: '',
+        skipped: true
     };
 }
 

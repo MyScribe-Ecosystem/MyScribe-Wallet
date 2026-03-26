@@ -26,16 +26,16 @@ import { useBTCUnit } from '@/ui/state/settings/hooks';
 import { copyToClipboard } from '@/ui/utils';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -248,8 +248,8 @@ export function Step2({
             <div
                 style={{
                     background: colors.containerBgFaded,
-                    borderRadius: '14px',
-                    border: `1px solid ${colors.containerBorder}`,
+                    borderRadius: '0px',
+                    border: `1.5px solid ${colors.containerBorder}`,
                     overflow: 'hidden'
                 }}>
                 {(() => {
@@ -338,9 +338,9 @@ export function Step2({
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         padding: '16px',
-                        border: `1px solid ${colors.containerBorder}`,
+                        border: `1.5px solid ${colors.containerBorder}`,
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '14px'
@@ -368,8 +368,8 @@ export function Step2({
                                 width: '100%',
                                 padding: '10px 12px',
                                 background: colors.inputBg,
-                                border: `1px solid ${pathError ? colors.error + '60' : colors.containerBorder}`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${pathError ? colors.error + '60' : colors.containerBorder}`,
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '13px',
                                 fontFamily: 'monospace',
@@ -413,8 +413,8 @@ export function Step2({
                                 width: '100%',
                                 padding: '10px 12px',
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '13px',
                                 outline: 'none',
@@ -449,8 +449,8 @@ export function Step2({
                         gap: '8px',
                         padding: '10px 12px',
                         background: `${colors.error}10`,
-                        border: `1px solid ${colors.error}30`,
-                        borderRadius: '10px'
+                        border: `1.5px solid ${colors.error}30`,
+                        borderRadius: '0px'
                     }}>
                     <WarningOutlined style={{ fontSize: 14, color: colors.error }} />
                     <span style={{ fontSize: '12px', color: colors.error }}>{error}</span>
@@ -466,7 +466,7 @@ export function Step2({
                     padding: '14px',
                     background: disabled || creatingWallet ? colors.buttonBg : colors.main,
                     border: 'none',
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     color: disabled || creatingWallet ? colors.textFaded : colors.background,
                     fontSize: '14px',
                     fontWeight: 600,
@@ -561,7 +561,7 @@ function AddressTypeOption({
                             padding: '2px 6px',
                             background: selected ? `${colors.main}25` : colors.containerBorder,
                             color: selected ? colors.main : colors.textFaded,
-                            borderRadius: '4px',
+                            borderRadius: '0px',
                             fontWeight: 600
                         }}>
                         {tag}
@@ -574,7 +574,7 @@ function AddressTypeOption({
                             padding: '2px 6px',
                             background: colors.success + '20',
                             color: colors.success,
-                            borderRadius: '4px',
+                            borderRadius: '0px',
                             fontWeight: 700
                         }}>
                         RECOMMENDED
@@ -587,7 +587,7 @@ function AddressTypeOption({
                             padding: '2px 6px',
                             background: colors.warning + '20',
                             color: colors.warning,
-                            borderRadius: '4px',
+                            borderRadius: '0px',
                             fontWeight: 600
                         }}>
                         {satoshisToAmount(totalSats)} {btcUnit}

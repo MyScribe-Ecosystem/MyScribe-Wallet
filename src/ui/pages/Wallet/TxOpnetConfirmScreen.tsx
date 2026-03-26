@@ -91,16 +91,16 @@ import { RouteTypes, useNavigate } from '../routeTypes';
 BigNumber.config({ EXPONENTIAL_AT: 256 });
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -2289,8 +2289,8 @@ export default function TxOpnetConfirmScreen() {
                                 justifyContent: 'center',
                                 padding: '24px',
                                 background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                                border: `1px solid ${colors.main}30`,
-                                borderRadius: '12px',
+                                border: `1.5px solid ${colors.main}30`,
+                                borderRadius: '0px',
                                 marginBottom: '12px'
                             }}>
                             <LoadingOutlined
@@ -2316,8 +2316,8 @@ export default function TxOpnetConfirmScreen() {
                                     marginTop: '12px',
                                     padding: '8px 12px',
                                     background: `${colors.success}15`,
-                                    border: `1px solid ${colors.success}30`,
-                                    borderRadius: '8px'
+                                    border: `1.5px solid ${colors.success}30`,
+                                    borderRadius: '0px'
                                 }}>
                                 <SafetyCertificateOutlined
                                     style={{
@@ -2345,8 +2345,8 @@ export default function TxOpnetConfirmScreen() {
                                 gap: '10px',
                                 padding: '14px',
                                 background: `${colors.error}15`,
-                                border: `1px solid ${colors.error}40`,
-                                borderRadius: '12px',
+                                border: `1.5px solid ${colors.error}40`,
+                                borderRadius: '0px',
                                 marginBottom: '12px'
                             }}>
                             <WarningOutlined
@@ -2383,8 +2383,8 @@ export default function TxOpnetConfirmScreen() {
                     <div
                         style={{
                             background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                            border: `1px solid ${colors.main}30`,
-                            borderRadius: '10px',
+                            border: `1.5px solid ${colors.main}30`,
+                            borderRadius: '0px',
                             padding: '10px 12px',
                             marginBottom: '12px',
                             display: 'flex',
@@ -2425,7 +2425,7 @@ export default function TxOpnetConfirmScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 marginBottom: '12px',
                                 overflow: 'hidden'
                             }}>
@@ -2475,7 +2475,7 @@ export default function TxOpnetConfirmScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -2509,7 +2509,7 @@ export default function TxOpnetConfirmScreen() {
                                     alignItems: 'center',
                                     padding: '10px',
                                     background: colors.inputBg,
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     marginBottom: '8px'
                                 }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -2572,7 +2572,7 @@ export default function TxOpnetConfirmScreen() {
                                     alignItems: 'center',
                                     padding: '10px',
                                     background: colors.inputBg,
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     marginBottom: '8px'
                                 }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -2622,7 +2622,7 @@ export default function TxOpnetConfirmScreen() {
                             style={{
                                 padding: '10px',
                                 background: colors.inputBg,
-                                borderRadius: '8px'
+                                borderRadius: '0px'
                             }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
                                 <ThunderboltOutlined style={{ fontSize: 14, color: colors.main }} />
@@ -2639,8 +2639,8 @@ export default function TxOpnetConfirmScreen() {
                                         marginTop: '8px',
                                         padding: '6px 8px',
                                         background: `${colors.warning}20`,
-                                        border: `1px solid ${colors.warning}50`,
-                                        borderRadius: '6px'
+                                        border: `1.5px solid ${colors.warning}50`,
+                                        borderRadius: '0px'
                                     }}>
                                     <WarningOutlined style={{ fontSize: 12, color: colors.warning }} />
                                     <span style={{ fontSize: '11px', color: colors.warning }}>
@@ -2657,8 +2657,8 @@ export default function TxOpnetConfirmScreen() {
                                     marginTop: '12px',
                                     padding: '12px',
                                     background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                                    border: `1px solid ${colors.main}30`,
-                                    borderRadius: '8px'
+                                    border: `1.5px solid ${colors.main}30`,
+                                    borderRadius: '0px'
                                 }}>
                                 <div
                                     style={{
@@ -2714,8 +2714,8 @@ export default function TxOpnetConfirmScreen() {
                                         style={{
                                             padding: '8px 10px',
                                             background: `${colors.success}10`,
-                                            border: `1px solid ${colors.success}25`,
-                                            borderRadius: '8px',
+                                            border: `1.5px solid ${colors.success}25`,
+                                            borderRadius: '0px',
                                             marginBottom: outputAnalysis.externalOutputs.length > 0 ? '8px' : '0'
                                         }}>
                                         <div style={{ fontSize: '10px', color: colors.textFaded, marginBottom: '4px' }}>
@@ -2762,8 +2762,8 @@ export default function TxOpnetConfirmScreen() {
                                         style={{
                                             padding: '8px 10px',
                                             background: '#fbbf2415',
-                                            border: '1px solid #fbbf2430',
-                                            borderRadius: '8px'
+                                            border: '1.5px solid #fbbf2430',
+                                            borderRadius: '0px'
                                         }}>
                                         <div
                                             style={{
@@ -2815,7 +2815,7 @@ export default function TxOpnetConfirmScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -2841,8 +2841,8 @@ export default function TxOpnetConfirmScreen() {
                                     style={{
                                         padding: '6px 12px',
                                         background: `${colors.success}20`,
-                                        border: `1px solid ${colors.success}40`,
-                                        borderRadius: '8px',
+                                        border: `1.5px solid ${colors.success}40`,
+                                        borderRadius: '0px',
                                         display: 'flex',
                                         alignItems: 'center',
                                         gap: '6px'
@@ -2864,8 +2864,8 @@ export default function TxOpnetConfirmScreen() {
                                     style={{
                                         padding: '6px 12px',
                                         background: `${colors.main}20`,
-                                        border: `1px solid ${colors.main}40`,
-                                        borderRadius: '8px',
+                                        border: `1.5px solid ${colors.main}40`,
+                                        borderRadius: '0px',
                                         display: 'flex',
                                         alignItems: 'center',
                                         gap: '6px'
@@ -2906,8 +2906,8 @@ export default function TxOpnetConfirmScreen() {
                             flex: 1,
                             padding: '12px',
                             background: colors.buttonHoverBg,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '10px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             color: colors.text,
                             fontSize: '14px',
                             fontWeight: 600,
@@ -2929,7 +2929,7 @@ export default function TxOpnetConfirmScreen() {
                             padding: '12px',
                             background: disabled || isSigning || signingError ? colors.buttonBg : colors.main,
                             border: 'none',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             color: disabled || isSigning || signingError ? colors.textFaded : colors.background,
                             fontSize: '14px',
                             fontWeight: 600,
@@ -3040,7 +3040,7 @@ export default function TxOpnetConfirmScreen() {
                                 style={{
                                     padding: '12px',
                                     background: colors.containerBgFaded,
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     width: '100%',
                                     marginTop: '12px'
                                 }}>

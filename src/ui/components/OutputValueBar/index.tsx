@@ -82,13 +82,13 @@ export function OutputValueBar({
                             style={Object.assign(
                                 {},
                                 {
-                                    borderWidth: 1,
+                                    borderWidth: 1.5,
                                     borderColor: 'rgba(255,255,255,0.3)',
                                     height: 75,
                                     width: 120,
                                     textAlign: 'center',
                                     padding: 4,
-                                    borderRadius: 5,
+                                    borderRadius: 0,
                                     display: 'flex',
                                     flexDirection: 'column',
                                     justifyContent: 'center',

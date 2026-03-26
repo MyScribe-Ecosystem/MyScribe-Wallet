@@ -23,15 +23,15 @@ import {
 import { RouteTypes, useNavigate } from '../routeTypes';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444'
 };
@@ -100,8 +100,8 @@ export function MyItem({ account, autoNav }: MyItemProps) {
                 style={{
                     position: 'relative',
                     marginBottom: '8px',
-                    borderRadius: '12px',
-                    border: `1px solid ${selected ? colors.main : colors.containerBorder}`,
+                    borderRadius: '0px',
+                    border: `1.5px solid ${selected ? colors.main : colors.containerBorder}`,
                     background: selected
                         ? `linear-gradient(135deg, ${colors.main}10 0%, ${colors.main}05 100%)`
                         : isHovered
@@ -125,7 +125,7 @@ export function MyItem({ account, autoNav }: MyItemProps) {
                         style={{
                             width: '40px',
                             height: '40px',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             background: selected ? colors.main : colors.containerBgFaded,
                             display: 'flex',
                             alignItems: 'center',
@@ -148,7 +148,7 @@ export function MyItem({ account, autoNav }: MyItemProps) {
                                     fontSize: 14,
                                     color: colors.success,
                                     background: colors.background,
-                                    borderRadius: '50%'
+                                    borderRadius: '0px'
                                 }}
                             />
                         )}
@@ -182,7 +182,7 @@ export function MyItem({ account, autoNav }: MyItemProps) {
                                         fontSize: '10px',
                                         padding: '1px 4px',
                                         background: colors.containerBgFaded,
-                                        borderRadius: '4px',
+                                        borderRadius: '0px',
                                         color: colors.main
                                     }}>
                                     {account.index}
@@ -196,7 +196,7 @@ export function MyItem({ account, autoNav }: MyItemProps) {
                         style={{
                             width: '32px',
                             height: '32px',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             background: optionsVisible ? colors.buttonBg : 'transparent',
                             border: 'none',
                             cursor: 'pointer',
@@ -243,8 +243,8 @@ export function MyItem({ account, autoNav }: MyItemProps) {
                                 top: '60px',
                                 right: '12px',
                                 background: colors.containerBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px',
                                 overflow: 'hidden',
                                 zIndex: 999,
                                 boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
@@ -390,7 +390,7 @@ export default function SwitchAccountScreen() {
                             style={{
                                 width: '32px',
                                 height: '32px',
-                                borderRadius: '8px',
+                                borderRadius: '0px',
                                 background: colors.main,
                                 border: 'none',
                                 cursor: 'pointer',
@@ -417,7 +417,7 @@ export default function SwitchAccountScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '14px',
+                        borderRadius: '0px',
                         padding: '8px'
                     }}>
                     <VirtualList
@@ -474,8 +474,8 @@ export default function SwitchAccountScreen() {
                         marginTop: '16px',
                         padding: '12px',
                         background: `${colors.main}10`,
-                        border: `1px solid ${colors.main}30`,
-                        borderRadius: '10px'
+                        border: `1.5px solid ${colors.main}30`,
+                        borderRadius: '0px'
                     }}>
                     <div
                         style={{

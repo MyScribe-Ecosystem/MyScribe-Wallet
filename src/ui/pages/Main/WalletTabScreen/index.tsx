@@ -72,23 +72,23 @@ import { OPNetList } from './OPNetList';
 import { getWalletHealthChecks, WalletHealthCheck } from './health';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
 
     btcOrange: '#e9983d',
 
-    buttonBorder: '#444746',
-    buttonBorderHover: '#f37413'
+    buttonBorder: '#2a4060',
+    buttonBorderHover: '#C49A3C'
 };
 
 export default function WalletTabScreen() {
@@ -348,7 +348,7 @@ export default function WalletTabScreen() {
                             padding: '5px 8px',
                             background: colors.buttonHoverBg,
                             border: 'none',
-                            borderRadius: '6px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             transition: 'all 0.15s',
                             maxWidth: '120px'
@@ -385,7 +385,7 @@ export default function WalletTabScreen() {
                             padding: '5px 8px',
                             background: colors.buttonHoverBg,
                             border: 'none',
-                            borderRadius: '6px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             transition: 'all 0.15s'
                         }}
@@ -410,8 +410,8 @@ export default function WalletTabScreen() {
                         <div
                             style={{
                                 background: `linear-gradient(135deg, ${colors.error}10 0%, ${colors.error}05 100%)`,
-                                border: `1px solid ${colors.error}30`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.error}30`,
+                                borderRadius: '0px',
                                 padding: '10px',
                                 marginBottom: '8px',
                                 display: 'flex',
@@ -461,8 +461,8 @@ export default function WalletTabScreen() {
                                 style={{
                                     padding: '4px 10px',
                                     background: colors.containerBgFaded,
-                                    border: `1px solid ${colors.containerBorder}`,
-                                    borderRadius: '20px',
+                                    border: `1.5px solid ${colors.containerBorder}`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     fontSize: '10px',
                                     fontWeight: 600,
@@ -498,9 +498,12 @@ export default function WalletTabScreen() {
                         style={{
                             position: 'relative',
                             margin: '-8px -12px -8px -12px',
-                            background: 'Linear-gradient(180deg, #2e2922 0%, rgba(0,0,0,0) 100%)'
+                            background: 'linear-gradient(180deg, #0d1f35 0%, #0A1628 100%)',
+                            border: '1.5px solid transparent',
+                            backgroundClip: 'padding-box',
+                            boxShadow: 'inset 0 0 0 1.5px rgba(196, 154, 60, 0.25), 0 0 20px rgba(196, 154, 60, 0.08), 0 0 40px rgba(196, 154, 60, 0.04)',
+                            animation: 'gold-border-glow 6s ease-in-out infinite'
                         }}>
-                        <ParticleField count={25} speed={0.22} />
                         {/*
                     <AddressBar
                         csv75_total_amount={accountBalance.csv75_total_amount}
@@ -534,7 +537,7 @@ export default function WalletTabScreen() {
                                     right: -30,
                                     width: 100,
                                     height: 100,
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     background: `radial-gradient(circle, ${colors.main}10 0%, transparent 70%)`,
                                     pointerEvents: 'none'
                                 }}
@@ -551,7 +554,7 @@ export default function WalletTabScreen() {
                                             <div
                                                 style={{
                                                     background: '#3b1111',
-                                                    borderRadius: '10px',
+                                                    borderRadius: '0px',
                                                     padding: '12px',
                                                     marginBottom: '12px',
                                                     maxWidth: '320px',
@@ -597,7 +600,7 @@ export default function WalletTabScreen() {
                                                         padding: '8px',
                                                         background: consolidateLoading ? colors.buttonBg : colors.error,
                                                         border: 'none',
-                                                        borderRadius: '8px',
+                                                        borderRadius: '0px',
                                                         cursor: consolidateLoading ? 'not-allowed' : 'pointer',
                                                         fontSize: '11px',
                                                         fontWeight: 600,
@@ -639,7 +642,7 @@ export default function WalletTabScreen() {
                                         <div
                                             style={{
                                                 background: bg,
-                                                borderRadius: '10px',
+                                                borderRadius: '0px',
                                                 padding: '12px',
                                                 marginBottom: '12px',
                                                 maxWidth: '320px',
@@ -680,7 +683,7 @@ export default function WalletTabScreen() {
                                                     padding: '8px',
                                                     background: consolidateLoading ? colors.buttonBg : accent,
                                                     border: 'none',
-                                                    borderRadius: '8px',
+                                                    borderRadius: '0px',
                                                     cursor: consolidateLoading ? 'not-allowed' : 'pointer',
                                                     fontSize: '11px',
                                                     fontWeight: 600,
@@ -707,8 +710,8 @@ export default function WalletTabScreen() {
                                             right: '8px',
                                             padding: '3px 9px',
                                             background: colors.containerBgFaded,
-                                            border: `1px solid ${colors.containerBorder}`,
-                                            borderRadius: '20px',
+                                            border: `1.5px solid ${colors.containerBorder}`,
+                                            borderRadius: '0px',
                                             cursor: 'pointer',
                                             fontSize: '9px',
                                             fontWeight: 600,
@@ -778,7 +781,7 @@ export default function WalletTabScreen() {
                                                     color: colors.btcOrange,
                                                     backgroundColor: 'rgba(233, 152, 61, 0.15)',
                                                     padding: '2px 6px',
-                                                    borderRadius: '6px',
+                                                    borderRadius: '0px',
                                                     textAlign: 'center',
                                                     fontWeight: 500
                                                 }}>
@@ -793,8 +796,8 @@ export default function WalletTabScreen() {
                                                     display: 'inline-flex',
                                                     alignItems: 'stretch',
                                                     background: colors.containerBgFaded,
-                                                    border: `1px solid ${colors.containerBorder}`,
-                                                    borderRadius: '10px',
+                                                    border: `1.5px solid ${colors.containerBorder}`,
+                                                    borderRadius: '0px',
                                                     overflow: 'hidden'
                                                 }}>
                                                 {/* MLDSA Key - only show if wallet is migrated */}
@@ -936,19 +939,13 @@ export default function WalletTabScreen() {
                                 }}
                             />
 
-                            {btcUnit !== 'BTC' ? (
+                            {btcUnit !== 'BTC' && (
                                 <ActionButton
                                     label="Faucet"
                                     icon={<ExperimentOutlined style={{ fontSize: 20, color: colors.text }} />}
                                     onClick={() => {
                                         window.open(faucetUrl || '', '_blank', 'noopener noreferrer');
                                     }}
-                                />
-                            ) : (
-                                <ActionButton
-                                    label="Deploy"
-                                    icon={<RocketOutlined style={{ fontSize: 20, color: colors.text }} />}
-                                    onClick={() => navigate(RouteTypes.DeployContract)}
                                 />
                             )}
 
@@ -969,8 +966,8 @@ export default function WalletTabScreen() {
                                     margin: '0 12px 12px',
                                     padding: '10px 14px',
                                     background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                                    border: `1px solid ${colors.main}30`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${colors.main}30`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -1008,8 +1005,8 @@ export default function WalletTabScreen() {
                                     margin: '0 12px 12px',
                                     padding: '10px 14px',
                                     background: `linear-gradient(135deg, ${colors.success}15 0%, ${colors.success}08 100%)`,
-                                    border: `1px solid ${colors.success}30`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${colors.success}30`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     display: 'flex',
                                     alignItems: 'center',

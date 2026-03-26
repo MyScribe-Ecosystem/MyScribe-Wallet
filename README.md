@@ -1,142 +1,65 @@
-# OP_WALLET
+# MyScribe Wallet
 
 ![Bitcoin](https://img.shields.io/badge/Bitcoin-000?style=for-the-badge&logo=bitcoin&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Chrome](https://img.shields.io/badge/Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
-![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=firefox&logoColor=white)
 
-<p align="center">
-  <a href="https://verichains.io">
-    <img src="https://img.shields.io/badge/Security%20Audit-Verichains-4C35E0?style=for-the-badge" alt="Audited by Verichains"/>
-  </a>
-</p>
+> A wallet built for legends.
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+## What is MyScribe Wallet?
 
-## Beta Notice
+MyScribe Wallet is an open-source, non-custodial Bitcoin browser extension built for consumers. It combines **OPNet smart contract** support with native **Ordinals inscription** browsing, all wrapped in a clean, distinctive UI.
 
-> **BETA SOFTWARE**: Wallet in active development. Expected bugs, missing features, and breaking changes. Release
-> candidate planned soon, stay tuned!
+MyScribe Wallet is a fork of [OP_WALLET](https://github.com/btc-vision/opwallet) with the following changes:
 
-## What is OPWallet?
+- **Ordinals restored & upgraded** — Inscriptions are fetched via `ordinals.com` + `mempool.space` (no Hiro dependency). Previews render inline using `ordinals.com/preview/{id}`.
+- **Consumer-focused** — Advanced developer features (contract deployment) stripped for a cleaner experience.
+- **MyScribe aesthetic** — Sharp 0px corner radius, gold gradient accents, visible container borders, and the MyScribe brand throughout.
+- **Version nag removed** — No more OP_WALLET update prompts.
 
-OPWallet is an open-source browser extension for OPNet and UTXO-based blockchains. It handles Bitcoin, Fractal,
-Dogecoin, Litecoin, and any UTXO chain you want to add via the power of opnet-node.
-
-It's built for people who want control over their wallet: custom RPCs, custom gateways, privacy features,
-quantum-resistant signatures, all configurable.
-
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/opnetbtc)
-[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/opnetbtc)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/opnet)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/maboroshi_btc)
+[![Website](https://img.shields.io/badge/MyScribe-C49A3C?style=for-the-badge&logo=data:image/svg+xml;base64,&logoColor=white)](https://myscribe.org)
 
 ## Features
 
-| Feature                   | OPWallet | UniSat       | OKX          | Xverse          | Leather | MetaMask      | Phantom |
-|---------------------------|----------|--------------|--------------|-----------------|---------|---------------|---------|
-| **Bitcoin Core**          |
-| Taproot                   | ✓        | ✓            | ✓            | ✓               | ✓       | Soon          | ✓       |
-| SegWit                    | ✓        | ✓            | ✓            | ✓               | ✓       | ✓             | ✓       |
-| Legacy                    | ✓        | ✓            | ✓            | ✓               | ✓       | ✗             | ✗       |
-| Testnet/Signet/Regtest    | ✓        | Testnet only | Testnet only | Testnet only    | ✗       | ✗             | ✗       |
-| Custom Networks           | ✓        | ✗            | ✗            | ✗               | ✗       | ✗             | ✗       |
-| Quantum Safe*             | ✓        | ✗            | ✗            | ✗               | ✗       | ✗             | ✗       |
-| **Features**              |
-| UTXO Management           | ✓        | ✓            | ✗            | ✗               | ✗       | ✗             | ✗       |
-| Address Rotation          | ✓        | ✗            | ✗            | ✗               | ✗       | ✗             | ✗       |
-| Custom RPC                | ✓        | ✗            | ✗            | ✗               | ✓       | ✗             | ✗       |
-| Fiat On-Ramp              | ✗        | ✓            | ✓            | ✓               | ✗       | ✓             | ✓       |
-| .btc Domains (see bellow) | ✓        | Centralized  | Centralized  | Centralized     | ✗       | ✗             | ✗       |
-| RBF Cancel                | ✓        | ✓            | ~            | ~               | ✗       | ✗             | ✗       |
-| Tx Visualization          | ✓        | ✗            | ✗            | ✗               | ✗       | ✗             | ✗       |
-| Accurate Tx Cost          | ✓        | ~            | ~            | ~               | ~       | ~             | ~       |
-| **Bitcoin Assets**        |
-| OPNet (L1)                | ✓        | ✗            | ✗            | ✗               | ✗       | ✗             | ✗       |
-| Ordinals (Centralized)    | ✗        | ✓            | ✓            | ✓               | ✓       | ✗             | ✓       |
-| Stacks (L2)               | ✗        | ✗            | ✗            | ✓               | ✓       | ✗             | ✗       |
-| **Multi-Chain**           |
-| Dogecoin                  | ✓        | ✗            | ✗            | ✗               | ✗       | ✗             | ✗       |
-| Litecoin                  | ✓        | ✗            | ✗            | ✗               | ✗       | ✗             | ✗       |
-| Ethereum/EVM              | ✗        | ✗            | ✓            | ✓               | ✗       | ✓             | ✓       |
-| Solana                    | ✗        | ✗            | ✓            | ✗               | ✗       | ✓             | ✓       |
-| **Security**              |
-| Open Source               | ✓        | ✓            | ✗            | ✗               | ✓       | ✓             | ✗       |
-| Hardware Wallet           | ✗        | Keystone     | Ledger       | Ledger/Keystone | Ledger  | Ledger/Trezor | Ledger  |
-| **Platforms**             |
-| Browser Extension         | ✓        | ✓            | ✓            | ✓               | ✓       | ✓             | ✓       |
-| Mobile                    | ✓        | ✓            | ✓            | ✓               | ✓       | ✓             | ✓       |
-
-*Quantum safe via address rotation prevents pubkey exposure
-
-*Decentralized .btc domain resolution. Xverse uses centralized ordinals indexer.
-
-The wallet supports Bitcoin across mainnet, testnet, testnet4, signet, and regtest alongside Fractal Bitcoin, Dogecoin,
-Litecoin, and any custom UTXO chain you configure. Privacy mode implements a hot/cold architecture with separate
-derivation paths, automatically rotating addresses after receiving funds while tracking rotation history and balances
-per address, with manual or automatic consolidation to cold storage without relying on mixing services.
-
-Quantum resistance for Bitcoin is achieved through address rotation. By never reusing addresses after receiving funds,
-public keys are never exposed on-chain, protecting against future quantum attacks on ECDSA. The wallet automatically
-rotates to fresh addresses and tracks rotation history with per-address balances. OPNet assets are quantum safe by
-default since your OPNet public key is ML-DSA, not Bitcoin, and is bound via ML-DSA hash. Once quantum computers become
-a threat, OPNet will enable strict security consensus rules that only allow ML-DSA signatures.
-
-Custom RPC endpoints work per network, and IPFS gateways include health monitoring, latency tracking, automatic
-failover, local node support with priority routing, and configurable cache TTL from one minute to one hour.
-
-OPNet integration covers smart contract deployment and interaction, OP20 tokens with transfer, approve, and mint
-operations, OP721 NFTs, .btc domain registration and resolution, human-readable decoding for MotoSwap and MotoChef
-transactions, and priority fee configuration.
-
-Wallet management handles HD wallets via BIP32, BIP39, BIP44, and BIP341, WIF private key imports, duplication detection
-for conflicting WIF or mnemonic keys, and encrypted backup exports with versioning.
-
-Transactions get full PSBT support, UTXO management and consolidation, RBF for cancellation, dynamic fee rate selection
-with bad fee detection warnings, accurate transaction cost calculation before sending, and change UTXO visibility
-showing
-exactly what returns to your wallet. The bowtie graph visualization lets you see your entire transaction before signing,
-displaying inputs on the left, outputs on the right, and the flow of funds between them so you know exactly what you are
-approving.
-
-Security features include per-site permission management, configurable auto-lock timers from five minutes to disabled,
-unconfirmed UTXO handling toggles, and risk assessment on transactions.
+| Feature | MyScribe Wallet |
+|---|---|
+| **Bitcoin** | Taproot, SegWit, Legacy |
+| **Networks** | Mainnet, Testnet, Signet, Regtest |
+| **Ordinals** | Browse inscriptions via ordinals.com |
+| **OPNet** | OP20 tokens, swaps, smart contract interaction |
+| **UTXO Management** | Consolidation, visualization, RBF cancel |
+| **Address Rotation** | Quantum-resistant via non-reuse |
+| **Custom RPC** | Per-network endpoint configuration |
+| **IPFS Gateways** | Health monitoring, failover, local node support |
+| **Security** | Per-site permissions, auto-lock, risk assessment |
+| **Open Source** | Apache-2.0 |
 
 ## Installation
 
 ### Manual Install
 
-1. Download from [GitHub Releases](https://github.com/btc-vision/opwallet/releases)
+1. Download or build from source (see below)
 2. Unzip
-3. Load in browser:
 
 **Chrome / Brave / Edge / Opera:**
 
 1. Go to `chrome://extensions/` (or equivalent)
 2. Enable Developer Mode
 3. Click Load unpacked
-4. Select folder
+4. Select the `dist/chrome` folder
 
-**Firefox:**
-
-1. Go to `about:debugging#/runtime/this-firefox`
-2. Click Load Temporary Add-on
-3. Select `manifest.json`
-
-## Build from Source
+### Build from Source
 
 ```bash
-git clone https://github.com/btc-vision/opwallet.git
-cd opwallet
+git clone https://github.com/bitbragi/MyScribe-Wallet.git
+cd MyScribe-Wallet
 npm install
 
-# Build
+# Build for Chrome
 npm run build:chrome
-npm run build:firefox
-npm run build:brave
-npm run build:edge
-npm run build:opera
 
 # Dev with hot reload
 npm run dev:chrome
@@ -144,25 +67,13 @@ npm run dev:chrome
 
 Requires Node.js 24+.
 
-## Security Audit
+## Upstream
 
-<p>
-  <a href="https://verichains.io">
-    <img src="https://raw.githubusercontent.com/btc-vision/contract-logo/refs/heads/main/public-assets/verichains.png" alt="Verichains" width="100"/>
-  </a>
-</p>
-
-| Component | Status             | Auditor                             |
-|-----------|--------------------|-------------------------------------|
-| OPWallet  | Completed (v1.5.x) | [Verichains](https://verichains.io) |
+MyScribe Wallet is built on top of [OP_WALLET](https://github.com/btc-vision/opwallet), which was audited by [Verichains](https://verichains.io). MyScribe-specific changes have not been independently audited.
 
 ### Vulnerabilities
 
-**DO NOT** open public issues for security bugs.
-
-Report via [GitHub Security Advisories](https://github.com/btc-vision/opwallet/security/advisories/new).
-
-See [SECURITY.md](SECURITY.md).
+**DO NOT** open public issues for security bugs. Report via [GitHub Security Advisories](https://github.com/bitbragi/MyScribe-Wallet/security/advisories/new).
 
 ## Contributing
 
@@ -178,6 +89,6 @@ See [SECURITY.md](SECURITY.md).
 
 ## Links
 
+- [MyScribe](https://myscribe.org)
 - [OPNet](https://opnet.org)
-- [Docs](https://docs.opnet.org)
-- [GitHub](https://github.com/btc-vision/opwallet)
+- [GitHub](https://github.com/bitbragi/MyScribe-Wallet)

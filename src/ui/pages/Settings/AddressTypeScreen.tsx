@@ -15,15 +15,15 @@ import { Address } from '@btc-vision/transaction';
 import { RouteTypes, useNavigate } from '../routeTypes';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -71,8 +71,8 @@ function AddressTypeItem({ label, address, assets, checked, description, btcUnit
                     : isHovered
                       ? colors.buttonBg
                       : colors.buttonHoverBg,
-                border: `1px solid ${checked ? colors.main : colors.containerBorder}`,
-                borderRadius: '12px',
+                border: `1.5px solid ${checked ? colors.main : colors.containerBorder}`,
+                borderRadius: '0px',
                 padding: '12px',
                 marginBottom: '8px',
                 cursor: 'pointer',
@@ -96,7 +96,7 @@ function AddressTypeItem({ label, address, assets, checked, description, btcUnit
                         width: '36px',
                         height: '36px',
                         minWidth: '36px',
-                        borderRadius: '8px',
+                        borderRadius: '0px',
                         background: checked ? `${colors.main}20` : colors.containerBgFaded,
                         display: 'flex',
                         alignItems: 'center',
@@ -118,7 +118,7 @@ function AddressTypeItem({ label, address, assets, checked, description, btcUnit
                                 fontSize: 12,
                                 color: colors.main,
                                 background: colors.background,
-                                borderRadius: '50%'
+                                borderRadius: '0px'
                             }}
                         />
                     )}
@@ -160,7 +160,7 @@ function AddressTypeItem({ label, address, assets, checked, description, btcUnit
                                 style={{
                                     padding: '2px 6px',
                                     background: colors.main,
-                                    borderRadius: '4px',
+                                    borderRadius: '0px',
                                     fontSize: '9px',
                                     color: colors.background,
                                     fontWeight: 600,
@@ -186,7 +186,7 @@ function AddressTypeItem({ label, address, assets, checked, description, btcUnit
                                 padding: '3px 6px',
                                 background: colors.containerBgFaded,
                                 border: 'none',
-                                borderRadius: '4px',
+                                borderRadius: '0px',
                                 cursor: 'pointer',
                                 transition: 'all 0.15s'
                             }}
@@ -235,7 +235,7 @@ function AddressTypeItem({ label, address, assets, checked, description, btcUnit
                                     style={{
                                         padding: '1px 4px',
                                         background: `${colors.success}20`,
-                                        borderRadius: '3px',
+                                        borderRadius: '0px',
                                         fontSize: '8px',
                                         color: colors.success,
                                         fontWeight: 600,
@@ -475,7 +475,7 @@ export default function AddressTypeScreen() {
                                 marginTop: '16px',
                                 padding: '12px 24px',
                                 backgroundColor: colors.main,
-                                borderRadius: '8px',
+                                borderRadius: '0px',
                                 cursor: 'pointer'
                             }}
                             onClick={() => navigate(RouteTypes.QuantumMigrationScreen)}>
@@ -502,8 +502,8 @@ export default function AddressTypeScreen() {
                     style={{
                         width: '100%',
                         background: `linear-gradient(135deg, ${colors.main}10 0%, ${colors.main}05 100%)`,
-                        border: `1px solid ${colors.main}30`,
-                        borderRadius: '10px',
+                        border: `1.5px solid ${colors.main}30`,
+                        borderRadius: '0px',
                         padding: '10px',
                         marginBottom: '12px',
                         display: 'flex',

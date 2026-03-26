@@ -5,15 +5,15 @@ import { DollarOutlined, PictureOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030'
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060'
 };
 
 export enum ImportType {
@@ -37,8 +37,8 @@ function ImportOption({ type, icon, title, description, isHovered, onHover, onSe
             style={{
                 width: '100%',
                 background: colors.containerBgFaded,
-                border: `1px solid ${isHovered ? colors.main : colors.containerBorder}`,
-                borderRadius: '14px',
+                border: `1.5px solid ${isHovered ? colors.main : colors.containerBorder}`,
+                borderRadius: '0px',
                 padding: '20px',
                 cursor: 'pointer',
                 transition: 'all 0.2s',
@@ -56,7 +56,7 @@ function ImportOption({ type, icon, title, description, isHovered, onHover, onSe
                     width: '48px',
                     height: '48px',
                     background: colors.main,
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

@@ -21,14 +21,14 @@ import { ChangePriorityFee } from './SignInteraction/ChangePriorityFee';
 const APPROVAL_TIMEOUT_SECONDS = 120; // 2 minutes
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    buttonBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80'
 };
 
@@ -373,8 +373,8 @@ export default function SignInteraction(props: Props) {
                         gap: '4px',
                         padding: '4px 8px',
                         background: timeRemaining <= 30 ? '#ef444420' : colors.containerBgFaded,
-                        border: `1px solid ${timeRemaining <= 30 ? '#ef4444' : colors.containerBorder}`,
-                        borderRadius: '6px',
+                        border: `1.5px solid ${timeRemaining <= 30 ? '#ef4444' : colors.containerBorder}`,
+                        borderRadius: '0px',
                         zIndex: 10
                     }}>
                     <ClockCircleOutlined
@@ -401,7 +401,7 @@ export default function SignInteraction(props: Props) {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         padding: '12px',
                         marginBottom: '12px'
                     }}>
@@ -433,7 +433,7 @@ export default function SignInteraction(props: Props) {
                             style={{
                                 padding: '8px',
                                 background: colors.inputBg,
-                                borderRadius: '8px',
+                                borderRadius: '0px',
                                 fontSize: '12px',
                                 color: colors.text,
                                 fontFamily: 'monospace',
@@ -497,7 +497,7 @@ export default function SignInteraction(props: Props) {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         padding: '12px',
                         marginBottom: '12px'
                     }}>
@@ -525,7 +525,7 @@ export default function SignInteraction(props: Props) {
                             alignItems: 'center',
                             padding: '8px',
                             background: colors.inputBg,
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             marginBottom: '8px'
                         }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -556,7 +556,7 @@ export default function SignInteraction(props: Props) {
                             alignItems: 'center',
                             padding: '8px',
                             background: colors.inputBg,
-                            borderRadius: '8px'
+                            borderRadius: '0px'
                         }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                             <span style={{ fontSize: '12px', color: colors.text }}>Fee Rate</span>
@@ -583,8 +583,8 @@ export default function SignInteraction(props: Props) {
                 <div
                     style={{
                         background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                        border: `1px solid ${colors.main}30`,
-                        borderRadius: '12px',
+                        border: `1.5px solid ${colors.main}30`,
+                        borderRadius: '0px',
                         padding: '12px',
                         marginBottom: '12px'
                     }}>
@@ -629,8 +629,8 @@ export default function SignInteraction(props: Props) {
                             style={{
                                 padding: '8px 10px',
                                 background: `${colors.success}10`,
-                                border: `1px solid ${colors.success}25`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.success}25`,
+                                borderRadius: '0px',
                                 marginBottom: outputAnalysis.externalOutputs.length > 0 ? '8px' : '0'
                             }}>
                             <div style={{ fontSize: '10px', color: colors.textFaded, marginBottom: '4px' }}>
@@ -669,8 +669,8 @@ export default function SignInteraction(props: Props) {
                             style={{
                                 padding: '8px 10px',
                                 background: '#fbbf2415',
-                                border: '1px solid #fbbf2430',
-                                borderRadius: '8px'
+                                border: '1.5px solid #fbbf2430',
+                                borderRadius: '0px'
                             }}>
                             <div
                                 style={{
@@ -725,7 +725,7 @@ export default function SignInteraction(props: Props) {
                         onClick={handleCancel}
                         style={{
                             background: colors.buttonBg,
-                            border: `1px solid ${colors.containerBorder}`,
+                            border: `1.5px solid ${colors.containerBorder}`,
                             color: colors.text
                         }}
                     />

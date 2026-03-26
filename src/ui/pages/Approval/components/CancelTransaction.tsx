@@ -183,7 +183,7 @@ export default function CancelTransaction(props: Props) {
                     <Card
                         style={{
                             borderColor: colors.warning,
-                            borderWidth: 1,
+                            borderWidth: 1.5,
                             borderStyle: 'solid',
                             backgroundColor: 'rgba(243, 116, 19, 0.1)' // orange with low opacity
                         }}>
@@ -215,7 +215,7 @@ export default function CancelTransaction(props: Props) {
                                         fontFamily: 'monospace',
                                         padding: 8,
                                         backgroundColor: colors.black,
-                                        borderRadius: 4,
+                                        borderRadius: 0,
                                         color: colors.text
                                     }}>
                                     {`0x${formatHexString(targetScript)}`}

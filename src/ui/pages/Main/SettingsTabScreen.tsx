@@ -39,15 +39,15 @@ import { Popover } from '@/ui/components/Popover';
 import { SwitchChainModal } from '../Settings/network/SwitchChainModal';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -278,7 +278,7 @@ export default function SettingsTabScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             overflow: 'hidden',
                             marginBottom: '16px'
                         }}>
@@ -308,7 +308,7 @@ export default function SettingsTabScreen() {
                                     style={{
                                         width: '36px',
                                         height: '36px',
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         background: colors.buttonHoverBg,
                                         display: 'flex',
                                         alignItems: 'center',
@@ -378,7 +378,7 @@ export default function SettingsTabScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             overflow: 'hidden',
                             marginBottom: '16px'
                         }}>
@@ -418,7 +418,7 @@ export default function SettingsTabScreen() {
                                 style={{
                                     width: '36px',
                                     height: '36px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: colors.buttonHoverBg,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -469,7 +469,7 @@ export default function SettingsTabScreen() {
                                 style={{
                                     width: '44px',
                                     height: '24px',
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     background: utxoProtectionDisabled ? colors.buttonBg : colors.success,
                                     position: 'relative',
                                     transition: 'background 0.2s',
@@ -479,7 +479,7 @@ export default function SettingsTabScreen() {
                                     style={{
                                         width: '20px',
                                         height: '20px',
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         background: colors.text,
                                         position: 'absolute',
                                         top: '2px',
@@ -511,8 +511,8 @@ export default function SettingsTabScreen() {
                                 style={{
                                     padding: '12px',
                                     background: item.danger ? `${colors.error}15` : colors.buttonHoverBg,
-                                    border: `1px solid ${item.danger ? `${colors.error}40` : colors.containerBorder}`,
-                                    borderRadius: '12px',
+                                    border: `1.5px solid ${item.danger ? `${colors.error}40` : colors.containerBorder}`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     transition: 'all 0.15s',
                                     display: 'flex',
@@ -573,7 +573,7 @@ export default function SettingsTabScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 overflow: 'hidden'
                             }}>
                             <div
@@ -595,7 +595,7 @@ export default function SettingsTabScreen() {
                                     style={{
                                         width: '36px',
                                         height: '36px',
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         background: colors.buttonHoverBg,
                                         display: 'flex',
                                         alignItems: 'center',
@@ -640,7 +640,7 @@ export default function SettingsTabScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             padding: '16px',
                             textAlign: 'center',
                             marginBottom: '16px'
@@ -669,7 +669,7 @@ export default function SettingsTabScreen() {
                                 style={{
                                     width: '40px',
                                     height: '40px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: colors.buttonHoverBg,
                                     border: 'none',
                                     cursor: 'pointer',
@@ -694,7 +694,7 @@ export default function SettingsTabScreen() {
                                 style={{
                                     width: '40px',
                                     height: '40px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: colors.buttonHoverBg,
                                     border: 'none',
                                     cursor: 'pointer',
@@ -719,7 +719,7 @@ export default function SettingsTabScreen() {
                                 style={{
                                     width: '40px',
                                     height: '40px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: colors.buttonHoverBg,
                                     border: 'none',
                                     cursor: 'pointer',
@@ -757,8 +757,8 @@ export default function SettingsTabScreen() {
                                     marginTop: '8px',
                                     padding: '6px 12px',
                                     background: `${colors.warning}20`,
-                                    border: `1px solid ${colors.warning}40`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.warning}40`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     transition: 'all 0.15s'
                                 }}
@@ -816,9 +816,9 @@ export default function SettingsTabScreen() {
                                     lineHeight: '1.6',
                                     marginBottom: '12px',
                                     background: `${colors.error}10`,
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     padding: '12px',
-                                    border: `1px solid ${colors.error}30`
+                                    border: `1.5px solid ${colors.error}30`
                                 }}>
                                 <strong style={{ color: colors.error }}>WARNING:</strong> This will allow OPWallet to
                                 spend UTXOs under 1,000 sat. If any of those UTXOs contain ordinals or inscriptions,
@@ -841,8 +841,8 @@ export default function SettingsTabScreen() {
                                     style={{
                                         width: '100%',
                                         padding: '10px',
-                                        borderRadius: '8px',
-                                        border: `1px solid ${utxoConfirmText === 'DISABLE' ? colors.error : '#444'}`,
+                                        borderRadius: '0px',
+                                        border: `1.5px solid ${utxoConfirmText === 'DISABLE' ? colors.error : '#444'}`,
                                         background: '#222',
                                         color: colors.text,
                                         fontSize: '14px',
@@ -863,8 +863,8 @@ export default function SettingsTabScreen() {
                                     style={{
                                         flex: 1,
                                         padding: '12px',
-                                        borderRadius: '10px',
-                                        border: `1px solid ${colors.success}60`,
+                                        borderRadius: '0px',
+                                        border: `1.5px solid ${colors.success}60`,
                                         background: `${colors.success}15`,
                                         color: colors.success,
                                         fontSize: '13px',
@@ -891,8 +891,8 @@ export default function SettingsTabScreen() {
                                     style={{
                                         flex: 1,
                                         padding: '12px',
-                                        borderRadius: '10px',
-                                        border: `1px solid ${utxoConfirmText === 'DISABLE' ? colors.error + '60' : '#333'}`,
+                                        borderRadius: '0px',
+                                        border: `1.5px solid ${utxoConfirmText === 'DISABLE' ? colors.error + '60' : '#333'}`,
                                         background: utxoConfirmText === 'DISABLE' ? `${colors.error}15` : 'transparent',
                                         color: utxoConfirmText === 'DISABLE' ? colors.error : '#555',
                                         fontSize: '13px',

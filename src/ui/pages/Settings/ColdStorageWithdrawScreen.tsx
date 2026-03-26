@@ -16,13 +16,13 @@ import { Action, SendBitcoinParameters, SourceType } from '@/shared/interfaces/R
 import { BitcoinUtils } from 'opnet';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
@@ -152,8 +152,8 @@ export default function ColdStorageWithdrawScreen() {
                     <div
                         style={{
                             background: `linear-gradient(145deg, ${colors.coldBlue}15 0%, ${colors.coldBlue}08 100%)`,
-                            border: `1px solid ${colors.coldBlue}30`,
-                            borderRadius: '14px',
+                            border: `1.5px solid ${colors.coldBlue}30`,
+                            borderRadius: '0px',
                             padding: '16px'
                         }}>
                         <Row style={{ alignItems: 'center', gap: 12, marginBottom: 12 }}>
@@ -219,8 +219,8 @@ export default function ColdStorageWithdrawScreen() {
                         <div
                             style={{
                                 background: `${colors.error}15`,
-                                border: `1px solid ${colors.error}40`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.error}40`,
+                                borderRadius: '0px',
                                 padding: '10px 12px'
                             }}>
                             <Text text={error} style={{ color: colors.error, fontSize: 12 }} />
@@ -231,8 +231,8 @@ export default function ColdStorageWithdrawScreen() {
                     <div
                         style={{
                             background: `${colors.warning}10`,
-                            border: `1px solid ${colors.warning}30`,
-                            borderRadius: '10px',
+                            border: `1.5px solid ${colors.warning}30`,
+                            borderRadius: '0px',
                             padding: '10px 12px',
                             display: 'flex',
                             alignItems: 'flex-start',

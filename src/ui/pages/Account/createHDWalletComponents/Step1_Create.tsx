@@ -11,13 +11,13 @@ import {
 } from '@ant-design/icons';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -59,9 +59,9 @@ export function Step1_Create({
             <div
                 style={{
                     background: colors.containerBgFaded,
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     padding: '12px',
-                    border: `1px solid ${colors.containerBorder}`
+                    border: `1.5px solid ${colors.containerBorder}`
                 }}>
                 <div
                     style={{
@@ -76,10 +76,10 @@ export function Step1_Create({
                                 display: 'flex',
                                 alignItems: 'center',
                                 background: colors.inputBg,
-                                borderRadius: '8px',
+                                borderRadius: '0px',
                                 padding: '0 10px',
                                 height: '36px',
-                                border: `1px solid ${colors.containerBorder}`,
+                                border: `1.5px solid ${colors.containerBorder}`,
                                 minWidth: 0
                             }}>
                             <span
@@ -118,7 +118,7 @@ export function Step1_Create({
                         padding: '8px',
                         background: 'transparent',
                         border: `1px dashed ${colors.containerBorder}`,
-                        borderRadius: '8px',
+                        borderRadius: '0px',
                         cursor: 'pointer',
                         color: copied ? colors.success : colors.textFaded,
                         fontSize: '12px',
@@ -142,8 +142,8 @@ export function Step1_Create({
                     gap: '8px',
                     padding: '10px 12px',
                     background: `${colors.warning}10`,
-                    border: `1px solid ${colors.warning}25`,
-                    borderRadius: '10px'
+                    border: `1.5px solid ${colors.warning}25`,
+                    borderRadius: '0px'
                 }}>
                 <WarningOutlined style={{ fontSize: 14, color: colors.warning, marginTop: '1px', flexShrink: 0 }} />
                 <span style={{ fontSize: '11px', color: colors.textFaded, lineHeight: '1.5' }}>
@@ -160,8 +160,8 @@ export function Step1_Create({
                     gap: '10px',
                     padding: '12px',
                     background: checked ? `${colors.success}10` : colors.containerBgFaded,
-                    borderRadius: '10px',
-                    border: `1px solid ${checked ? colors.success + '30' : colors.containerBorder}`,
+                    borderRadius: '0px',
+                    border: `1.5px solid ${checked ? colors.success + '30' : colors.containerBorder}`,
                     cursor: 'pointer',
                     transition: 'all 0.15s'
                 }}>
@@ -196,9 +196,9 @@ export function Step1_Create({
                 style={{
                     width: '100%',
                     padding: '14px',
-                    background: !checked ? '#434343' : colors.main,
+                    background: !checked ? '#1a3050' : colors.main,
                     border: 'none',
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     color: !checked ? colors.textFaded : colors.background,
                     fontSize: '14px',
                     fontWeight: 600,

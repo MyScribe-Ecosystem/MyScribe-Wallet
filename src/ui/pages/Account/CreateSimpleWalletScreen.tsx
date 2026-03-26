@@ -30,16 +30,16 @@ const EXPECTED_QUANTUM_KEY_BYTES = MLDSA_CONFIG.privateKeySize;
 const EXPECTED_QUANTUM_KEY_HEX_CHARS = EXPECTED_QUANTUM_KEY_BYTES * 2;
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -143,7 +143,7 @@ function Step1({ updateContextData }: { updateContextData: (params: UpdateContex
                     style={{
                         width: '60px',
                         height: '60px',
-                        borderRadius: '50%',
+                        borderRadius: '0px',
                         background: `linear-gradient(135deg, ${colors.main}20 0%, ${colors.main}10 100%)`,
                         display: 'flex',
                         alignItems: 'center',
@@ -191,7 +191,7 @@ function Step1({ updateContextData }: { updateContextData: (params: UpdateContex
                                 padding: '2px 8px',
                                 background: `${colors.main}20`,
                                 color: colors.main,
-                                borderRadius: '4px',
+                                borderRadius: '0px',
                                 fontWeight: 600
                             }}>
                             {inputType === 'hex' ? 'HEX Format' : 'WIF Format'}
@@ -205,8 +205,8 @@ function Step1({ updateContextData }: { updateContextData: (params: UpdateContex
                         minHeight: '100px',
                         padding: '12px',
                         background: colors.inputBg,
-                        border: `1px solid ${colors.containerBorder}`,
-                        borderRadius: '10px',
+                        border: `1.5px solid ${colors.containerBorder}`,
+                        borderRadius: '0px',
                         color: colors.text,
                         fontSize: '13px',
                         fontFamily: 'monospace',
@@ -238,7 +238,7 @@ function Step1({ updateContextData }: { updateContextData: (params: UpdateContex
             <div
                 style={{
                     background: colors.containerBgFaded,
-                    borderRadius: '10px',
+                    borderRadius: '0px',
                     padding: '12px'
                 }}>
                 <div
@@ -268,7 +268,7 @@ function Step1({ updateContextData }: { updateContextData: (params: UpdateContex
                                 padding: '1px 4px',
                                 background: `${colors.main}20`,
                                 color: colors.main,
-                                borderRadius: '3px',
+                                borderRadius: '0px',
                                 fontSize: '10px',
                                 fontWeight: 600
                             }}>
@@ -289,7 +289,7 @@ function Step1({ updateContextData }: { updateContextData: (params: UpdateContex
                                 padding: '1px 4px',
                                 background: `${colors.main}20`,
                                 color: colors.main,
-                                borderRadius: '3px',
+                                borderRadius: '0px',
                                 fontSize: '10px',
                                 fontWeight: 600
                             }}>
@@ -307,7 +307,7 @@ function Step1({ updateContextData }: { updateContextData: (params: UpdateContex
                     padding: '14px',
                     background: disabled ? colors.buttonBg : colors.main,
                     border: 'none',
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     color: disabled ? colors.textFaded : colors.background,
                     fontSize: '14px',
                     fontWeight: 600,
@@ -454,7 +454,7 @@ function Step2({
                     style={{
                         width: '60px',
                         height: '60px',
-                        borderRadius: '50%',
+                        borderRadius: '0px',
                         background: `linear-gradient(135deg, ${colors.main}20 0%, ${colors.main}10 100%)`,
                         display: 'flex',
                         alignItems: 'center',
@@ -480,7 +480,7 @@ function Step2({
             <div
                 style={{
                     background: colors.containerBgFaded,
-                    borderRadius: '14px',
+                    borderRadius: '0px',
                     padding: '8px'
                 }}>
                 {hdPathOptions.map((item, index) => {
@@ -518,7 +518,7 @@ function Step2({
                     padding: '14px',
                     background: colors.main,
                     border: 'none',
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     color: colors.background,
                     fontSize: '14px',
                     fontWeight: 600,
@@ -768,7 +768,7 @@ function Step3({
                     style={{
                         width: '60px',
                         height: '60px',
-                        borderRadius: '50%',
+                        borderRadius: '0px',
                         background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%)',
                         display: 'flex',
                         alignItems: 'center',
@@ -795,8 +795,8 @@ function Step3({
                 <div
                     style={{
                         background: 'rgba(139, 92, 246, 0.1)',
-                        border: '1px solid rgba(139, 92, 246, 0.3)',
-                        borderRadius: '10px',
+                        border: '1.5px solid rgba(139, 92, 246, 0.3)',
+                        borderRadius: '0px',
                         padding: '12px'
                     }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
@@ -815,7 +815,7 @@ function Step3({
                                     marginTop: '8px',
                                     padding: '8px',
                                     background: 'rgba(0, 0, 0, 0.2)',
-                                    borderRadius: '6px',
+                                    borderRadius: '0px',
                                     fontFamily: 'monospace',
                                     fontSize: '10px',
                                     wordBreak: 'break-all',
@@ -833,8 +833,8 @@ function Step3({
                 <div
                     style={{
                         background: 'rgba(139, 92, 246, 0.1)',
-                        border: '1px solid rgba(139, 92, 246, 0.3)',
-                        borderRadius: '10px',
+                        border: '1.5px solid rgba(139, 92, 246, 0.3)',
+                        borderRadius: '0px',
                         padding: '12px'
                     }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
@@ -855,7 +855,7 @@ function Step3({
                         style={{
                             background: colors.containerBgFaded,
                             border: `2px solid ${onChainLinkedKey ? colors.main : colors.containerBorder}`,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '16px',
                             cursor: 'pointer',
                             transition: 'all 0.2s'
@@ -874,7 +874,7 @@ function Step3({
                                 style={{
                                     width: '40px',
                                     height: '40px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: `${colors.main}20`,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -901,7 +901,7 @@ function Step3({
                             style={{
                                 background: colors.containerBgFaded,
                                 border: `2px solid ${colors.containerBorder}`,
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 padding: '16px',
                                 cursor: 'pointer',
                                 transition: 'all 0.2s'
@@ -920,7 +920,7 @@ function Step3({
                                     style={{
                                         width: '40px',
                                         height: '40px',
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         background: 'rgba(139, 92, 246, 0.2)',
                                         display: 'flex',
                                         alignItems: 'center',
@@ -945,7 +945,7 @@ function Step3({
                         <div
                             style={{
                                 background: 'rgba(0, 0, 0, 0.2)',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 padding: '12px'
                             }}>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
@@ -968,8 +968,8 @@ function Step3({
                     <div
                         style={{
                             background: 'rgba(74, 222, 128, 0.1)',
-                            border: '1px solid rgba(74, 222, 128, 0.3)',
-                            borderRadius: '10px',
+                            border: '1.5px solid rgba(74, 222, 128, 0.3)',
+                            borderRadius: '0px',
                             padding: '12px'
                         }}>
                         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
@@ -999,7 +999,7 @@ function Step3({
                                 padding: '14px',
                                 background: colors.buttonBg,
                                 border: 'none',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -1017,7 +1017,7 @@ function Step3({
                                 padding: '14px',
                                 background: '#8B5CF6',
                                 border: 'none',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 color: '#fff',
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -1057,7 +1057,7 @@ function Step3({
                                 border: quantumKeyError
                                     ? `1px solid ${colors.error}`
                                     : `1px solid ${colors.containerBorder}`,
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '11px',
                                 fontFamily: 'monospace',
@@ -1094,7 +1094,7 @@ function Step3({
                             style={{
                                 background: 'rgba(139, 92, 246, 0.05)',
                                 border: '1px dashed rgba(139, 92, 246, 0.3)',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 padding: '12px',
                                 textAlign: 'center'
                             }}>
@@ -1105,8 +1105,8 @@ function Step3({
                                 style={{
                                     padding: '8px 16px',
                                     background: 'rgba(139, 92, 246, 0.2)',
-                                    border: '1px solid rgba(139, 92, 246, 0.4)',
-                                    borderRadius: '8px',
+                                    border: '1.5px solid rgba(139, 92, 246, 0.4)',
+                                    borderRadius: '0px',
                                     color: '#8B5CF6',
                                     fontSize: '12px',
                                     fontWeight: 600,
@@ -1129,7 +1129,7 @@ function Step3({
                                 padding: '14px',
                                 background: colors.buttonBg,
                                 border: 'none',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -1147,7 +1147,7 @@ function Step3({
                                 padding: '14px',
                                 background: colors.main,
                                 border: 'none',
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 color: colors.background,
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -1320,13 +1320,13 @@ export default function CreateSimpleWalletScreen() {
                                         style={{
                                             width: '24px',
                                             height: '24px',
-                                            borderRadius: '50%',
+                                            borderRadius: '0px',
                                             background: isActive
                                                 ? colors.main
                                                 : isCompleted
                                                   ? colors.success
                                                   : colors.buttonHoverBg,
-                                            border: `1px solid ${
+                                            border: `1.5px solid ${
                                                 isActive
                                                     ? colors.main
                                                     : isCompleted

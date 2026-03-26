@@ -6,12 +6,12 @@ import { TransactionsCount } from '@/ui/pages/Main/WalletTabScreen/components/Tr
 import { CloseOutlined } from '@ant-design/icons';
 
 const colors = {
-    main: '#f37413',
+    main: '#C49A3C',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBorder: '#303030',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
@@ -53,7 +53,7 @@ export function BalanceDetailPopup({
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     background: '#1a1a1a',
-                    borderRadius: '16px',
+                    borderRadius: '0px',
                     width: '90%',
                     maxWidth: '360px',
                     maxHeight: '80vh',

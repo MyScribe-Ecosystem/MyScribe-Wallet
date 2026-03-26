@@ -13,15 +13,15 @@ import { Address } from '@btc-vision/transaction';
 import React, { useEffect, useState } from 'react';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     error: '#e74c3c'
 };
 
@@ -251,7 +251,7 @@ export default function NFTTabScreen() {
                                             height: '80px',
                                             background: colors.containerBg,
                                             border: `2px dashed ${colors.containerBorder}`,
-                                            borderRadius: '20px',
+                                            borderRadius: '0px',
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'center',
@@ -280,9 +280,9 @@ export default function NFTTabScreen() {
                                 <Row
                                     justifyBetween
                                     style={{
-                                        background: '#313131',
-                                        borderTop: `1px solid #444746`,
-                                        borderBottom: `1px solid #444746`,
+                                        background: '#152a45',
+                                        borderTop: `1px solid #2a4060`,
+                                        borderBottom: `1px solid #2a4060`,
                                         padding: '12px',
                                         display: 'flex',
                                         alignItems: 'center',
@@ -302,7 +302,7 @@ export default function NFTTabScreen() {
                                                 padding: '6px 12px',
                                                 background: colors.main,
                                                 border: 'none',
-                                                borderRadius: '6px',
+                                                borderRadius: '0px',
                                                 color: colors.background,
                                                 fontSize: '12px',
                                                 fontWeight: 600,
@@ -360,7 +360,7 @@ export default function NFTTabScreen() {
                         <Row
                             justifyBetween
                             style={{
-                                borderBottom: '1px solid #444746',
+                                borderBottom: '1px solid #2a4060',
                                 padding: '12px',
                                 background: 'rgb(49, 49, 49)'
                             }}>
@@ -409,8 +409,8 @@ function CollectionCard({
             style={{
                 aspectRatio: '1',
                 background: colors.containerBgFaded,
-                border: `1px solid ${colors.containerBorder}`,
-                borderRadius: '12px',
+                border: `1.5px solid ${colors.containerBorder}`,
+                borderRadius: '0px',
                 overflow: 'hidden',
                 cursor: 'pointer',
                 position: 'relative',
@@ -452,10 +452,10 @@ function CollectionCard({
                     right: '6px',
                     width: '24px',
                     height: '24px',
-                    borderRadius: '50%',
+                    borderRadius: '0px',
                     background: 'rgba(0, 0, 0, 0.7)',
                     backdropFilter: 'blur(4px)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    border: '1.5px solid rgba(255, 255, 255, 0.2)',
                     color: 'white',
                     fontSize: '12px',
                     display: 'flex',
@@ -499,7 +499,7 @@ function CollectionCard({
                             color: 'rgba(255, 255, 255, 0.9)',
                             background: 'rgba(0, 0, 0, 0.5)',
                             padding: '2px 6px',
-                            borderRadius: '4px'
+                            borderRadius: '0px'
                         }}>
                         {ownedCount !== undefined ? `${ownedCount} owned` : 'Loading...'}
                     </span>
@@ -546,7 +546,7 @@ function CollectionHeader({ collection }: { collection: NFTCollection }) {
                     left: 0,
                     right: 0,
                     padding: '12px',
-                    background: 'linear-gradient(to top, #212121 0%, transparent 100%)',
+                    background: 'linear-gradient(to top, #0A1628 0%, transparent 100%)',
                     color: 'white',
                     zIndex: 1,
                     borderBottom: '1px solid rgb(68, 71, 70)'
@@ -561,7 +561,7 @@ function CollectionHeader({ collection }: { collection: NFTCollection }) {
                             style={{
                                 width: '48px',
                                 height: '48px',
-                                borderRadius: '50%',
+                                borderRadius: '0px',
                                 border: '2px solid white'
                             }}
                         />
@@ -582,9 +582,9 @@ function CollectionHeader({ collection }: { collection: NFTCollection }) {
                     position: 'absolute',
                     top: '10px',
                     right: '10px',
-                    background: '#212121',
-                    borderRadius: '5px',
-                    border: '1px solid #444746',
+                    background: '#0A1628',
+                    borderRadius: '0px',
+                    border: '1.5px solid #2a4060',
                     color: 'white',
                     padding: '3px 7px'
                 }}>
@@ -626,8 +626,8 @@ function NFTCard({ nft, onClick }: { nft: OwnedNFT; onClick: () => void }) {
         <div
             style={{
                 background: colors.containerBgFaded,
-                border: `1px solid #444746`,
-                borderRadius: '12px',
+                border: `1.5px solid #2a4060`,
+                borderRadius: '0px',
                 overflow: 'hidden',
                 cursor: 'pointer',
                 transition: 'all 0.2s'
@@ -677,13 +677,13 @@ function NFTCard({ nft, onClick }: { nft: OwnedNFT; onClick: () => void }) {
                             alignItems: 'center',
                             justifyContent: 'center',
                             fontSize: '48px',
-                            background: '#212121'
+                            background: '#0A1628'
                         }}>
                         ❓
                     </div>
                 )}
             </div>
-            <div style={{ padding: '8px', background: '#212121' }}>
+            <div style={{ padding: '8px', background: '#0A1628' }}>
                 <div style={{ fontSize: '12px', fontWeight: 600, color: colors.text }}>
                     {metadata?.name || `#${nft.tokenId}`}
                 </div>

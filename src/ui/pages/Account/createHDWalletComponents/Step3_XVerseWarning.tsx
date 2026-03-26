@@ -20,7 +20,7 @@ const colors = {
     cardBg: 'rgba(255, 255, 255, 0.03)',
     cardBorder: 'rgba(255, 255, 255, 0.06)',
     divider: 'rgba(255, 255, 255, 0.06)',
-    main: '#f37413'
+    main: '#C49A3C'
 };
 
 export function Step3_XVerseWarning({
@@ -69,8 +69,8 @@ export function Step3_XVerseWarning({
                 style={{
                     padding: '14px 16px',
                     background: `linear-gradient(135deg, ${colors.warningBg} 0%, rgba(245, 158, 11, 0.02) 100%)`,
-                    borderRadius: '12px',
-                    border: `1px solid ${colors.warningBorder}`,
+                    borderRadius: '0px',
+                    border: `1.5px solid ${colors.warningBorder}`,
                     display: 'flex',
                     alignItems: 'center',
                     gap: '12px'
@@ -79,7 +79,7 @@ export function Step3_XVerseWarning({
                     style={{
                         width: '36px',
                         height: '36px',
-                        borderRadius: '10px',
+                        borderRadius: '0px',
                         background: 'rgba(245, 158, 11, 0.12)',
                         display: 'flex',
                         alignItems: 'center',
@@ -103,8 +103,8 @@ export function Step3_XVerseWarning({
                 style={{
                     padding: '16px',
                     background: `linear-gradient(135deg, ${colors.cardBg} 0%, rgba(255,255,255,0.01) 100%)`,
-                    borderRadius: '12px',
-                    border: `1px solid ${colors.cardBorder}`,
+                    borderRadius: '0px',
+                    border: `1.5px solid ${colors.cardBorder}`,
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '14px'
@@ -119,9 +119,9 @@ export function Step3_XVerseWarning({
                             style={{
                                 width: '22px',
                                 height: '22px',
-                                borderRadius: '6px',
+                                borderRadius: '0px',
                                 background: `${colors.main}18`,
-                                border: `1px solid ${colors.main}30`,
+                                border: `1.5px solid ${colors.main}30`,
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -142,9 +142,9 @@ export function Step3_XVerseWarning({
                             style={{
                                 width: '22px',
                                 height: '22px',
-                                borderRadius: '6px',
+                                borderRadius: '0px',
                                 background: `${colors.main}18`,
-                                border: `1px solid ${colors.main}30`,
+                                border: `1.5px solid ${colors.main}30`,
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -168,7 +168,7 @@ export function Step3_XVerseWarning({
                     style={{
                         padding: '10px 12px',
                         background: 'rgba(245, 158, 11, 0.06)',
-                        borderRadius: '8px',
+                        borderRadius: '0px',
                         borderLeft: '3px solid rgba(245, 158, 11, 0.4)'
                     }}>
                     <div
@@ -192,8 +192,8 @@ export function Step3_XVerseWarning({
                 style={{
                     padding: '16px',
                     background: `linear-gradient(135deg, ${colors.infoBg} 0%, rgba(96, 165, 250, 0.02) 100%)`,
-                    borderRadius: '12px',
-                    border: `1px solid ${colors.infoBorder}`,
+                    borderRadius: '0px',
+                    border: `1.5px solid ${colors.infoBorder}`,
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '12px'
@@ -233,8 +233,8 @@ export function Step3_XVerseWarning({
                 style={{
                     padding: '12px 14px',
                     background: 'rgba(255, 255, 255, 0.02)',
-                    borderRadius: '10px',
-                    border: `1px solid ${colors.divider}`
+                    borderRadius: '0px',
+                    border: `1.5px solid ${colors.divider}`
                 }}>
                 <div
                     style={{

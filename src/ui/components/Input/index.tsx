@@ -54,7 +54,7 @@ const $baseContainerStyle: CSSProperties = {
     paddingRight: 15.2,
     paddingTop: 11,
     paddingBottom: 11,
-    borderRadius: 5,
+    borderRadius: 0,
     minHeight: '46.5px',
     alignSelf: 'stretch'
 };

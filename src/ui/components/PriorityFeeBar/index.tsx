@@ -61,7 +61,7 @@ export function PriorityFeeBar({
                             style={{
                                 cursor: readonly ? 'default' : 'pointer',
                                 padding: '6px 10px',
-                                borderRadius: 6,
+                                borderRadius: 0,
                                 minWidth: 70
                             }}
                             onClick={() => pick(idx)}>

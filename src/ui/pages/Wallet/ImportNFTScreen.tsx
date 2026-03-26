@@ -10,16 +10,16 @@ import { AddressTypes, AddressVerificator } from '@btc-vision/transaction';
 import { useEffect, useState } from 'react';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444'
 };
@@ -177,7 +177,7 @@ export default function ImportNFTScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px'
                         }}>
                         <div
@@ -200,8 +200,8 @@ export default function ImportNFTScreen() {
                             onChange={(e) => handleAddressChange(e.target.value)}
                             style={{
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px'
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px'
                             }}
                         />
                     </div>
@@ -220,9 +220,9 @@ export default function ImportNFTScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 padding: '16px',
-                                border: `1px solid ${colors.main}30`
+                                border: `1.5px solid ${colors.main}30`
                             }}>
                             <div style={{ display: 'flex', gap: '12px', marginBottom: '12px' }}>
                                 <div
@@ -230,7 +230,7 @@ export default function ImportNFTScreen() {
                                         width: '64px',
                                         height: '64px',
                                         background: colors.main,
-                                        borderRadius: '12px',
+                                        borderRadius: '0px',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
@@ -279,8 +279,8 @@ export default function ImportNFTScreen() {
                             style={{
                                 padding: '12px',
                                 background: `${colors.error}15`,
-                                border: `1px solid ${colors.error}30`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.error}30`,
+                                borderRadius: '0px',
                                 textAlign: 'center'
                             }}>
                             <span style={{ fontSize: '12px', color: colors.error }}>{error}</span>
@@ -293,7 +293,7 @@ export default function ImportNFTScreen() {
                             padding: '14px',
                             background: collectionInfo && !loading ? colors.main : colors.buttonBg,
                             border: 'none',
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             color: collectionInfo && !loading ? colors.background : colors.textFaded,
                             fontSize: '14px',
                             fontWeight: 600,

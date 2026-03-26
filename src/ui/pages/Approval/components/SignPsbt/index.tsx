@@ -505,7 +505,7 @@ export default function SignPsbt({
                                 <Text
                                     text="RBF"
                                     color="white"
-                                    style={{ backgroundColor: 'green', padding: 5, borderRadius: 5 }}
+                                    style={{ backgroundColor: 'green', padding: 5, borderRadius: 0 }}
                                 />
                             ) : (
                                 <Text
@@ -514,7 +514,7 @@ export default function SignPsbt({
                                     style={{
                                         backgroundColor: '#F55454',
                                         padding: 5,
-                                        borderRadius: 5,
+                                        borderRadius: 0,
                                         textDecoration: 'line-through'
                                     }}
                                 />
@@ -571,9 +571,9 @@ export default function SignPsbt({
                                                                     {isToSign && (
                                                                         <Row
                                                                             style={{
-                                                                                borderWidth: 1,
+                                                                                borderWidth: 1.5,
                                                                                 borderColor: 'gold',
-                                                                                borderRadius: 5,
+                                                                                borderRadius: 0,
                                                                                 padding: 2
                                                                             }}>
                                                                             <Text

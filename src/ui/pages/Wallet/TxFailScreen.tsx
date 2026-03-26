@@ -29,7 +29,7 @@ export default function TxFailScreen() {
                                             color: colors.red,
                                             backgroundColor: 'rgba(225, 45, 53, 0.1)',
                                             padding: 5,
-                                            borderRadius: 7
+                                            borderRadius: 0
                                         }}
                                         text="The recipient's public key was not found. Please provide their public key directly to proceed with the transaction."
                                         textCenter
@@ -44,7 +44,7 @@ export default function TxFailScreen() {
                                             color: colors.red,
                                             backgroundColor: 'rgba(225, 45, 53, 0.1)',
                                             padding: 5,
-                                            borderRadius: 7
+                                            borderRadius: 0
                                         }}
                                         text="Please re-import the token, this token was previously imported using an old version of the wallet."
                                         textCenter
@@ -59,7 +59,7 @@ export default function TxFailScreen() {
                                             color: colors.red,
                                             backgroundColor: 'rgba(225, 45, 53, 0.1)',
                                             padding: 5,
-                                            borderRadius: 7
+                                            borderRadius: 0
                                         }}
                                         text={line}
                                         textCenter

@@ -30,15 +30,15 @@ import {
 import { usePrivacyModeEnabled } from '@/ui/hooks/useAppConfig';
 
 const colors = {
-    main: '#f37413',
-    mainGradient: 'linear-gradient(135deg, #f37413 0%, #ff8c42 100%)',
-    background: '#212121',
+    main: '#C49A3C',
+    mainGradient: 'linear-gradient(135deg, #C49A3C 0%, #ff8c42 100%)',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
@@ -181,8 +181,8 @@ export default function AddressRotationScreen() {
                         <div
                             style={{
                                 background: `linear-gradient(135deg, ${colors.warning}15 0%, ${colors.warning}08 100%)`,
-                                border: `1px solid ${colors.warning}40`,
-                                borderRadius: '14px',
+                                border: `1.5px solid ${colors.warning}40`,
+                                borderRadius: '0px',
                                 padding: '20px',
                                 textAlign: 'center'
                             }}>
@@ -209,8 +209,8 @@ export default function AddressRotationScreen() {
                         <div
                             style={{
                                 background: `linear-gradient(135deg, ${colors.warning}15 0%, ${colors.warning}08 100%)`,
-                                border: `1px solid ${colors.warning}40`,
-                                borderRadius: '14px',
+                                border: `1.5px solid ${colors.warning}40`,
+                                borderRadius: '0px',
                                 padding: '20px',
                                 textAlign: 'center'
                             }}>
@@ -237,7 +237,7 @@ export default function AddressRotationScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '20px',
                                 textAlign: 'center'
                             }}>
@@ -245,7 +245,7 @@ export default function AddressRotationScreen() {
                                 style={{
                                     width: 80,
                                     height: 80,
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     background: colors.mainGradient,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -262,7 +262,7 @@ export default function AddressRotationScreen() {
                             />
                         </div>
 
-                        <div style={{ background: colors.containerBgFaded, borderRadius: '14px', overflow: 'hidden' }}>
+                        <div style={{ background: colors.containerBgFaded, borderRadius: '0px', overflow: 'hidden' }}>
                             <FeatureItem
                                 icon={<ThunderboltOutlined style={{ color: colors.hotOrange }} />}
                                 title="Auto-Rotating Addresses"
@@ -308,7 +308,7 @@ export default function AddressRotationScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '16px',
+                            borderRadius: '0px',
                             padding: '20px',
                             textAlign: 'center'
                         }}>
@@ -324,7 +324,7 @@ export default function AddressRotationScreen() {
                             style={{
                                 background: 'white',
                                 padding: 12,
-                                borderRadius: 12,
+                                borderRadius: 0,
                                 display: 'inline-block',
                                 marginBottom: 16
                             }}>
@@ -335,7 +335,7 @@ export default function AddressRotationScreen() {
                             onClick={handleCopyAddress}
                             style={{
                                 background: colors.buttonHoverBg,
-                                borderRadius: 10,
+                                borderRadius: 0,
                                 padding: '10px 14px',
                                 cursor: 'pointer',
                                 display: 'flex',
@@ -373,8 +373,8 @@ export default function AddressRotationScreen() {
                     <div
                         style={{
                             background: `linear-gradient(145deg, ${colors.coldBlue}15 0%, ${colors.coldBlue}08 100%)`,
-                            border: `1px solid ${colors.coldBlue}30`,
-                            borderRadius: '14px',
+                            border: `1.5px solid ${colors.coldBlue}30`,
+                            borderRadius: '0px',
                             padding: '14px'
                         }}>
                         <Row style={{ alignItems: 'center', gap: 12 }}>
@@ -382,7 +382,7 @@ export default function AddressRotationScreen() {
                                 style={{
                                     width: 40,
                                     height: 40,
-                                    borderRadius: 10,
+                                    borderRadius: 0,
                                     background: `${colors.coldBlue}20`,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -417,7 +417,7 @@ export default function AddressRotationScreen() {
                                 onClick={handleCopyColdAddress}
                                 style={{
                                     background: colors.buttonHoverBg,
-                                    borderRadius: 8,
+                                    borderRadius: 0,
                                     padding: '8px 10px',
                                     cursor: 'pointer',
                                     display: 'flex',
@@ -451,7 +451,7 @@ export default function AddressRotationScreen() {
                         />
                     </div>
 
-                    <div style={{ background: colors.containerBgFaded, borderRadius: '12px', overflow: 'hidden' }}>
+                    <div style={{ background: colors.containerBgFaded, borderRadius: '0px', overflow: 'hidden' }}>
                         <ActionRow
                             icon={<HistoryOutlined style={{ color: colors.main }} />}
                             title="View History"
@@ -482,7 +482,7 @@ export default function AddressRotationScreen() {
                             style={{
                                 marginTop: 8,
                                 background: 'transparent',
-                                border: `1px solid ${colors.error}40`,
+                                border: `1.5px solid ${colors.error}40`,
                                 color: colors.error,
                                 fontSize: 13
                             }}
@@ -518,7 +518,7 @@ function FeatureItem({
                 style={{
                     width: 36,
                     height: 36,
-                    borderRadius: 10,
+                    borderRadius: 0,
                     background: colors.buttonHoverBg,
                     display: 'flex',
                     alignItems: 'center',
@@ -537,7 +537,7 @@ function FeatureItem({
 
 function StatCard({ label, value, sub }: { label: string; value: string; sub: string }) {
     return (
-        <div style={{ background: colors.containerBgFaded, borderRadius: 10, padding: 12 }}>
+        <div style={{ background: colors.containerBgFaded, borderRadius: 0, padding: 12 }}>
             <Text text={label} style={{ fontSize: 10, color: colors.textFaded }} />
             <Text text={value} style={{ fontSize: 16, fontWeight: 600, marginTop: 2 }} />
             <Text text={sub} style={{ fontSize: 9, color: colors.textFaded, marginTop: 1 }} />
@@ -582,7 +582,7 @@ function ActionRow({
                 style={{
                     width: 32,
                     height: 32,
-                    borderRadius: 8,
+                    borderRadius: 0,
                     background: colors.buttonHoverBg,
                     display: 'flex',
                     alignItems: 'center',
@@ -600,7 +600,7 @@ function ActionRow({
                     style={{
                         width: 40,
                         height: 22,
-                        borderRadius: 11,
+                        borderRadius: 0,
                         background: toggleValue ? colors.main : colors.buttonBg,
                         padding: 2
                     }}>
@@ -608,7 +608,7 @@ function ActionRow({
                         style={{
                             width: 18,
                             height: 18,
-                            borderRadius: 9,
+                            borderRadius: 0,
                             background: 'white',
                             transform: toggleValue ? 'translateX(18px)' : 'translateX(0)',
                             transition: 'transform 0.2s'

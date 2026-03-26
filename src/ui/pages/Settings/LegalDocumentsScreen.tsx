@@ -9,14 +9,14 @@ import { FileTextOutlined, SafetyCertificateOutlined } from '@ant-design/icons';
 type DocKey = 'tos' | 'privacy';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030'
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060'
 };
 
 export default function LegalDocumentsScreen() {
@@ -67,8 +67,8 @@ export default function LegalDocumentsScreen() {
             callout: {
                 ...baseText,
                 background: 'rgba(243,116,19,0.08)',
-                border: '1px solid rgba(243,116,19,0.2)',
-                borderRadius: 8,
+                border: '1.5px solid rgba(243,116,19,0.2)',
+                borderRadius: 0,
                 padding: '10px 14px',
                 margin: '10px 0',
                 fontSize: 12
@@ -109,7 +109,7 @@ export default function LegalDocumentsScreen() {
                         gap: 6,
                         padding: '4px',
                         background: colors.containerBgFaded,
-                        borderRadius: 12,
+                        borderRadius: 0,
                         marginBottom: 10
                     }}>
                     <button
@@ -122,7 +122,7 @@ export default function LegalDocumentsScreen() {
                             justifyContent: 'center',
                             gap: 6,
                             padding: '10px 12px',
-                            borderRadius: 10,
+                            borderRadius: 0,
                             border: 'none',
                             cursor: 'pointer',
                             transition: 'all 0.2s',
@@ -145,7 +145,7 @@ export default function LegalDocumentsScreen() {
                             justifyContent: 'center',
                             gap: 6,
                             padding: '10px 12px',
-                            borderRadius: 10,
+                            borderRadius: 0,
                             border: 'none',
                             cursor: 'pointer',
                             transition: 'all 0.2s',
@@ -167,9 +167,9 @@ export default function LegalDocumentsScreen() {
                         flex: 1,
                         overflow: 'auto',
                         background: colors.containerBgFaded,
-                        borderRadius: 12,
+                        borderRadius: 0,
                         padding: '14px 16px',
-                        border: `1px solid ${colors.containerBorder}`
+                        border: `1.5px solid ${colors.containerBorder}`
                     }}>
                     {activeDoc === 'tos' ? (
                         <TermsText effectiveDate={TOS_LAST_UPDATE} styles={legalDocStyles} />

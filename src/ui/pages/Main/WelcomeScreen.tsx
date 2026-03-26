@@ -36,7 +36,7 @@ export default function WelcomeScreen() {
                     </div>
 
                     <div className="welcome__description">
-                        Manage tokens and interact with apps on the OP_NET Bitcoin L1 Metaprotocol.
+                        Manage your onchain identity, Ordinals inscriptions, & OPNet programmable assets.
                     </div>
 
                     <div className="welcome__actions">

@@ -21,15 +21,15 @@ import { useLocationState } from '@/ui/utils';
 import { RouteTypes, useNavigate } from '../routeTypes';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     warning: '#fbbf24'
 };
@@ -235,13 +235,13 @@ export default function CreateHDWalletScreen() {
                                         style={{
                                             width: '24px',
                                             height: '24px',
-                                            borderRadius: '50%',
+                                            borderRadius: '0px',
                                             background: isActive
                                                 ? colors.main
                                                 : isCompleted
                                                   ? colors.success
                                                   : colors.buttonHoverBg,
-                                            border: `1px solid ${
+                                            border: `1.5px solid ${
                                                 isActive
                                                     ? colors.main
                                                     : isCompleted

@@ -15,14 +15,14 @@ import { WifExportWarningModal } from '@/ui/components/WifExportWarningModal';
 import { copyToClipboard, useLocationState, useWallet } from '@/ui/utils';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
-    buttonBg: '#434343',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
+    buttonBg: '#1a3050',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
@@ -47,8 +47,8 @@ function CopyableKey({ label, value, onCopy }: { label: string; value: string; o
                     gap: '8px',
                     padding: '10px 12px',
                     background: colors.inputBg,
-                    borderRadius: '8px',
-                    border: `1px solid ${colors.containerBorder}`,
+                    borderRadius: '0px',
+                    border: `1.5px solid ${colors.containerBorder}`,
                     cursor: 'pointer',
                     transition: 'all 0.15s'
                 }}
@@ -142,8 +142,8 @@ export default function ExportPrivateKeyScreen() {
                             <div
                                 style={{
                                     background: `${colors.error}10`,
-                                    border: `1px solid ${colors.error}30`,
-                                    borderRadius: '12px',
+                                    border: `1.5px solid ${colors.error}30`,
+                                    borderRadius: '0px',
                                     padding: '14px',
                                     marginBottom: '16px'
                                 }}>
@@ -164,8 +164,8 @@ export default function ExportPrivateKeyScreen() {
                                 <div
                                     style={{
                                         background: `${colors.main}10`,
-                                        border: `1px solid ${colors.main}30`,
-                                        borderRadius: '12px',
+                                        border: `1.5px solid ${colors.main}30`,
+                                        borderRadius: '0px',
                                         padding: '14px',
                                         marginBottom: '16px',
                                         display: 'flex',
@@ -220,8 +220,8 @@ export default function ExportPrivateKeyScreen() {
                                         width: '100%',
                                         padding: '12px 14px',
                                         background: colors.inputBg,
-                                        border: `1px solid ${error ? colors.error : colors.containerBorder}`,
-                                        borderRadius: '10px',
+                                        border: `1.5px solid ${error ? colors.error : colors.containerBorder}`,
+                                        borderRadius: '0px',
                                         color: colors.text,
                                         fontSize: '14px',
                                         outline: 'none',
@@ -252,7 +252,7 @@ export default function ExportPrivateKeyScreen() {
                                     padding: '14px',
                                     background: !password ? colors.buttonBg : colors.main,
                                     border: 'none',
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     color: !password ? colors.textFaded : colors.background,
                                     fontSize: '14px',
                                     fontWeight: 600,
@@ -281,9 +281,9 @@ export default function ExportPrivateKeyScreen() {
                             <div
                                 style={{
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     padding: '14px',
-                                    border: `1px solid ${colors.containerBorder}`,
+                                    border: `1.5px solid ${colors.containerBorder}`,
                                     marginBottom: '12px'
                                 }}>
                                 <div
@@ -308,8 +308,8 @@ export default function ExportPrivateKeyScreen() {
                                             gap: '8px',
                                             padding: '10px 12px',
                                             background: isSimpleKeyring ? `${colors.error}10` : `${colors.main}10`,
-                                            border: `1px solid ${isSimpleKeyring ? colors.error + '30' : colors.main + '30'}`,
-                                            borderRadius: '10px',
+                                            border: `1.5px solid ${isSimpleKeyring ? colors.error + '30' : colors.main + '30'}`,
+                                            borderRadius: '0px',
                                             marginBottom: '12px'
                                         }}>
                                         <WarningOutlined
@@ -331,9 +331,9 @@ export default function ExportPrivateKeyScreen() {
                                     <div
                                         style={{
                                             background: colors.containerBgFaded,
-                                            borderRadius: '12px',
+                                            borderRadius: '0px',
                                             padding: '14px',
-                                            border: `1px solid ${colors.purple}30`
+                                            border: `1.5px solid ${colors.purple}30`
                                         }}>
                                         <div
                                             style={{

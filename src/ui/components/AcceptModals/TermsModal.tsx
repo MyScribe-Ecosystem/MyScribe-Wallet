@@ -171,8 +171,8 @@ export function TermsOfServiceModal({
             width: '100%',
             maxWidth: 360,
             height: 'calc(95vh)',
-            borderRadius: 16,
-            border: '1px solid rgba(255,255,255,0.10)',
+            borderRadius: 0,
+            border: '1.5px solid rgba(255,255,255,0.10)',
             background: 'rgba(30,30,30,0.98)',
             boxShadow: '0 18px 60px rgba(0,0,0,0.55)',
             display: 'flex',
@@ -223,8 +223,8 @@ export function TermsOfServiceModal({
 
         const docTab: CSSProperties = {
             flex: '1 1 0',
-            borderRadius: 12,
-            border: '1px solid rgba(255,255,255,0.12)',
+            borderRadius: 0,
+            border: '1.5px solid rgba(255,255,255,0.12)',
             background: 'rgba(255,255,255,0.03)',
             padding: '10px 10px',
             display: 'flex',
@@ -240,7 +240,7 @@ export function TermsOfServiceModal({
         };
 
         const docTabActive: CSSProperties = {
-            border: '1px solid rgba(147,197,253,0.35)',
+            border: '1.5px solid rgba(147,197,253,0.35)',
             background: 'rgba(147,197,253,0.08)',
         };
 
@@ -257,14 +257,14 @@ export function TermsOfServiceModal({
             justifyContent: 'center',
             width: 16,
             height: 16,
-            borderRadius: 6,
-            border: '1px solid rgba(255,255,255,0.16)',
+            borderRadius: 0,
+            border: '1.5px solid rgba(255,255,255,0.16)',
             background: 'rgba(0,0,0,0.20)',
             flex: '0 0 auto',
         };
 
         const tickOn: CSSProperties = {
-            border: '1px solid rgba(147,197,253,0.65)',
+            border: '1.5px solid rgba(147,197,253,0.65)',
             background: 'rgba(147,197,253,0.12)',
         };
 
@@ -326,8 +326,8 @@ export function TermsOfServiceModal({
         };
 
         const callout: CSSProperties = {
-            borderRadius: 14,
-            border: '1px solid rgba(255,255,255,0.12)',
+            borderRadius: 0,
+            border: '1.5px solid rgba(255,255,255,0.12)',
             background: 'rgba(0,0,0,0.24)',
             padding: '10px 12px',
             margin: '10px 0',
@@ -342,8 +342,8 @@ export function TermsOfServiceModal({
             bottom: 10,
             width: 36,
             height: 36,
-            borderRadius: 14,
-            border: '1px solid rgba(255,255,255,0.14)',
+            borderRadius: 0,
+            border: '1.5px solid rgba(255,255,255,0.14)',
             background: 'rgba(0,0,0,0.40)',
             color: 'rgba(255,255,255,0.90)',
             display: 'flex',
@@ -369,7 +369,7 @@ export function TermsOfServiceModal({
             alignItems: 'center',
             gap: 10,
             padding: '10px 10px',
-            borderRadius: 14,
+            borderRadius: 0,
             border: accepted ? '1px solid rgba(147,197,253,0.35)' : '1px solid rgba(255,255,255,0.12)',
             background: accepted ? 'rgba(147,197,253,0.08)' : 'rgba(255,255,255,0.03)',
             cursor: bothScrolled ? 'pointer' : 'not-allowed',
@@ -381,7 +381,7 @@ export function TermsOfServiceModal({
         const box: CSSProperties = {
             width: 14,
             height: 14,
-            borderRadius: 5,
+            borderRadius: 0,
             border: accepted ? '1px solid rgba(147,197,253,0.95)' : '1px solid rgba(255,255,255,0.25)',
             background: accepted ? 'rgba(147,197,253,0.22)' : 'rgba(0,0,0,0.20)',
             display: 'flex',

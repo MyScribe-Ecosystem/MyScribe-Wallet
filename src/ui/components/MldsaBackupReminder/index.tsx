@@ -6,15 +6,15 @@ import { useWallet } from '@/ui/utils';
 import { KeyOutlined, SafetyOutlined, WarningOutlined } from '@ant-design/icons';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -75,10 +75,10 @@ export const MldsaBackupReminder = ({ account, onClose }: MldsaBackupReminderPro
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     background: colors.containerBg,
-                    borderRadius: '16px',
+                    borderRadius: '0px',
                     width: '90%',
                     maxWidth: '340px',
-                    border: `1px solid ${colors.containerBorder}`,
+                    border: `1.5px solid ${colors.containerBorder}`,
                     boxShadow: '0 10px 40px rgba(0, 0, 0, 0.5)',
                     zIndex: 1000,
                     animation: 'slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
@@ -88,16 +88,16 @@ export const MldsaBackupReminder = ({ account, onClose }: MldsaBackupReminderPro
                     style={{
                         padding: '20px 20px 0',
                         background: `linear-gradient(135deg, ${colors.warning}15 0%, transparent 100%)`,
-                        borderRadius: '16px 16px 0 0'
+                        borderRadius: '0px'
                     }}>
                     {/* Warning Icon */}
                     <div
                         style={{
                             width: '56px',
                             height: '56px',
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             background: `linear-gradient(135deg, ${colors.warning}20 0%, ${colors.warning}10 100%)`,
-                            border: `1px solid ${colors.warning}30`,
+                            border: `1.5px solid ${colors.warning}30`,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -114,7 +114,7 @@ export const MldsaBackupReminder = ({ account, onClose }: MldsaBackupReminderPro
                             style={{
                                 position: 'absolute',
                                 inset: '-1px',
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '1px',
                                 background: `linear-gradient(135deg, ${colors.warning}40 0%, transparent 100%)`,
                                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
@@ -156,17 +156,17 @@ export const MldsaBackupReminder = ({ account, onClose }: MldsaBackupReminderPro
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '16px',
-                            border: `1px solid ${colors.containerBorder}`
+                            border: `1.5px solid ${colors.containerBorder}`
                         }}>
                         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                             <div
                                 style={{
                                     width: '36px',
                                     height: '36px',
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     background: `${colors.main}20`,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -211,8 +211,8 @@ export const MldsaBackupReminder = ({ account, onClose }: MldsaBackupReminderPro
                             gap: '8px',
                             padding: '10px',
                             background: `${colors.error}10`,
-                            border: `1px solid ${colors.error}25`,
-                            borderRadius: '10px',
+                            border: `1.5px solid ${colors.error}25`,
+                            borderRadius: '0px',
                             marginBottom: '20px'
                         }}>
                         <WarningOutlined
@@ -244,8 +244,8 @@ export const MldsaBackupReminder = ({ account, onClose }: MldsaBackupReminderPro
                                 flex: 1,
                                 padding: '12px',
                                 background: colors.buttonHoverBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '14px',
                                 fontWeight: 600,
@@ -273,7 +273,7 @@ export const MldsaBackupReminder = ({ account, onClose }: MldsaBackupReminderPro
                                 padding: '12px',
                                 background: colors.main,
                                 border: 'none',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 color: '#fff',
                                 fontSize: '14px',
                                 fontWeight: 600,

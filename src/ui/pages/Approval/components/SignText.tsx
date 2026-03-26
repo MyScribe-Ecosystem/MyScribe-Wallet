@@ -30,19 +30,19 @@ const quantum = {
 
 // Standard theme (non-quantum)
 const standard = {
-    main: '#f37413',
+    main: '#C49A3C',
     accent10: 'rgba(243, 116, 19, 0.10)',
     accent20: 'rgba(243, 116, 19, 0.20)',
     accent30: 'rgba(243, 116, 19, 0.30)'
 };
 
 const themeColors = {
-    background: '#212121',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     warning: '#fbbf24'
 };
 
@@ -182,8 +182,8 @@ export default function SignText({ params: { data, session } }: Props) {
                         background: isQuantum
                             ? `linear-gradient(135deg, ${quantum.glow15} 0%, ${quantum.glow06} 100%)`
                             : `linear-gradient(135deg, ${standard.main}10 0%, ${standard.main}05 100%)`,
-                        border: `1px solid ${isQuantum ? quantum.glow30 : `${standard.main}20`}`,
-                        borderRadius: 12,
+                        border: `1.5px solid ${isQuantum ? quantum.glow30 : `${standard.main}20`}`,
+                        borderRadius: 0,
                         padding: 16,
                         marginBottom: 12
                     }}>
@@ -195,7 +195,7 @@ export default function SignText({ params: { data, session } }: Props) {
                                 style={{
                                     width: 40,
                                     height: 40,
-                                    borderRadius: 10,
+                                    borderRadius: 0,
                                     objectFit: 'cover'
                                 }}
                                 onError={(e) => {
@@ -210,7 +210,7 @@ export default function SignText({ params: { data, session } }: Props) {
                             style={{
                                 width: 40,
                                 height: 40,
-                                borderRadius: 10,
+                                borderRadius: 0,
                                 background: accent,
                                 display: session.icon ? 'none' : 'flex',
                                 alignItems: 'center',
@@ -267,9 +267,9 @@ export default function SignText({ params: { data, session } }: Props) {
                                     alignItems: 'center',
                                     gap: 6,
                                     padding: '4px 12px',
-                                    borderRadius: 16,
+                                    borderRadius: 0,
                                     backgroundColor: quantum.glow15,
-                                    border: `1px solid ${quantum.glow40}`
+                                    border: `1.5px solid ${quantum.glow40}`
                                 }}>
                                 <SafetyCertificateOutlined style={{ fontSize: 11, color: quantum.primaryLight }} />
                                 <span style={{ fontSize: 11, fontWeight: 600, color: quantum.primaryLight }}>
@@ -288,9 +288,9 @@ export default function SignText({ params: { data, session } }: Props) {
                                     alignItems: 'center',
                                     gap: 6,
                                     padding: '4px 12px',
-                                    borderRadius: 16,
+                                    borderRadius: 0,
                                     backgroundColor: `${standard.main}20`,
-                                    border: `1px solid ${standard.main}40`
+                                    border: `1.5px solid ${standard.main}40`
                                 }}>
                                 <LockOutlined style={{ fontSize: 11, color: standard.main }} />
                                 <span style={{ fontSize: 12, fontWeight: 600, color: standard.main }}>
@@ -316,7 +316,7 @@ export default function SignText({ params: { data, session } }: Props) {
                             <div
                                 style={{
                                     background: themeColors.containerBgFaded,
-                                    borderRadius: 12,
+                                    borderRadius: 0,
                                     padding: 12,
                                     marginBottom: 12
                                 }}>
@@ -328,8 +328,8 @@ export default function SignText({ params: { data, session } }: Props) {
                                     style={{
                                         padding: 10,
                                         background: isQuantum ? quantum.glow06 : `${standard.main}08`,
-                                        border: `1px solid ${isQuantum ? quantum.glow20 : `${standard.main}15`}`,
-                                        borderRadius: 8
+                                        border: `1.5px solid ${isQuantum ? quantum.glow20 : `${standard.main}15`}`,
+                                        borderRadius: 0
                                     }}>
                                     <JSONDisplay obj={parsedMessage} accentColor={accent} />
                                 </div>
@@ -338,7 +338,7 @@ export default function SignText({ params: { data, session } }: Props) {
                             <div
                                 style={{
                                     background: themeColors.containerBgFaded,
-                                    borderRadius: 12,
+                                    borderRadius: 0,
                                     padding: 12,
                                     marginBottom: 12
                                 }}>
@@ -355,8 +355,8 @@ export default function SignText({ params: { data, session } }: Props) {
                                         wordBreak: 'break-word',
                                         padding: 10,
                                         background: themeColors.inputBg,
-                                        borderRadius: 8,
-                                        border: `1px solid ${themeColors.containerBorder}`,
+                                        borderRadius: 0,
+                                        border: `1.5px solid ${themeColors.containerBorder}`,
                                         fontSize: 13,
                                         color: themeColors.text,
                                         lineHeight: '1.6'
@@ -370,7 +370,7 @@ export default function SignText({ params: { data, session } }: Props) {
                         <div
                             style={{
                                 background: themeColors.containerBgFaded,
-                                borderRadius: 12,
+                                borderRadius: 0,
                                 padding: 12,
                                 marginBottom: 12
                             }}>
@@ -387,8 +387,8 @@ export default function SignText({ params: { data, session } }: Props) {
                                     wordBreak: 'break-word',
                                     padding: 10,
                                     background: themeColors.inputBg,
-                                    borderRadius: 8,
-                                    border: `1px solid ${themeColors.containerBorder}`,
+                                    borderRadius: 0,
+                                    border: `1.5px solid ${themeColors.containerBorder}`,
                                     fontFamily: 'monospace',
                                     fontSize: 13,
                                     lineHeight: '1.6',
@@ -403,8 +403,8 @@ export default function SignText({ params: { data, session } }: Props) {
                             style={{
                                 padding: '10px 12px',
                                 background: `${themeColors.warning}10`,
-                                border: `1px solid ${themeColors.warning}30`,
-                                borderRadius: 12,
+                                border: `1.5px solid ${themeColors.warning}30`,
+                                borderRadius: 0,
                                 marginBottom: 12
                             }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -427,8 +427,8 @@ export default function SignText({ params: { data, session } }: Props) {
                                 background: isQuantum
                                     ? `linear-gradient(135deg, ${quantum.glow15} 0%, ${quantum.glow06} 100%)`
                                     : `linear-gradient(135deg, ${standard.accent10} 0%, ${standard.main}05 100%)`,
-                                border: `1px solid ${isQuantum ? quantum.glow30 : standard.accent30}`,
-                                borderRadius: 12,
+                                border: `1.5px solid ${isQuantum ? quantum.glow30 : standard.accent30}`,
+                                borderRadius: 0,
                                 padding: 20,
                                 marginBottom: 12,
                                 textAlign: 'center'
@@ -462,7 +462,7 @@ export default function SignText({ params: { data, session } }: Props) {
                         <div
                             style={{
                                 background: themeColors.containerBgFaded,
-                                borderRadius: 12,
+                                borderRadius: 0,
                                 padding: 12,
                                 marginBottom: 12
                             }}>
@@ -483,8 +483,8 @@ export default function SignText({ params: { data, session } }: Props) {
                                     alignItems: 'center',
                                     padding: 10,
                                     background: themeColors.inputBg,
-                                    borderRadius: 8,
-                                    border: `1px solid ${themeColors.containerBorder}`
+                                    borderRadius: 0,
+                                    border: `1.5px solid ${themeColors.containerBorder}`
                                 }}>
                                 <span style={{ fontSize: 12, color: themeColors.textFaded }}>Signature Type</span>
                                 {isQuantum ? (
@@ -508,8 +508,8 @@ export default function SignText({ params: { data, session } }: Props) {
                                         alignItems: 'center',
                                         padding: 10,
                                         background: themeColors.inputBg,
-                                        borderRadius: 8,
-                                        border: `1px solid ${themeColors.containerBorder}`,
+                                        borderRadius: 0,
+                                        border: `1.5px solid ${themeColors.containerBorder}`,
                                         marginTop: 6
                                     }}>
                                     <span style={{ fontSize: 12, color: themeColors.textFaded }}>Security</span>
@@ -536,8 +536,8 @@ export default function SignText({ params: { data, session } }: Props) {
                                 preset="default"
                                 onClick={handleCancel}
                                 style={{
-                                    background: '#434343',
-                                    border: `1px solid ${themeColors.containerBorder}`,
+                                    background: '#1a3050',
+                                    border: `1.5px solid ${themeColors.containerBorder}`,
                                     color: themeColors.text
                                 }}
                             />
@@ -561,8 +561,8 @@ export default function SignText({ params: { data, session } }: Props) {
                                 preset="default"
                                 onClick={handleBack}
                                 style={{
-                                    background: '#434343',
-                                    border: `1px solid ${themeColors.containerBorder}`,
+                                    background: '#1a3050',
+                                    border: `1.5px solid ${themeColors.containerBorder}`,
                                     color: themeColors.text
                                 }}
                             />

@@ -93,11 +93,11 @@ const AccountSelect = ({ rightExtra }: AccountSelectProps) => {
                                     justifyContent: 'center',
                                     width: '18px',
                                     height: '18px',
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     backgroundColor: 'rgba(243, 116, 19, 0.2)',
                                     marginLeft: '4px'
                                 }}>
-                                <WarningOutlined style={{ fontSize: 10, color: '#f37413' }} />
+                                <WarningOutlined style={{ fontSize: 10, color: '#C49A3C' }} />
                             </span>
                         )}
                         <span

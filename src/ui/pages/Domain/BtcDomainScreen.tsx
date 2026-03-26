@@ -39,15 +39,15 @@ import { RouteTypes, useNavigate } from '../routeTypes';
 import { useBtcDomainsEnabled } from '@/ui/hooks/useAppConfig';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     inputBg: '#1a1a1a',
     success: '#4ade80',
     error: '#ef4444',
@@ -516,8 +516,8 @@ export default function BtcDomainScreen() {
                     <div
                         style={{
                             background: `linear-gradient(135deg, ${colors.warning}15 0%, ${colors.warning}08 100%)`,
-                            border: `1px solid ${colors.warning}40`,
-                            borderRadius: '14px',
+                            border: `1.5px solid ${colors.warning}40`,
+                            borderRadius: '0px',
                             padding: '20px',
                             textAlign: 'center'
                         }}>
@@ -546,7 +546,7 @@ export default function BtcDomainScreen() {
                         gap: '4px',
                         marginBottom: '20px',
                         background: colors.containerBgFaded,
-                        borderRadius: '10px',
+                        borderRadius: '0px',
                         padding: '4px'
                     }}>
                     <button
@@ -555,7 +555,7 @@ export default function BtcDomainScreen() {
                             flex: 1,
                             padding: '8px 4px',
                             border: 'none',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             fontSize: '11px',
                             fontWeight: 600,
@@ -571,7 +571,7 @@ export default function BtcDomainScreen() {
                             flex: 1,
                             padding: '8px 4px',
                             border: 'none',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             fontSize: '11px',
                             fontWeight: 600,
@@ -587,7 +587,7 @@ export default function BtcDomainScreen() {
                             flex: 1,
                             padding: '8px 4px',
                             border: 'none',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             fontSize: '11px',
                             fontWeight: 600,
@@ -603,7 +603,7 @@ export default function BtcDomainScreen() {
                             flex: 1,
                             padding: '8px 4px',
                             border: 'none',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             fontSize: '11px',
                             fontWeight: 600,
@@ -630,8 +630,8 @@ export default function BtcDomainScreen() {
                                         display: 'flex',
                                         alignItems: 'center',
                                         background: colors.inputBg,
-                                        borderRadius: '8px',
-                                        border: `1px solid ${colors.containerBorder}`,
+                                        borderRadius: '0px',
+                                        border: `1.5px solid ${colors.containerBorder}`,
                                         padding: '0 12px'
                                     }}>
                                     <input
@@ -659,7 +659,7 @@ export default function BtcDomainScreen() {
                                         padding: '12px 16px',
                                         background: colors.main,
                                         border: 'none',
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         cursor: isAddingDomain || !addDomainInput.trim() ? 'not-allowed' : 'pointer',
                                         opacity: isAddingDomain || !addDomainInput.trim() ? 0.5 : 1
                                     }}>
@@ -704,7 +704,7 @@ export default function BtcDomainScreen() {
                                     padding: '40px',
                                     color: colors.textFaded,
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px'
+                                    borderRadius: '0px'
                                 }}>
                                 <GlobalOutlined style={{ fontSize: 32, marginBottom: '12px', opacity: 0.5 }} />
                                 <div style={{ fontSize: '13px' }}>No domains tracked yet</div>
@@ -719,9 +719,9 @@ export default function BtcDomainScreen() {
                                         key={domain.name}
                                         style={{
                                             background: colors.containerBgFaded,
-                                            borderRadius: '10px',
+                                            borderRadius: '0px',
                                             padding: '12px 14px',
-                                            border: `1px solid ${domain.isOwner ? colors.success : colors.error}20`,
+                                            border: `1.5px solid ${domain.isOwner ? colors.success : colors.error}20`,
                                             display: 'flex',
                                             alignItems: 'center',
                                             gap: '12px'
@@ -730,7 +730,7 @@ export default function BtcDomainScreen() {
                                             style={{
                                                 width: '36px',
                                                 height: '36px',
-                                                borderRadius: '8px',
+                                                borderRadius: '0px',
                                                 background: domain.isOwner ? `${colors.success}15` : `${colors.error}15`,
                                                 display: 'flex',
                                                 alignItems: 'center',
@@ -769,7 +769,7 @@ export default function BtcDomainScreen() {
                                                     border: 'none',
                                                     cursor: 'pointer',
                                                     padding: '8px',
-                                                    borderRadius: '6px',
+                                                    borderRadius: '0px',
                                                     color: colors.main
                                                 }}>
                                                 <SwapOutlined />
@@ -808,8 +808,8 @@ export default function BtcDomainScreen() {
                                         display: 'flex',
                                         alignItems: 'center',
                                         background: colors.inputBg,
-                                        borderRadius: '8px',
-                                        border: `1px solid ${colors.containerBorder}`,
+                                        borderRadius: '0px',
+                                        border: `1.5px solid ${colors.containerBorder}`,
                                         padding: '0 12px'
                                     }}>
                                     <input
@@ -840,7 +840,7 @@ export default function BtcDomainScreen() {
                                         padding: '12px 16px',
                                         background: colors.main,
                                         border: 'none',
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         cursor: isCheckingDomain || !domainInput.trim() ? 'not-allowed' : 'pointer',
                                         opacity: isCheckingDomain || !domainInput.trim() ? 0.5 : 1
                                     }}>
@@ -858,10 +858,10 @@ export default function BtcDomainScreen() {
                             <div
                                 style={{
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     padding: '16px',
                                     marginBottom: '16px',
-                                    border: `1px solid ${domainInfo.exists ? colors.error : colors.success}30`
+                                    border: `1.5px solid ${domainInfo.exists ? colors.error : colors.success}30`
                                 }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
                                     {domainInfo.exists ? (
@@ -896,7 +896,7 @@ export default function BtcDomainScreen() {
                                                 alignItems: 'center',
                                                 padding: '12px',
                                                 background: colors.background,
-                                                borderRadius: '8px',
+                                                borderRadius: '0px',
                                                 marginBottom: '12px'
                                             }}>
                                             <span style={{ color: colors.textFaded, fontSize: '12px' }}>
@@ -920,7 +920,7 @@ export default function BtcDomainScreen() {
                                                 padding: '14px',
                                                 background: colors.main,
                                                 border: 'none',
-                                                borderRadius: '8px',
+                                                borderRadius: '0px',
                                                 cursor: 'pointer',
                                                 fontSize: '14px',
                                                 fontWeight: 600,
@@ -941,7 +941,7 @@ export default function BtcDomainScreen() {
                                         <div
                                             style={{
                                                 background: colors.inputBg,
-                                                borderRadius: '8px',
+                                                borderRadius: '0px',
                                                 padding: '10px 12px',
                                                 display: 'flex',
                                                 alignItems: 'center',
@@ -969,8 +969,8 @@ export default function BtcDomainScreen() {
                         <div
                             style={{
                                 background: `${colors.info}10`,
-                                border: `1px solid ${colors.info}30`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.info}30`,
+                                borderRadius: '0px',
                                 padding: '12px',
                                 fontSize: '11px',
                                 color: colors.textFaded,
@@ -998,8 +998,8 @@ export default function BtcDomainScreen() {
                                         display: 'flex',
                                         alignItems: 'center',
                                         background: colors.inputBg,
-                                        borderRadius: '8px',
-                                        border: `1px solid ${colors.containerBorder}`,
+                                        borderRadius: '0px',
+                                        border: `1.5px solid ${colors.containerBorder}`,
                                         padding: '0 12px'
                                     }}>
                                     <input
@@ -1027,7 +1027,7 @@ export default function BtcDomainScreen() {
                                         padding: '12px 16px',
                                         background: colors.main,
                                         border: 'none',
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         cursor: isCheckingPublishDomain || !publishDomain.trim() ? 'not-allowed' : 'pointer',
                                         opacity: isCheckingPublishDomain || !publishDomain.trim() ? 0.5 : 1
                                     }}>
@@ -1045,10 +1045,10 @@ export default function BtcDomainScreen() {
                             <div
                                 style={{
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     padding: '16px',
                                     marginBottom: '16px',
-                                    border: `1px solid ${publishDomainInfo.isOwner ? colors.success : colors.error}30`
+                                    border: `1.5px solid ${publishDomainInfo.isOwner ? colors.success : colors.error}30`
                                 }}>
                                 {!publishDomainInfo.exists ? (
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -1091,7 +1091,7 @@ export default function BtcDomainScreen() {
                                             padding: '24px',
                                             background: colors.inputBg,
                                             border: `2px dashed ${selectedFile ? colors.success : colors.containerBorder}`,
-                                            borderRadius: '12px',
+                                            borderRadius: '0px',
                                             cursor: 'pointer',
                                             transition: 'all 0.2s'
                                         }}>
@@ -1130,7 +1130,7 @@ export default function BtcDomainScreen() {
                                             padding: '14px',
                                             background: colors.info,
                                             border: 'none',
-                                            borderRadius: '8px',
+                                            borderRadius: '0px',
                                             cursor: isUploading ? 'not-allowed' : 'pointer',
                                             fontSize: '14px',
                                             fontWeight: 600,
@@ -1158,8 +1158,8 @@ export default function BtcDomainScreen() {
                                     <div
                                         style={{
                                             background: `${colors.success}15`,
-                                            border: `1px solid ${colors.success}30`,
-                                            borderRadius: '10px',
+                                            border: `1.5px solid ${colors.success}30`,
+                                            borderRadius: '0px',
                                             padding: '12px',
                                             marginBottom: '16px'
                                         }}>
@@ -1172,7 +1172,7 @@ export default function BtcDomainScreen() {
                                                 alignItems: 'center',
                                                 justifyContent: 'space-between',
                                                 background: colors.background,
-                                                borderRadius: '6px',
+                                                borderRadius: '0px',
                                                 padding: '8px 10px'
                                             }}>
                                             <code style={{ fontSize: '10px', color: colors.text, fontFamily: 'monospace' }}>
@@ -1211,7 +1211,7 @@ export default function BtcDomainScreen() {
                                             padding: '14px',
                                             background: colors.main,
                                             border: 'none',
-                                            borderRadius: '8px',
+                                            borderRadius: '0px',
                                             cursor: 'pointer',
                                             fontSize: '14px',
                                             fontWeight: 600,
@@ -1235,7 +1235,7 @@ export default function BtcDomainScreen() {
                                         <div
                                             style={{
                                                 background: colors.inputBg,
-                                                borderRadius: '8px',
+                                                borderRadius: '0px',
                                                 padding: '10px 12px',
                                                 display: 'flex',
                                                 alignItems: 'center',
@@ -1263,8 +1263,8 @@ export default function BtcDomainScreen() {
                         <div
                             style={{
                                 background: `${colors.warning}10`,
-                                border: `1px solid ${colors.warning}30`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.warning}30`,
+                                borderRadius: '0px',
                                 padding: '12px',
                                 fontSize: '11px',
                                 color: colors.textFaded,
@@ -1301,15 +1301,15 @@ export default function BtcDomainScreen() {
                                             key={transfer.domainName}
                                             style={{
                                                 background: `${colors.warning}15`,
-                                                border: `1px solid ${colors.warning}30`,
-                                                borderRadius: '10px',
+                                                border: `1.5px solid ${colors.warning}30`,
+                                                borderRadius: '0px',
                                                 padding: '12px'
                                             }}>
                                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
                                                 <div style={{ fontWeight: 600, color: colors.text }}>
                                                     {transfer.domainName}.btc
                                                 </div>
-                                                <span style={{ fontSize: '10px', padding: '2px 8px', background: colors.warning, color: '#000', borderRadius: '4px', fontWeight: 600 }}>
+                                                <span style={{ fontSize: '10px', padding: '2px 8px', background: colors.warning, color: '#000', borderRadius: '0px', fontWeight: 600 }}>
                                                     PENDING
                                                 </span>
                                             </div>
@@ -1323,7 +1323,7 @@ export default function BtcDomainScreen() {
                                                     padding: '8px',
                                                     background: colors.error,
                                                     border: 'none',
-                                                    borderRadius: '6px',
+                                                    borderRadius: '0px',
                                                     cursor: 'pointer',
                                                     fontSize: '12px',
                                                     fontWeight: 600,
@@ -1359,8 +1359,8 @@ export default function BtcDomainScreen() {
                                             display: 'flex',
                                             alignItems: 'center',
                                             background: colors.inputBg,
-                                            borderRadius: '8px',
-                                            border: `1px solid ${colors.containerBorder}`,
+                                            borderRadius: '0px',
+                                            border: `1.5px solid ${colors.containerBorder}`,
                                             padding: '0 12px'
                                         }}>
                                         <input
@@ -1391,7 +1391,7 @@ export default function BtcDomainScreen() {
                                             padding: '10px 14px',
                                             background: colors.main,
                                             border: 'none',
-                                            borderRadius: '8px',
+                                            borderRadius: '0px',
                                             cursor: isCheckingTransferDomain || !transferDomainInput.trim() ? 'not-allowed' : 'pointer',
                                             opacity: isCheckingTransferDomain || !transferDomainInput.trim() ? 0.5 : 1
                                         }}>
@@ -1409,10 +1409,10 @@ export default function BtcDomainScreen() {
                                 <div
                                     style={{
                                         background: colors.containerBgFaded,
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         padding: '12px',
                                         marginBottom: '12px',
-                                        border: `1px solid ${transferDomainInfo.isOwner ? colors.success : colors.error}30`
+                                        border: `1.5px solid ${transferDomainInfo.isOwner ? colors.success : colors.error}30`
                                     }}>
                                     {!transferDomainInfo.exists ? (
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -1454,8 +1454,8 @@ export default function BtcDomainScreen() {
                                             style={{
                                                 width: '100%',
                                                 background: colors.inputBg,
-                                                borderRadius: '8px',
-                                                border: `1px solid ${colors.containerBorder}`,
+                                                borderRadius: '0px',
+                                                border: `1.5px solid ${colors.containerBorder}`,
                                                 padding: '12px',
                                                 color: colors.text,
                                                 fontSize: '13px',
@@ -1479,7 +1479,7 @@ export default function BtcDomainScreen() {
                                             padding: '14px',
                                             background: recipientAddress.trim() ? colors.main : colors.buttonBg,
                                             border: 'none',
-                                            borderRadius: '8px',
+                                            borderRadius: '0px',
                                             cursor: recipientAddress.trim() ? 'pointer' : 'not-allowed',
                                             fontSize: '14px',
                                             fontWeight: 600,
@@ -1516,8 +1516,8 @@ export default function BtcDomainScreen() {
                                             display: 'flex',
                                             alignItems: 'center',
                                             background: colors.inputBg,
-                                            borderRadius: '8px',
-                                            border: `1px solid ${colors.containerBorder}`,
+                                            borderRadius: '0px',
+                                            border: `1.5px solid ${colors.containerBorder}`,
                                             padding: '0 12px'
                                         }}>
                                         <input
@@ -1548,7 +1548,7 @@ export default function BtcDomainScreen() {
                                             padding: '10px 14px',
                                             background: colors.main,
                                             border: 'none',
-                                            borderRadius: '8px',
+                                            borderRadius: '0px',
                                             cursor: isCheckingAcceptDomain || !acceptDomainInput.trim() ? 'not-allowed' : 'pointer',
                                             opacity: isCheckingAcceptDomain || !acceptDomainInput.trim() ? 0.5 : 1
                                         }}>
@@ -1566,10 +1566,10 @@ export default function BtcDomainScreen() {
                                 <div
                                     style={{
                                         background: colors.containerBgFaded,
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         padding: '12px',
                                         marginBottom: '12px',
-                                        border: `1px solid ${acceptDomainPendingInfo.isOutgoing ? colors.warning : colors.success}30`
+                                        border: `1.5px solid ${acceptDomainPendingInfo.isOutgoing ? colors.warning : colors.success}30`
                                     }}>
                                     {acceptDomainPendingInfo.isOutgoing ? (
                                         <div>
@@ -1601,7 +1601,7 @@ export default function BtcDomainScreen() {
                                                     padding: '12px',
                                                     background: colors.success,
                                                     border: 'none',
-                                                    borderRadius: '8px',
+                                                    borderRadius: '0px',
                                                     cursor: 'pointer',
                                                     fontSize: '14px',
                                                     fontWeight: 600,
@@ -1623,8 +1623,8 @@ export default function BtcDomainScreen() {
                         <div
                             style={{
                                 background: `${colors.info}10`,
-                                border: `1px solid ${colors.info}30`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.info}30`,
+                                borderRadius: '0px',
                                 padding: '12px',
                                 fontSize: '11px',
                                 color: colors.textFaded,
@@ -1646,8 +1646,8 @@ export default function BtcDomainScreen() {
                             width: '100%',
                             padding: '12px 14px',
                             background: colors.containerBgFaded,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '10px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
@@ -1673,8 +1673,8 @@ export default function BtcDomainScreen() {
                                 marginTop: '8px',
                                 padding: '16px',
                                 background: colors.containerBgFaded,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '10px'
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px'
                             }}>
                             <div style={{ fontSize: '11px', color: colors.textFaded, marginBottom: '12px' }}>
                                 Requires <strong>Node.js 24+</strong> from{' '}
@@ -1691,7 +1691,7 @@ export default function BtcDomainScreen() {
                                 <div
                                     style={{
                                         background: colors.inputBg,
-                                        borderRadius: '6px',
+                                        borderRadius: '0px',
                                         padding: '8px 10px',
                                         display: 'flex',
                                         alignItems: 'center',
@@ -1719,7 +1719,7 @@ export default function BtcDomainScreen() {
                                 <div
                                     style={{
                                         background: colors.inputBg,
-                                        borderRadius: '6px',
+                                        borderRadius: '0px',
                                         padding: '8px 10px',
                                         display: 'flex',
                                         alignItems: 'center',
@@ -1747,7 +1747,7 @@ export default function BtcDomainScreen() {
                                 <div
                                     style={{
                                         background: colors.inputBg,
-                                        borderRadius: '6px',
+                                        borderRadius: '0px',
                                         padding: '8px 10px',
                                         display: 'flex',
                                         alignItems: 'center',

@@ -12,12 +12,12 @@ import {
 } from '@ant-design/icons';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80'
 };
 
@@ -51,8 +51,8 @@ export function Step0({
             <div
                 style={{
                     background: colors.containerBgFaded,
-                    borderRadius: '14px',
-                    border: `1px solid ${colors.containerBorder}`,
+                    borderRadius: '0px',
+                    border: `1.5px solid ${colors.containerBorder}`,
                     overflow: 'hidden'
                 }}>
                 {RESTORE_WALLETS.map((item, index) => {
@@ -89,7 +89,7 @@ export function Step0({
                                 style={{
                                     width: '40px',
                                     height: '40px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: colors.containerBorder,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -112,7 +112,7 @@ export function Step0({
                                                 padding: '2px 6px',
                                                 background: colors.main,
                                                 color: '#fff',
-                                                borderRadius: '4px',
+                                                borderRadius: '0px',
                                                 fontWeight: 700
                                             }}>
                                             RECOMMENDED

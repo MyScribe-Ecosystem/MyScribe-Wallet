@@ -158,7 +158,7 @@ export default function OpnetBrowserScreen() {
             <Layout>
                 <Header onBack={() => window.history.go(-1)} title="OPNet Browser" />
                 <div className="opnet-browser-loading">
-                    <LoadingOutlined style={{ fontSize: 24, color: '#f37413' }} />
+                    <LoadingOutlined style={{ fontSize: 24, color: '#C49A3C' }} />
                     <span>Loading...</span>
                 </div>
             </Layout>
@@ -191,7 +191,7 @@ export default function OpnetBrowserScreen() {
                         className={`opnet-browser-row ${enableLoading ? 'disabled' : 'clickable'}`}
                         onClick={handleToggleEnabled}>
                         <div className="opnet-browser-row-icon">
-                            <GlobalOutlined style={{ fontSize: 18, color: '#f37413' }} />
+                            <GlobalOutlined style={{ fontSize: 18, color: '#C49A3C' }} />
                         </div>
                         <div className="opnet-browser-row-content">
                             <div className="opnet-browser-row-title">Enable .btc Domain Browsing</div>
@@ -206,12 +206,12 @@ export default function OpnetBrowserScreen() {
                         </div>
                         <div
                             className="opnet-browser-toggle"
-                            style={{ background: browserSettings?.enabled ? '#f37413' : '#434343' }}>
+                            style={{ background: browserSettings?.enabled ? '#C49A3C' : '#1a3050' }}>
                             <div
                                 className="opnet-browser-toggle-knob"
                                 style={{ left: browserSettings?.enabled ? 22 : 2 }}>
                                 {enableLoading && (
-                                    <LoadingOutlined style={{ fontSize: 10, color: '#f37413' }} />
+                                    <LoadingOutlined style={{ fontSize: 10, color: '#C49A3C' }} />
                                 )}
                             </div>
                         </div>
@@ -228,11 +228,11 @@ export default function OpnetBrowserScreen() {
                         className="opnet-browser-row clickable"
                         onClick={() => setCacheTtlPopoverVisible(true)}>
                         <div className="opnet-browser-row-icon">
-                            <ClockCircleOutlined style={{ fontSize: 18, color: '#f37413' }} />
+                            <ClockCircleOutlined style={{ fontSize: 18, color: '#C49A3C' }} />
                         </div>
                         <div className="opnet-browser-row-content">
                             <div className="opnet-browser-row-title">Cache TTL</div>
-                            <div className="opnet-browser-row-status" style={{ color: '#f37413' }}>
+                            <div className="opnet-browser-row-status" style={{ color: '#C49A3C' }}>
                                 {cacheTtlLabel}
                             </div>
                             <div className="opnet-browser-row-desc">
@@ -246,7 +246,7 @@ export default function OpnetBrowserScreen() {
                     {cacheStats && (
                         <div className="opnet-browser-row">
                             <div className="opnet-browser-row-icon">
-                                <CloudServerOutlined style={{ fontSize: 18, color: '#f37413' }} />
+                                <CloudServerOutlined style={{ fontSize: 18, color: '#C49A3C' }} />
                             </div>
                             <div className="opnet-browser-row-content">
                                 <div className="opnet-browser-row-title">Cache Usage</div>
@@ -317,7 +317,7 @@ export default function OpnetBrowserScreen() {
                             className="opnet-browser-gateway-row"
                             style={{
                                 borderBottom:
-                                    index < gateways.length - 1 ? '1px solid #303030' : 'none'
+                                    index < gateways.length - 1 ? '1px solid #2a4060' : 'none'
                             }}>
                             <div
                                 className="opnet-browser-gateway-dot"
@@ -391,7 +391,7 @@ export default function OpnetBrowserScreen() {
                     padding: 12px;
                 }
                 .opnet-browser-info {
-                    background: #292929;
+                    background: #122240;
                     border-radius: 10px;
                     padding: 10px;
                     margin-bottom: 16px;
@@ -417,7 +417,7 @@ export default function OpnetBrowserScreen() {
                     line-height: 1.3;
                 }
                 .opnet-browser-card {
-                    background: #292929;
+                    background: #122240;
                     border-radius: 14px;
                     overflow: hidden;
                     margin-bottom: 16px;
@@ -426,7 +426,7 @@ export default function OpnetBrowserScreen() {
                     display: flex;
                     align-items: center;
                     padding: 14px 12px;
-                    border-bottom: 1px solid #303030;
+                    border-bottom: 1px solid #2a4060;
                 }
                 .opnet-browser-row:last-child {
                     border-bottom: none;
@@ -515,7 +515,7 @@ export default function OpnetBrowserScreen() {
                 .opnet-browser-btn-secondary {
                     padding: 4px 8px;
                     background: transparent;
-                    border: 1px solid #303030;
+                    border: 1px solid #2a4060;
                     border-radius: 6px;
                     cursor: pointer;
                     display: flex;
@@ -533,7 +533,7 @@ export default function OpnetBrowserScreen() {
                 }
                 .opnet-browser-btn-primary {
                     padding: 4px 8px;
-                    background: #f37413;
+                    background: #C49A3C;
                     border: none;
                     border-radius: 6px;
                     cursor: pointer;
@@ -620,7 +620,7 @@ function CacheTtlPopover({
                     style={{
                         textAlign: 'center',
                         paddingBottom: 12,
-                        borderBottom: '1px solid #303030'
+                        borderBottom: '1px solid #2a4060'
                     }}>
                     <div style={{ fontSize: 16, fontWeight: 600, color: '#dbdbdb', marginBottom: 4 }}>
                         Cache TTL
@@ -644,30 +644,30 @@ function CacheTtlPopover({
                                     background: isSelected
                                         ? 'linear-gradient(135deg, rgba(243,116,19,0.15) 0%, rgba(243,116,19,0.05) 100%)'
                                         : 'rgba(85, 85, 85, 0.3)',
-                                    border: isSelected ? '1px solid #f37413' : '1px solid transparent',
-                                    borderRadius: 10,
+                                    border: isSelected ? '1px solid #C49A3C' : '1px solid transparent',
+                                    borderRadius: 0,
                                     cursor: 'pointer'
                                 }}>
                                 <div
                                     style={{
                                         width: 30,
                                         height: 30,
-                                        borderRadius: 8,
-                                        background: isSelected ? 'rgba(243,116,19,0.2)' : '#292929',
+                                        borderRadius: 0,
+                                        background: isSelected ? 'rgba(243,116,19,0.2)' : '#122240',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         marginRight: 10
                                     }}>
                                     <ClockCircleOutlined
-                                        style={{ fontSize: 14, color: isSelected ? '#f37413' : '#888' }}
+                                        style={{ fontSize: 14, color: isSelected ? '#C49A3C' : '#888' }}
                                     />
                                 </div>
                                 <div style={{ flex: 1, fontSize: 12, fontWeight: 500, color: '#dbdbdb' }}>
                                     {option.label}
                                 </div>
                                 {isSelected && (
-                                    <CheckCircleFilled style={{ fontSize: 14, color: '#f37413' }} />
+                                    <CheckCircleFilled style={{ fontSize: 14, color: '#C49A3C' }} />
                                 )}
                             </div>
                         );
@@ -679,8 +679,8 @@ function CacheTtlPopover({
                         width: '100%',
                         padding: 10,
                         background: 'rgba(85, 85, 85, 0.3)',
-                        border: '1px solid #303030',
-                        borderRadius: 10,
+                        border: '1.5px solid #2a4060',
+                        borderRadius: 0,
                         color: '#dbdbdb',
                         fontSize: 13,
                         fontWeight: 500,
@@ -728,7 +728,7 @@ function AddGatewayPopover({
                     style={{
                         textAlign: 'center',
                         paddingBottom: 12,
-                        borderBottom: '1px solid #303030'
+                        borderBottom: '1px solid #2a4060'
                     }}>
                     <div style={{ fontSize: 16, fontWeight: 600, color: '#dbdbdb', marginBottom: 4 }}>
                         Add IPFS Gateway
@@ -751,8 +751,8 @@ function AddGatewayPopover({
                             width: '100%',
                             padding: 12,
                             background: 'rgba(85, 85, 85, 0.3)',
-                            border: `1px solid ${error ? '#ef4444' : '#303030'}`,
-                            borderRadius: 10,
+                            border: `1.5px solid ${error ? '#ef4444' : '#2a4060'}`,
+                            borderRadius: 0,
                             color: '#dbdbdb',
                             fontSize: 13,
                             fontFamily: 'monospace',
@@ -773,8 +773,8 @@ function AddGatewayPopover({
                             flex: 1,
                             padding: 10,
                             background: 'rgba(85, 85, 85, 0.3)',
-                            border: '1px solid #303030',
-                            borderRadius: 10,
+                            border: '1.5px solid #2a4060',
+                            borderRadius: 0,
                             color: '#dbdbdb',
                             fontSize: 13,
                             fontWeight: 500,
@@ -787,9 +787,9 @@ function AddGatewayPopover({
                         style={{
                             flex: 1,
                             padding: 10,
-                            background: '#f37413',
+                            background: '#C49A3C',
                             border: 'none',
-                            borderRadius: 10,
+                            borderRadius: 0,
                             color: '#fff',
                             fontSize: 13,
                             fontWeight: 500,

@@ -14,12 +14,12 @@ import { useRotationHistory, useRefreshRotation, useRotationLoading } from '@/ui
 import { RotatedAddressStatus } from '@/shared/types/AddressRotation';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     warning: '#fbbf24',
     hotOrange: '#f97316',
@@ -110,7 +110,7 @@ export default function RotationHistoryScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '40px 20px',
                                 textAlign: 'center'
                             }}>
@@ -135,7 +135,7 @@ export default function RotationHistoryScreen() {
                                         key={addr.address}
                                         style={{
                                             background: colors.containerBgFaded,
-                                            borderRadius: '12px',
+                                            borderRadius: '0px',
                                             padding: '14px',
                                             border: addr.status === RotatedAddressStatus.ACTIVE
                                                 ? `1px solid ${colors.hotOrange}40`
@@ -161,7 +161,7 @@ export default function RotationHistoryScreen() {
                                                         fontSize: 10,
                                                         fontWeight: 500,
                                                         padding: '2px 6px',
-                                                        borderRadius: 4
+                                                        borderRadius: 0
                                                     }}>
                                                     {config.icon}
                                                     <span>{config.label}</span>
@@ -186,7 +186,7 @@ export default function RotationHistoryScreen() {
                                                 cursor: 'pointer',
                                                 padding: '8px',
                                                 background: 'rgba(0,0,0,0.2)',
-                                                borderRadius: 8,
+                                                borderRadius: 0,
                                                 marginBottom: 8
                                             }}>
                                             <Text

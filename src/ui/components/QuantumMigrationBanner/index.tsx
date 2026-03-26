@@ -11,8 +11,8 @@ export function QuantumMigrationBanner({ onMigrate }: QuantumMigrationBannerProp
             onClick={onMigrate}
             style={{
                 background: 'linear-gradient(135deg, rgba(243, 116, 19, 0.15) 0%, rgba(243, 116, 19, 0.08) 100%)',
-                border: '1px solid rgba(243, 116, 19, 0.4)',
-                borderRadius: '12px',
+                border: '1.5px solid rgba(243, 116, 19, 0.4)',
+                borderRadius: '0px',
                 padding: '12px 16px',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease'
@@ -22,14 +22,14 @@ export function QuantumMigrationBanner({ onMigrate }: QuantumMigrationBannerProp
                     style={{
                         width: 36,
                         height: 36,
-                        borderRadius: '50%',
+                        borderRadius: '0px',
                         backgroundColor: 'rgba(243, 116, 19, 0.2)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         flexShrink: 0
                     }}>
-                    <WarningOutlined style={{ fontSize: 18, color: '#f37413' }} />
+                    <WarningOutlined style={{ fontSize: 18, color: '#C49A3C' }} />
                 </div>
                 <Column gap="zero" style={{ flex: 1 }}>
                     <Text text="Post-Quantum Migration Required" preset="bold" size="sm" color="warning" />
@@ -43,8 +43,8 @@ export function QuantumMigrationBanner({ onMigrate }: QuantumMigrationBannerProp
                 <div
                     style={{
                         padding: '6px 12px',
-                        backgroundColor: '#f37413',
-                        borderRadius: '8px'
+                        backgroundColor: '#C49A3C',
+                        borderRadius: '0px'
                     }}>
                     <Text text="Migrate" size="xs" preset="bold" style={{ color: '#000' }} />
                 </div>

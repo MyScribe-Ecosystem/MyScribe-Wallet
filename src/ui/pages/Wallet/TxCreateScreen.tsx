@@ -31,17 +31,17 @@ import { Address, AddressTypes, AddressVerificator } from '@btc-vision/transacti
 BigNumber.config({ EXPONENTIAL_AT: 256 });
 
 const colors = {
-    main: '#f37413',
+    main: '#C49A3C',
     btcOrange: '#e9983d',
-    background: '#212121',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -642,7 +642,7 @@ export default function TxCreateScreen() {
                                     textAlign: 'center',
                                     padding: '40px 20px',
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px'
+                                    borderRadius: '0px'
                                 }}>
                                 <WarningOutlined style={{ fontSize: 48, color: colors.warning, marginBottom: 16 }} />
                                 <h3 style={{ fontSize: '16px', color: colors.text, marginBottom: 8 }}>
@@ -713,7 +713,7 @@ export default function TxCreateScreen() {
                             style={{
                                 background: colors.containerBg,
                                 border: `2px solid ${colors.warning}40`,
-                                borderRadius: '16px',
+                                borderRadius: '0px',
                                 padding: '20px',
                                 maxWidth: '360px',
                                 width: '100%',
@@ -733,7 +733,7 @@ export default function TxCreateScreen() {
                                         width: '36px',
                                         height: '36px',
                                         background: `${colors.warning}20`,
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center'
@@ -773,8 +773,8 @@ export default function TxCreateScreen() {
                                     style={{
                                         padding: '10px 12px',
                                         background: `${colors.error}12`,
-                                        border: `1px solid ${colors.error}25`,
-                                        borderRadius: '10px',
+                                        border: `1.5px solid ${colors.error}25`,
+                                        borderRadius: '0px',
                                         fontSize: '12px',
                                         color: colors.text,
                                         lineHeight: 1.4
@@ -787,7 +787,7 @@ export default function TxCreateScreen() {
                                     style={{
                                         padding: '10px 12px',
                                         background: `${colors.main}08`,
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         fontSize: '11px',
                                         color: colors.textFaded,
                                         lineHeight: 1.4
@@ -803,8 +803,8 @@ export default function TxCreateScreen() {
                                         flex: 1,
                                         padding: '10px',
                                         background: colors.containerBgFaded,
-                                        border: `1px solid ${colors.containerBorder}`,
-                                        borderRadius: '10px',
+                                        border: `1.5px solid ${colors.containerBorder}`,
+                                        borderRadius: '0px',
                                         color: colors.text,
                                         fontSize: '12px',
                                         fontWeight: 600,
@@ -826,7 +826,7 @@ export default function TxCreateScreen() {
                                         padding: '10px',
                                         background: colors.warning,
                                         border: 'none',
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         color: colors.background,
                                         fontSize: '12px',
                                         fontWeight: 600,
@@ -899,8 +899,8 @@ export default function TxCreateScreen() {
                                                 width: '100%',
                                                 padding: '16px',
                                                 background: colors.containerBgFaded,
-                                                border: `1px solid ${colors.containerBorder}`,
-                                                borderRadius: '14px',
+                                                border: `1.5px solid ${colors.containerBorder}`,
+                                                borderRadius: '0px',
                                                 cursor: isDisabled ? 'not-allowed' : 'pointer',
                                                 opacity: isDisabled ? 0.6 : 1,
                                                 transition: 'all 0.2s',
@@ -949,7 +949,7 @@ export default function TxCreateScreen() {
                                                                     padding: '2px 6px',
                                                                     background: colors.main + '20',
                                                                     color: colors.main,
-                                                                    borderRadius: '4px',
+                                                                    borderRadius: '0px',
                                                                     fontWeight: 600
                                                                 }}>
                                                                 PRIMARY
@@ -1006,7 +1006,7 @@ export default function TxCreateScreen() {
                                                 style={{
                                                     padding: '12px',
                                                     background: colors.inputBg,
-                                                    borderRadius: '10px',
+                                                    borderRadius: '0px',
                                                     marginBottom: balance.lockedBalance ? '8px' : '0'
                                                 }}>
                                                 <div
@@ -1042,7 +1042,7 @@ export default function TxCreateScreen() {
                                                         alignItems: 'center',
                                                         padding: '8px 12px',
                                                         background: `${colors.warning}10`,
-                                                        borderRadius: '8px',
+                                                        borderRadius: '0px',
                                                         fontSize: '11px'
                                                     }}>
                                                     <span style={{ color: colors.warning }}>
@@ -1089,8 +1089,8 @@ export default function TxCreateScreen() {
                                     marginTop: '16px',
                                     padding: '12px',
                                     background: `${colors.main}10`,
-                                    border: `1px solid ${colors.main}20`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${colors.main}20`,
+                                    borderRadius: '0px',
                                     textAlign: 'center'
                                 }}>
                                 <p
@@ -1141,8 +1141,8 @@ export default function TxCreateScreen() {
                     <div
                         style={{
                             background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                            border: `1px solid ${colors.main}30`,
-                            borderRadius: '12px',
+                            border: `1.5px solid ${colors.main}30`,
+                            borderRadius: '0px',
                             padding: '12px',
                             marginBottom: '16px',
                             display: 'flex',
@@ -1182,8 +1182,8 @@ export default function TxCreateScreen() {
                             style={{
                                 padding: '6px 10px',
                                 background: colors.buttonHoverBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '11px',
                                 fontWeight: 600,
@@ -1205,7 +1205,7 @@ export default function TxCreateScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -1237,8 +1237,8 @@ export default function TxCreateScreen() {
                             autoFocus
                             style={{
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px'
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px'
                             }}
                         />
 
@@ -1248,8 +1248,8 @@ export default function TxCreateScreen() {
                                     marginTop: '8px',
                                     padding: '8px',
                                     background: `${colors.warning}15`,
-                                    border: `1px solid ${colors.warning}30`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.warning}30`,
+                                    borderRadius: '0px',
                                     display: 'flex',
                                     gap: '6px'
                                 }}>
@@ -1292,8 +1292,8 @@ export default function TxCreateScreen() {
                                     marginTop: '8px',
                                     padding: '8px',
                                     background: `${colors.error}15`,
-                                    border: `1px solid ${colors.error}30`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.error}30`,
+                                    borderRadius: '0px',
                                     display: 'flex',
                                     gap: '6px'
                                 }}>
@@ -1335,8 +1335,8 @@ export default function TxCreateScreen() {
                                     marginTop: '8px',
                                     padding: '8px',
                                     background: `${colors.error}15`,
-                                    border: `1px solid ${colors.error}30`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.error}30`,
+                                    borderRadius: '0px',
                                     display: 'flex',
                                     gap: '6px'
                                 }}>
@@ -1377,7 +1377,7 @@ export default function TxCreateScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -1412,8 +1412,8 @@ export default function TxCreateScreen() {
                                 }}
                                 style={{
                                     background: colors.inputBg,
-                                    border: `1px solid ${colors.containerBorder}`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.containerBorder}`,
+                                    borderRadius: '0px',
                                     paddingRight: '60px'
                                 }}
                             />
@@ -1426,7 +1426,7 @@ export default function TxCreateScreen() {
                                     padding: '4px 8px',
                                     background: colors.main,
                                     border: 'none',
-                                    borderRadius: '6px',
+                                    borderRadius: '0px',
                                     color: colors.background,
                                     fontSize: '11px',
                                     fontWeight: 600,
@@ -1486,7 +1486,7 @@ export default function TxCreateScreen() {
                                     marginTop: '8px',
                                     padding: '6px',
                                     background: `${colors.error}15`,
-                                    borderRadius: '6px',
+                                    borderRadius: '0px',
                                     textAlign: 'center'
                                 }}>
                                 <span
@@ -1504,7 +1504,7 @@ export default function TxCreateScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px'
                         }}>
@@ -1535,10 +1535,10 @@ export default function TxCreateScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px',
-                            border: `1px solid ${colors.containerBorder}`
+                            border: `1.5px solid ${colors.containerBorder}`
                         }}>
                         <button
                             onClick={() => setShowUTXOStatus(!showUTXOStatus)}
@@ -1607,7 +1607,7 @@ export default function TxCreateScreen() {
                     <div
                         style={{
                             background: checked ? `${colors.warning}10` : colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px',
                             border: checked ? `1px solid ${colors.warning}30` : 'none',
@@ -1622,8 +1622,8 @@ export default function TxCreateScreen() {
                                     gap: '6px',
                                     padding: '10px',
                                     background: `${colors.warning}15`,
-                                    border: `1px solid ${colors.warning}25`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.warning}25`,
+                                    borderRadius: '0px',
                                     marginBottom: '12px'
                                 }}>
                                 <WarningOutlined
@@ -1675,7 +1675,7 @@ export default function TxCreateScreen() {
                                     height: '20px',
                                     minWidth: '20px',
                                     marginTop: '1px',
-                                    borderRadius: '6px',
+                                    borderRadius: '0px',
                                     border: checked
                                         ? `2px solid ${colors.warning}`
                                         : '2px solid rgba(255, 255, 255, 0.2)',
@@ -1734,7 +1734,7 @@ export default function TxCreateScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '80px'
                         }}>
@@ -1767,8 +1767,8 @@ export default function TxCreateScreen() {
                                 width: '100%',
                                 padding: '8px 10px',
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px',
                                 color: colors.text,
                                 fontSize: '13px',
                                 outline: 'none',
@@ -1802,7 +1802,7 @@ export default function TxCreateScreen() {
                         padding: '14px',
                         background: disabled ? colors.buttonBg : colors.main,
                         border: 'none',
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         color: disabled ? colors.textFaded : colors.background,
                         fontSize: '14px',
                         fontWeight: 600,

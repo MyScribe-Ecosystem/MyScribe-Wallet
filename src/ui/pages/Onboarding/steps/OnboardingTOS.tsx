@@ -101,8 +101,8 @@ export function OnboardingTOS({ onAccept }: { onAccept: () => void }) {
             li: { ...baseText, margin: '6px 0' },
             hr: { border: 0, borderTop: '1px solid rgba(255,255,255,0.10)', margin: '14px 0' },
             callout: {
-                borderRadius: 14,
-                border: '1px solid rgba(255,255,255,0.12)',
+                borderRadius: 0,
+                border: '1.5px solid rgba(255,255,255,0.12)',
                 background: 'rgba(0,0,0,0.24)',
                 padding: '10px 12px',
                 margin: '10px 0',

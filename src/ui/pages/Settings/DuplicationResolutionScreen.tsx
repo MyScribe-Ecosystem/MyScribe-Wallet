@@ -21,15 +21,15 @@ import { useReloadAccounts } from '@/ui/state/accounts/hooks';
 import { useWallet } from '@/ui/utils';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
@@ -363,7 +363,7 @@ export default function DuplicationResolutionScreen() {
                             style={{
                                 width: '24px',
                                 height: '24px',
-                                borderRadius: '50%',
+                                borderRadius: '0px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -376,7 +376,7 @@ export default function DuplicationResolutionScreen() {
                                           ? colors.main
                                           : colors.containerBgFaded,
                                 color: index <= currentStepIndex ? '#fff' : colors.textFaded,
-                                border: `1px solid ${index <= currentStepIndex ? 'transparent' : colors.containerBorder}`
+                                border: `1.5px solid ${index <= currentStepIndex ? 'transparent' : colors.containerBorder}`
                             }}>
                             {index < currentStepIndex ? <CheckCircleOutlined /> : index + 1}
                         </div>
@@ -635,9 +635,9 @@ export default function DuplicationResolutionScreen() {
                     <div
                         style={{
                             padding: '10px',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             background: isWalletDupe ? `${colors.error}10` : `${colors.warning}10`,
-                            border: `1px solid ${isWalletDupe ? colors.error : colors.warning}30`
+                            border: `1.5px solid ${isWalletDupe ? colors.error : colors.warning}30`
                         }}>
                         <Row itemsCenter gap="sm" style={{ marginBottom: '4px' }}>
                             <WarningOutlined
@@ -671,7 +671,7 @@ export default function DuplicationResolutionScreen() {
                                 style={{
                                     marginTop: '10px',
                                     padding: '10px 16px',
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     border: `2px solid ${colors.success}`,
                                     background: `${colors.success}20`,
                                     color: colors.success,
@@ -710,7 +710,7 @@ export default function DuplicationResolutionScreen() {
                                 onClick={() => handleConflictSelection(conflict.conflictId, walletInfo.keyringIndex)}
                                 style={{
                                     padding: '12px',
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     border: `2px solid ${isSelected ? colors.main : colors.containerBorder}`,
                                     background: isSelected ? `${colors.main}10` : colors.containerBgFaded,
                                     cursor: 'pointer',
@@ -728,7 +728,7 @@ export default function DuplicationResolutionScreen() {
                                             <div
                                                 style={{
                                                     padding: '1px 5px',
-                                                    borderRadius: '3px',
+                                                    borderRadius: '0px',
                                                     background: colors.containerBorder,
                                                     fontSize: '9px',
                                                     color: colors.textFaded
@@ -791,9 +791,9 @@ export default function DuplicationResolutionScreen() {
                                             <div
                                                 style={{
                                                     padding: '2px 6px',
-                                                    borderRadius: '4px',
+                                                    borderRadius: '0px',
                                                     background: badge.bgColor,
-                                                    border: `1px solid ${badge.borderColor}`,
+                                                    border: `1.5px solid ${badge.borderColor}`,
                                                     fontSize: '10px',
                                                     fontWeight: 600,
                                                     color: badge.color
@@ -815,7 +815,7 @@ export default function DuplicationResolutionScreen() {
                                         style={{
                                             width: '20px',
                                             height: '20px',
-                                            borderRadius: '50%',
+                                            borderRadius: '0px',
                                             border: `2px solid ${isSelected ? colors.main : colors.containerBorder}`,
                                             display: 'flex',
                                             alignItems: 'center',
@@ -828,7 +828,7 @@ export default function DuplicationResolutionScreen() {
                                                 style={{
                                                     width: '10px',
                                                     height: '10px',
-                                                    borderRadius: '50%',
+                                                    borderRadius: '0px',
                                                     background: colors.main
                                                 }}
                                             />
@@ -962,7 +962,7 @@ export default function DuplicationResolutionScreen() {
                 style={{
                     width: '80px',
                     height: '80px',
-                    borderRadius: '50%',
+                    borderRadius: '0px',
                     background: `${colors.success}20`,
                     display: 'flex',
                     alignItems: 'center',

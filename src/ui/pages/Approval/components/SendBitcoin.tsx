@@ -12,13 +12,13 @@ export interface Props {
 }
 
 const themeColors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     warning: '#fbbf24'
 };
 
@@ -51,8 +51,8 @@ function DetailRow({ label, value, mono }: { label: string; value: string; mono?
                 alignItems: 'center',
                 padding: 10,
                 background: themeColors.inputBg,
-                borderRadius: 8,
-                border: `1px solid ${themeColors.containerBorder}`
+                borderRadius: 0,
+                border: `1.5px solid ${themeColors.containerBorder}`
             }}>
             <span style={{ fontSize: 12, color: themeColors.textFaded }}>{label}</span>
             <span
@@ -110,8 +110,8 @@ export default function SendBitcoin(props: Props) {
                 <div
                     style={{
                         background: `linear-gradient(135deg, ${themeColors.main}10 0%, ${themeColors.main}05 100%)`,
-                        border: `1px solid ${themeColors.main}20`,
-                        borderRadius: 12,
+                        border: `1.5px solid ${themeColors.main}20`,
+                        borderRadius: 0,
                         padding: 16,
                         marginBottom: 12
                     }}>
@@ -123,7 +123,7 @@ export default function SendBitcoin(props: Props) {
                                 style={{
                                     width: 40,
                                     height: 40,
-                                    borderRadius: 10,
+                                    borderRadius: 0,
                                     objectFit: 'cover'
                                 }}
                                 onError={(e) => {
@@ -138,7 +138,7 @@ export default function SendBitcoin(props: Props) {
                             style={{
                                 width: 40,
                                 height: 40,
-                                borderRadius: 10,
+                                borderRadius: 0,
                                 background: themeColors.main,
                                 display: session.icon ? 'none' : 'flex',
                                 alignItems: 'center',
@@ -183,9 +183,9 @@ export default function SendBitcoin(props: Props) {
                             alignItems: 'center',
                             gap: 6,
                             padding: '4px 12px',
-                            borderRadius: 16,
+                            borderRadius: 0,
                             backgroundColor: `${themeColors.main}20`,
-                            border: `1px solid ${themeColors.main}40`
+                            border: `1.5px solid ${themeColors.main}40`
                         }}>
                         <SendOutlined style={{ fontSize: 11, color: themeColors.main }} />
                         <span style={{ fontSize: 12, fontWeight: 600, color: themeColors.main }}>BTC Transfer</span>
@@ -196,7 +196,7 @@ export default function SendBitcoin(props: Props) {
                 <div
                     style={{
                         background: themeColors.containerBgFaded,
-                        borderRadius: 12,
+                        borderRadius: 0,
                         padding: 12,
                         marginBottom: 12
                     }}>
@@ -209,8 +209,8 @@ export default function SendBitcoin(props: Props) {
                             textAlign: 'center',
                             padding: 16,
                             background: themeColors.inputBg,
-                            borderRadius: 8,
-                            border: `1px solid ${themeColors.containerBorder}`
+                            borderRadius: 0,
+                            border: `1.5px solid ${themeColors.containerBorder}`
                         }}>
                         <div
                             style={{
@@ -239,7 +239,7 @@ export default function SendBitcoin(props: Props) {
                 <div
                     style={{
                         background: themeColors.containerBgFaded,
-                        borderRadius: 12,
+                        borderRadius: 0,
                         padding: 12,
                         marginBottom: 12
                     }}>
@@ -261,7 +261,7 @@ export default function SendBitcoin(props: Props) {
                     <div
                         style={{
                             background: themeColors.containerBgFaded,
-                            borderRadius: 12,
+                            borderRadius: 0,
                             padding: 12,
                             marginBottom: 12
                         }}>
@@ -276,8 +276,8 @@ export default function SendBitcoin(props: Props) {
                                 wordBreak: 'break-word',
                                 padding: 10,
                                 background: themeColors.inputBg,
-                                borderRadius: 8,
-                                border: `1px solid ${themeColors.containerBorder}`,
+                                borderRadius: 0,
+                                border: `1.5px solid ${themeColors.containerBorder}`,
                                 fontSize: 13,
                                 color: themeColors.text,
                                 lineHeight: '1.6'
@@ -292,8 +292,8 @@ export default function SendBitcoin(props: Props) {
                     style={{
                         padding: '10px 12px',
                         background: `${themeColors.warning}10`,
-                        border: `1px solid ${themeColors.warning}30`,
-                        borderRadius: 12,
+                        border: `1.5px solid ${themeColors.warning}30`,
+                        borderRadius: 0,
                         marginBottom: 12
                     }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -317,8 +317,8 @@ export default function SendBitcoin(props: Props) {
                         preset="default"
                         onClick={handleReject}
                         style={{
-                            background: '#434343',
-                            border: `1px solid ${themeColors.containerBorder}`,
+                            background: '#1a3050',
+                            border: `1.5px solid ${themeColors.containerBorder}`,
                             color: themeColors.text
                         }}
                     />

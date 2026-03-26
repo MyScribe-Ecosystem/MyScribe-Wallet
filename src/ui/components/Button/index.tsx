@@ -59,7 +59,7 @@ export interface ButtonProps {
 const $baseViewStyle: CSSProperties = {
     display: 'flex',
     minHeight: 36,
-    borderRadius: 8,
+    borderRadius: 0,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
@@ -72,18 +72,20 @@ const $baseViewStyle: CSSProperties = {
 
 const $viewPresets = {
     default: Object.assign({}, $baseViewStyle, {
-        borderWidth: 1,
+        borderWidth: 1.5,
         minHeight: 50,
         borderColor: colors.white_muted,
-        borderRadius: 12
+        borderRadius: 0
     }) as CSSProperties,
 
     primary: Object.assign({}, $baseViewStyle, {
-        // Use specific properties instead of 'background'
-        backgroundColor: '#ee771b',
-        transition: 'background 0.2s ease-in-out',
-        color: colors.white,
-        height: '46px'
+        backgroundImage: 'linear-gradient(135deg, #f5e6b8, #e8c547, #c9a227, #f0dc8a, #a67c1a, #d4af37)',
+        backgroundSize: '200% 200%',
+        color: '#0A1628',
+        height: '46px',
+        fontWeight: 700,
+        textTransform: 'uppercase' as const,
+        letterSpacing: '0.05em'
     } as CSSProperties),
 
     danger: Object.assign({}, $baseViewStyle, {
@@ -93,8 +95,11 @@ const $viewPresets = {
     } as CSSProperties),
 
     approval: Object.assign({}, $baseViewStyle, {
-        backgroundColor: colors.orange,
-        height: '48px'
+        backgroundImage: 'linear-gradient(135deg, #f5e6b8, #e8c547, #c9a227, #f0dc8a, #a67c1a, #d4af37)',
+        backgroundSize: '200% 200%',
+        color: '#0A1628',
+        height: '48px',
+        fontWeight: 700
     } as CSSProperties),
 
     bar: Object.assign({}, $baseViewStyle, {
@@ -107,25 +112,25 @@ const $viewPresets = {
     } as CSSProperties),
 
     defaultV2: Object.assign({}, $baseViewStyle, {
-        borderWidth: 1,
+        borderWidth: 1.5,
         minHeight: 50,
         borderColor: colors.white_muted,
-        borderRadius: 12,
+        borderRadius: 0,
         backgroundColor: colors.black_dark
     } as CSSProperties),
 
     fontsmall: Object.assign({}, $baseViewStyle, {
-        borderWidth: 1,
+        borderWidth: 1.5,
         minHeight: 50,
         borderColor: colors.white_muted,
-        borderRadius: 12
+        borderRadius: 0
     }) as CSSProperties,
 
     primaryV2: Object.assign({}, $baseViewStyle, {
         // Use specific properties instead of 'background'
-        backgroundImage: 'linear-gradient(103.92deg, #EBB94C 0%, #E97E00 100%)',
+        backgroundImage: 'linear-gradient(135deg, #f5e6b8, #e8c547, #c9a227, #f0dc8a, #a67c1a, #d4af37)',
         minHeight: 50,
-        borderRadius: 12
+        borderRadius: 0
     } as CSSProperties),
 
     home: Object.assign({}, $baseViewStyle, {
@@ -133,8 +138,8 @@ const $viewPresets = {
         minWidth: 64,
         minHeight: 64,
         flexDirection: 'column',
-        borderRadius: 16,
-        borderWidth: 1,
+        borderRadius: 0,
+        borderWidth: 1.5,
         borderColor: '#FFFFFF4D',
         padding: 5,
         marginRight: 5,
@@ -144,31 +149,31 @@ const $viewPresets = {
 
 const $hoverViewPresets: Record<Presets, CSSProperties> = {
     default: {
-        backgroundColor: '#383535'
+        backgroundColor: '#1a3050'
     },
     primary: {
-        backgroundColor: 'rgba(238,119,27,0.85)'
+        filter: 'brightness(1.1)'
     },
     approval: {
-        backgroundColor: colors.orange_dark
+        filter: 'brightness(1.1)'
     },
     danger: {
         backgroundColor: colors.red_dark
     },
     bar: {
-        backgroundColor: '#383535'
+        backgroundColor: '#1a3050'
     },
     fontsmall: {
-        backgroundColor: '#383535'
+        backgroundColor: '#1a3050'
     },
     defaultV2: {
-        backgroundColor: '#383535'
+        backgroundColor: '#1a3050'
     },
     primaryV2: {
         backgroundColor: colors.yellow_dark
     },
     home: {
-        backgroundColor: '#383535'
+        backgroundColor: '#1a3050'
     }
 };
 

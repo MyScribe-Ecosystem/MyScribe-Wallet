@@ -21,7 +21,7 @@ export const Popover = ({
                 ...style
             }}>
             <div
-                style={{ backgroundColor: '#181A1F', width: 340, padding: 20, borderRadius: 15, position: 'relative' }}>
+                style={{ backgroundColor: '#181A1F', width: 340, padding: 20, borderRadius: 0, position: 'relative' }}>
                 {onClose && (
                     <Row
                         style={{ position: 'absolute', top: 10, right: 10 }}

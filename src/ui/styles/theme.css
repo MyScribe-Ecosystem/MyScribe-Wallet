@@ -1,21 +1,21 @@
-/* ─── OPWallet Design Tokens ─── */
+/* ─── MyScribe Wallet Design Tokens ─── */
 :root {
   /* ── Colors ── */
-  --color-main: #f37413;
-  --color-main-hover: #e06000;
-  --color-background: #212121;
-  --color-surface: #1a1a1a;
+  --color-main: #C49A3C;
+  --color-main-hover: #a67c1a;
+  --color-background: #0A1628;
+  --color-surface: #0d1f35;
   --color-text: #dbdbdb;
   --color-text-faded: rgba(219, 219, 219, 0.7);
   --color-text-muted: rgba(219, 219, 219, 0.45);
 
-  --color-button-bg: #434343;
-  --color-button-hover: rgba(85, 85, 85, 0.3);
+  --color-button-bg: #1a3050;
+  --color-button-hover: rgba(26, 48, 80, 0.5);
 
-  --color-container: #434343;
-  --color-container-faded: #292929;
-  --color-container-border: #303030;
-  --color-input-bg: #292828;
+  --color-container: #1a3050;
+  --color-container-faded: #122240;
+  --color-container-border: #3a5575;
+  --color-input-bg: #122240;
 
   --color-success: #4ade80;
   --color-error: #ef4444;
@@ -23,8 +23,8 @@
   --color-purple: #8B5CF6;
   --color-btc-orange: #e9983d;
 
-  --color-alert-error-bg: #3b1111;
-  --color-alert-warning-bg: #3b2e11;
+  --color-alert-error-bg: #2a1111;
+  --color-alert-warning-bg: #2a2011;
 
   /* ── Typography ── */
   --font-family: 'Inter-Regular', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -64,20 +64,20 @@
   --space-32: 32px;
 
   /* ── Borders & Radii ── */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 10px;
-  --radius-xl: 12px;
-  --radius-2xl: 14px;
-  --radius-3xl: 16px;
-  --radius-pill: 20px;
-  --radius-full: 50%;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-pill: 0px;
+  --radius-full: 0px;
 
   /* ── Shadows ── */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
-  --shadow-glow-main: 0 4px 12px rgba(243, 116, 19, 0.3);
+  --shadow-glow-main: 0 4px 12px rgba(196, 154, 60, 0.3);
 
   /* ── Transitions ── */
   --transition-fast: 0.15s ease;

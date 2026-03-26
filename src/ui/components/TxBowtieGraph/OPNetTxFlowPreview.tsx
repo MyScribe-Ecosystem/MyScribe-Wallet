@@ -8,7 +8,7 @@ import { MultiTxBowtieGraph, TransactionData } from './MultiTxBowtieGraph';
 import { TxInput, TxOutput } from './types';
 
 const colors = {
-    main: '#f37413',
+    main: '#C49A3C',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
     success: '#4ade80',
@@ -121,9 +121,9 @@ export function OPNetTxFlowPreview({
             <div
                 style={{
                     background: 'rgba(0, 0, 0, 0.2)',
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     padding: '12px',
-                    border: `1px solid ${colors.main}20`
+                    border: `1.5px solid ${colors.main}20`
                 }}>
                 {title && (
                     <div
@@ -158,7 +158,7 @@ export function OPNetTxFlowPreview({
                             color: colors.success,
                             background: `${colors.success}10`,
                             padding: '6px 10px',
-                            borderRadius: '6px'
+                            borderRadius: '0px'
                         }}>
                         <SafetyCertificateOutlined style={{ fontSize: 12 }} />
                         <span>Safe - will not broadcast until confirmed</span>
@@ -176,7 +176,7 @@ export function OPNetTxFlowPreview({
                     width,
                     padding: '16px',
                     background: 'rgba(0, 0, 0, 0.2)',
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     color: colors.textFaded,
                     fontSize: '12px',
                     textAlign: 'center'
@@ -196,9 +196,9 @@ export function OPNetTxFlowPreview({
         <div
             style={{
                 background: 'rgba(0, 0, 0, 0.2)',
-                borderRadius: '12px',
+                borderRadius: '0px',
                 padding: '12px',
-                border: `1px solid ${colors.main}20`
+                border: `1.5px solid ${colors.main}20`
             }}>
             {title && (
                 <div

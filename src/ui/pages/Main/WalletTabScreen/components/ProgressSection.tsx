@@ -101,7 +101,7 @@ export const ProgressSection: React.FC<ProgressSectionProps> = ({
                             width: '100%',
                             height: '4px',
                             backgroundColor: colors.containerBorder,
-                            borderRadius: '2px',
+                            borderRadius: '0px',
                             overflow: 'hidden'
                         }}>
                         <div

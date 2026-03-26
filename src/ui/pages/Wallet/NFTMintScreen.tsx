@@ -12,16 +12,16 @@ import { Action, Features, MintNFTParameters } from '@/shared/interfaces/RawTxPa
 import { useChain } from '@/ui/state/settings/hooks';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -224,7 +224,7 @@ export default function NFTMintScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '12px',
                             display: 'flex',
@@ -236,7 +236,7 @@ export default function NFTMintScreen() {
                                 width: '64px',
                                 height: '64px',
                                 background: colors.containerBg,
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 overflow: 'hidden',
                                 flexShrink: 0
                             }}>
@@ -298,7 +298,7 @@ export default function NFTMintScreen() {
                             <div
                                 style={{
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     padding: '14px',
                                     marginBottom: '12px'
                                 }}>
@@ -362,7 +362,7 @@ export default function NFTMintScreen() {
                             <div
                                 style={{
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     padding: '14px',
                                     marginBottom: '12px'
                                 }}>
@@ -383,7 +383,7 @@ export default function NFTMintScreen() {
                                         style={{
                                             width: '32px',
                                             height: '32px',
-                                            borderRadius: '6px',
+                                            borderRadius: '0px',
                                             background: colors.buttonBg,
                                             border: 'none',
                                             color: colors.text,
@@ -418,7 +418,7 @@ export default function NFTMintScreen() {
                                         style={{
                                             width: '32px',
                                             height: '32px',
-                                            borderRadius: '6px',
+                                            borderRadius: '0px',
                                             background: colors.buttonBg,
                                             border: 'none',
                                             color: colors.text,
@@ -444,7 +444,7 @@ export default function NFTMintScreen() {
                                         marginTop: '12px',
                                         padding: '8px',
                                         background: colors.containerBg,
-                                        borderRadius: '6px',
+                                        borderRadius: '0px',
                                         textAlign: 'center'
                                     }}>
                                     <div style={{ fontSize: '11px', color: colors.textFaded, marginBottom: '4px' }}>
@@ -465,7 +465,7 @@ export default function NFTMintScreen() {
                             <div
                                 style={{
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     padding: '14px',
                                     marginBottom: '12px'
                                 }}>
@@ -500,8 +500,8 @@ export default function NFTMintScreen() {
                             style={{
                                 padding: '8px',
                                 background: `${colors.error}15`,
-                                border: `1px solid ${colors.error}30`,
-                                borderRadius: '8px',
+                                border: `1.5px solid ${colors.error}30`,
+                                borderRadius: '0px',
                                 textAlign: 'center',
                                 marginBottom: '12px'
                             }}>
@@ -516,7 +516,7 @@ export default function NFTMintScreen() {
                             padding: '14px',
                             background: disabled ? colors.buttonBg : colors.main,
                             border: 'none',
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             color: disabled ? colors.textFaded : colors.background,
                             fontSize: '14px',
                             fontWeight: 600,

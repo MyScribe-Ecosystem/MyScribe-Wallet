@@ -31,7 +31,7 @@ export interface SelectProps extends BaseViewProps {
 const $selectStyle = {
     backgroundColor: '#1c1919',
     padding: 10,
-    borderRadius: 4,
+    borderRadius: 0,
     cursor: 'pointer',
     fontSize: fontSizes.xs,
     color: colors.text,
@@ -57,9 +57,9 @@ const $modalStyle = {
 } as CSSProperties;
 
 const $modalContentStyle = {
-    backgroundColor: '#212121',
+    backgroundColor: '#0A1628',
     padding: 20,
-    borderRadius: 4,
+    borderRadius: 0,
     maxWidth: 300,
     width: '100%'
 } as CSSProperties;
@@ -76,13 +76,13 @@ const $optionStyle = {
 } as CSSProperties;
 
 const $searchInputStyle = {
-    backgroundColor: '#212121',
-    borderColor: '#292828',
-    borderWidth: 1,
+    backgroundColor: '#0A1628',
+    borderColor: '#122240',
+    borderWidth: 1.5,
     width: '100%',
     padding: 8,
     marginBottom: 10,
-    borderRadius: 4,
+    borderRadius: 0,
     fontSize: fontSizes.xs,
     border: 'none',
     color: colors.text

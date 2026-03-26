@@ -1,12 +1,12 @@
 import React from 'react';
 
 const colors = {
-    main: '#f37413',
-    mainDark: '#d5640f',
+    main: '#C49A3C',
+    mainDark: '#a67c1a',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.55)',
-    containerBorder: '#303030',
-    bg: '#292929'
+    containerBorder: '#3a5575',
+    bg: '#122240'
 };
 
 interface ActionButtonProps {
@@ -28,7 +28,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({ label, onClick, icon }) => 
                 padding: '4px 4px 4px',
                 background: 'transparent',
                 border: 'none',
-                borderRadius: '16px',
+                borderRadius: '0px',
                 cursor: 'pointer',
                 transition: 'all 0.2s'
             }}
@@ -59,7 +59,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({ label, onClick, icon }) => 
                 style={{
                     width: '44px',
                     height: '44px',
-                    borderRadius: '50%',
+                    borderRadius: '0px',
                     background: colors.bg,
                     border: `1.5px solid ${colors.containerBorder}`,
                     display: 'flex',

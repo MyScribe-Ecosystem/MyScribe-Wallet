@@ -2,9 +2,9 @@ import { Column, Content, Header, Layout } from '@/ui/components';
 import { RouteTypes, useNavigate } from '@/ui/pages/routeTypes';
 
 const colors = {
-    background: '#212121',
+    background: '#0A1628',
     textFaded: 'rgba(255, 255, 255, 0.5)',
-    main: '#f37413'
+    main: '#C49A3C'
 };
 
 export default function HistoryScreen() {

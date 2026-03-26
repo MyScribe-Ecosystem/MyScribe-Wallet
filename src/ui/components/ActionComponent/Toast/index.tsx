@@ -16,7 +16,7 @@ export interface ToastProps {
 const $baseViewStyle = {
     alignSelf: 'end',
     padding: 4,
-    borderRadius: 4,
+    borderRadius: 0,
     paddingLeft: 8,
     paddingRight: 8,
     marginLeft: 16,

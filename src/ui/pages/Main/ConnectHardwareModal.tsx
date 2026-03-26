@@ -15,7 +15,7 @@ function WalletItem(props: { walletType: HardwareWalletType; onClick?: () => voi
 
     return (
         <Card
-            style={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: 10, opacity: props.disabled ? 0.4 : 1 }}
+            style={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: 0, opacity: props.disabled ? 0.4 : 1 }}
             mt="lg"
             onClick={() => {
                 if (props.disabled) {

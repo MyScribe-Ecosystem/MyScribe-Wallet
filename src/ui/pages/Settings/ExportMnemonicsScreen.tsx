@@ -17,14 +17,14 @@ import { useTools } from '@/ui/components/ActionComponent';
 import { copyToClipboard, useLocationState, useWallet } from '@/ui/utils';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
-    buttonBg: '#434343',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
+    buttonBg: '#1a3050',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -105,9 +105,9 @@ export default function ExportMnemonicsScreen() {
                                 style={{
                                     width: '56px',
                                     height: '56px',
-                                    borderRadius: '14px',
+                                    borderRadius: '0px',
                                     background: `linear-gradient(135deg, ${colors.error}20 0%, ${colors.error}10 100%)`,
-                                    border: `1px solid ${colors.error}30`,
+                                    border: `1.5px solid ${colors.error}30`,
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
@@ -120,8 +120,8 @@ export default function ExportMnemonicsScreen() {
                             <div
                                 style={{
                                     background: `${colors.error}10`,
-                                    border: `1px solid ${colors.error}30`,
-                                    borderRadius: '12px',
+                                    border: `1.5px solid ${colors.error}30`,
+                                    borderRadius: '0px',
                                     padding: '14px',
                                     marginBottom: '16px'
                                 }}>
@@ -181,8 +181,8 @@ export default function ExportMnemonicsScreen() {
                             <div
                                 style={{
                                     background: `${colors.warning}10`,
-                                    border: `1px solid ${colors.warning}25`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${colors.warning}25`,
+                                    borderRadius: '0px',
                                     padding: '10px 12px',
                                     marginBottom: '20px',
                                     display: 'flex',
@@ -222,8 +222,8 @@ export default function ExportMnemonicsScreen() {
                                         width: '100%',
                                         padding: '12px 14px',
                                         background: colors.inputBg,
-                                        border: `1px solid ${error ? colors.error : colors.containerBorder}`,
-                                        borderRadius: '10px',
+                                        border: `1.5px solid ${error ? colors.error : colors.containerBorder}`,
+                                        borderRadius: '0px',
                                         color: colors.text,
                                         fontSize: '14px',
                                         outline: 'none',
@@ -255,7 +255,7 @@ export default function ExportMnemonicsScreen() {
                                     padding: '14px',
                                     background: !password ? colors.buttonBg : colors.main,
                                     border: 'none',
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     color: !password ? colors.textFaded : colors.background,
                                     fontSize: '14px',
                                     fontWeight: 600,
@@ -278,8 +278,8 @@ export default function ExportMnemonicsScreen() {
                             <div
                                 style={{
                                     background: `${colors.warning}10`,
-                                    border: `1px solid ${colors.warning}25`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${colors.warning}25`,
+                                    borderRadius: '0px',
                                     padding: '10px 12px',
                                     marginBottom: '14px',
                                     display: 'flex',
@@ -312,8 +312,8 @@ export default function ExportMnemonicsScreen() {
                                     gap: '8px',
                                     padding: '10px',
                                     background: copyHover ? `${colors.main}15` : 'transparent',
-                                    border: `1px solid ${copyHover ? colors.main + '40' : colors.containerBorder}`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${copyHover ? colors.main + '40' : colors.containerBorder}`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     transition: 'all 0.2s',
                                     marginBottom: '14px'
@@ -336,9 +336,9 @@ export default function ExportMnemonicsScreen() {
                             <div
                                 style={{
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     padding: '14px',
-                                    border: `1px solid ${colors.containerBorder}`,
+                                    border: `1.5px solid ${colors.containerBorder}`,
                                     marginBottom: '14px'
                                 }}>
                                 <div
@@ -356,8 +356,8 @@ export default function ExportMnemonicsScreen() {
                                                 gap: '8px',
                                                 padding: '8px 10px',
                                                 background: colors.inputBg,
-                                                borderRadius: '8px',
-                                                border: `1px solid ${colors.containerBorder}`
+                                                borderRadius: '0px',
+                                                border: `1.5px solid ${colors.containerBorder}`
                                             }}>
                                             <span
                                                 style={{
@@ -388,9 +388,9 @@ export default function ExportMnemonicsScreen() {
                             <div
                                 style={{
                                     background: colors.containerBgFaded,
-                                    borderRadius: '12px',
+                                    borderRadius: '0px',
                                     padding: '14px',
-                                    border: `1px solid ${colors.containerBorder}`
+                                    border: `1.5px solid ${colors.containerBorder}`
                                 }}>
                                 <div
                                     style={{
@@ -414,8 +414,8 @@ export default function ExportMnemonicsScreen() {
                                         gap: '8px',
                                         padding: '8px 10px',
                                         background: colors.inputBg,
-                                        borderRadius: '8px',
-                                        border: `1px solid ${colors.containerBorder}`,
+                                        borderRadius: '0px',
+                                        border: `1.5px solid ${colors.containerBorder}`,
                                         cursor: 'pointer',
                                         transition: 'border-color 0.15s',
                                         marginBottom: passphrase ? '8px' : '0'
@@ -462,8 +462,8 @@ export default function ExportMnemonicsScreen() {
                                             gap: '8px',
                                             padding: '8px 10px',
                                             background: colors.inputBg,
-                                            borderRadius: '8px',
-                                            border: `1px solid ${colors.containerBorder}`,
+                                            borderRadius: '0px',
+                                            border: `1.5px solid ${colors.containerBorder}`,
                                             cursor: 'pointer',
                                             transition: 'border-color 0.15s'
                                         }}

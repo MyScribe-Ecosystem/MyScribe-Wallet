@@ -23,16 +23,16 @@ import { RouteTypes, useNavigate } from '../routeTypes';
 BigNumber.config({ EXPONENTIAL_AT: 256 });
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -199,8 +199,8 @@ export default function SendOpNetScreen() {
                 <div
                     style={{
                         background: `linear-gradient(135deg, ${colors.main}15 0%, ${colors.main}08 100%)`,
-                        border: `1px solid ${colors.main}30`,
-                        borderRadius: '14px',
+                        border: `1.5px solid ${colors.main}30`,
+                        borderRadius: '0px',
                         padding: '16px',
                         textAlign: 'center'
                     }}>
@@ -219,7 +219,7 @@ export default function SendOpNetScreen() {
                                 style={{
                                     width: 32,
                                     height: 32,
-                                    borderRadius: '8px'
+                                    borderRadius: '0px'
                                 }}
                             />
                         ) : (
@@ -227,7 +227,7 @@ export default function SendOpNetScreen() {
                                 style={{
                                     width: 32,
                                     height: 32,
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     background: colors.main,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -273,7 +273,7 @@ export default function SendOpNetScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         padding: '12px'
                     }}>
                     <div
@@ -299,8 +299,8 @@ export default function SendOpNetScreen() {
                         autoFocus
                         style={{
                             background: colors.inputBg,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '8px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             padding: '10px',
                             fontSize: '13px'
                         }}
@@ -312,7 +312,7 @@ export default function SendOpNetScreen() {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '12px'
                         }}>
                         <div
@@ -335,7 +335,7 @@ export default function SendOpNetScreen() {
                                 style={{
                                     padding: '10px',
                                     background: colors.inputBg,
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     fontSize: '12px',
                                     color: colors.textFaded,
                                     textAlign: 'center'
@@ -347,8 +347,8 @@ export default function SendOpNetScreen() {
                                 style={{
                                     padding: '10px',
                                     background: colors.inputBg,
-                                    border: `1px solid ${colors.success}30`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.success}30`,
+                                    borderRadius: '0px',
                                     fontSize: '11px',
                                     color: colors.text,
                                     fontFamily: 'monospace',
@@ -362,8 +362,8 @@ export default function SendOpNetScreen() {
                                 style={{
                                     padding: '10px',
                                     background: `${colors.error}15`,
-                                    border: `1px solid ${colors.error}30`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.error}30`,
+                                    borderRadius: '0px',
                                     fontSize: '11px',
                                     color: colors.error,
                                     lineHeight: '1.6'
@@ -383,7 +383,7 @@ export default function SendOpNetScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         padding: '12px'
                     }}>
                     <div
@@ -412,7 +412,7 @@ export default function SendOpNetScreen() {
                                 padding: '4px 8px',
                                 background: colors.main,
                                 border: 'none',
-                                borderRadius: '6px',
+                                borderRadius: '0px',
                                 color: colors.background,
                                 fontSize: '10px',
                                 fontWeight: 600,
@@ -437,8 +437,8 @@ export default function SendOpNetScreen() {
                         decimalPlaces={divisibility}
                         style={{
                             background: colors.inputBg,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '8px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             padding: '10px',
                             fontSize: '16px',
                             fontWeight: 600
@@ -450,7 +450,7 @@ export default function SendOpNetScreen() {
                 <div
                     style={{
                         background: `linear-gradient(135deg, ${colors.containerBgFaded} 0%, rgba(41, 40, 40, 0.6) 100%)`,
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         padding: '14px',
                         border: note
                             ? `1px solid ${colors.main}30`
@@ -487,7 +487,7 @@ export default function SendOpNetScreen() {
                                     letterSpacing: 'normal',
                                     background: 'rgba(255,255,255,0.05)',
                                     padding: '2px 6px',
-                                    borderRadius: '4px'
+                                    borderRadius: '0px'
                                 }}>
                                 Optional
                             </span>
@@ -514,8 +514,8 @@ export default function SendOpNetScreen() {
                         }}
                         style={{
                             background: colors.inputBg,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '10px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             padding: '10px 12px',
                             fontSize: '13px',
                             lineHeight: '1.4',
@@ -528,7 +528,7 @@ export default function SendOpNetScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         padding: '12px'
                     }}>
                     <div
@@ -578,8 +578,8 @@ export default function SendOpNetScreen() {
                         style={{
                             padding: '8px 12px',
                             background: `${colors.error}15`,
-                            border: `1px solid ${colors.error}30`,
-                            borderRadius: '8px',
+                            border: `1.5px solid ${colors.error}30`,
+                            borderRadius: '0px',
                             textAlign: 'center'
                         }}>
                         <Text
@@ -600,7 +600,7 @@ export default function SendOpNetScreen() {
                         padding: '14px',
                         background: disabled ? colors.buttonBg : colors.main,
                         border: 'none',
-                        borderRadius: '12px',
+                        borderRadius: '0px',
                         color: disabled ? colors.textFaded : colors.background,
                         fontSize: '14px',
                         fontWeight: 600,

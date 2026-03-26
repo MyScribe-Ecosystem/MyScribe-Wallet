@@ -17,16 +17,16 @@ import { useState } from 'react';
 import { useTools } from '../ActionComponent';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     warning: '#fbbf24'
 };
@@ -170,7 +170,7 @@ export function AddressBar({
                     width: '100%',
                     padding: '14px',
                     background: colors.buttonHoverBg,
-                    borderRadius: '17px',
+                    borderRadius: '0px',
                     marginBottom: '12px',
                     cursor: 'pointer',
                     transition: 'background 0.3s',
@@ -210,7 +210,7 @@ export function AddressBar({
                             style={{
                                 width: '36px',
                                 height: '36px',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 background: colors.main,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -247,7 +247,7 @@ export function AddressBar({
                         style={{
                             width: '32px',
                             height: '32px',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             background: copiedMain ? `${colors.success}20` : colors.containerBgFaded,
                             display: 'flex',
                             alignItems: 'center',
@@ -296,7 +296,7 @@ export function AddressBar({
                         color: colors.text,
                         background: colors.buttonHoverBg,
                         border: 'none',
-                        borderRadius: '17px',
+                        borderRadius: '0px',
                         padding: '8px 12px',
                         cursor: 'pointer',
                         transition: 'all 0.3s',
@@ -329,7 +329,7 @@ export function AddressBar({
                         fontFamily: 'Inter-Regular, serif',
                         color: colors.text,
                         border: 'none',
-                        borderRadius: '17px',
+                        borderRadius: '0px',
                         background: colors.buttonHoverBg,
                         cursor: 'pointer',
                         transition: 'all 0.3s',
@@ -367,8 +367,8 @@ export function AddressBar({
                     <div
                         style={{
                             background: colors.containerBg,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '16px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             width: '500px',
                             maxWidth: '90vw',
                             maxHeight: '80vh',
@@ -403,7 +403,7 @@ export function AddressBar({
                                     color: colors.textFaded,
                                     cursor: 'pointer',
                                     padding: '4px',
-                                    borderRadius: '4px',
+                                    borderRadius: '0px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
@@ -434,10 +434,10 @@ export function AddressBar({
                                     key={addr.label}
                                     style={{
                                         padding: '16px',
-                                        borderRadius: '12px',
+                                        borderRadius: '0px',
                                         marginBottom: i !== otherAddresses.length - 1 ? '12px' : '0',
                                         background: colors.inputBg,
-                                        border: `1px solid ${colors.containerBorder}`,
+                                        border: `1.5px solid ${colors.containerBorder}`,
                                         transition: 'all 0.15s',
                                         cursor: 'pointer'
                                     }}
@@ -492,7 +492,7 @@ export function AddressBar({
                                                 <div
                                                     style={{
                                                         background: colors.containerBgFaded,
-                                                        borderRadius: '8px',
+                                                        borderRadius: '0px',
                                                         padding: '12px',
                                                         marginTop: '8px'
                                                     }}>
@@ -639,8 +639,8 @@ export function AddressBar({
                                                     color: colors.text,
                                                     fontSize: '11px',
                                                     padding: '8px 10px',
-                                                    borderRadius: '8px',
-                                                    border: `1px solid ${colors.containerBorder}`,
+                                                    borderRadius: '0px',
+                                                    border: `1.5px solid ${colors.containerBorder}`,
                                                     width: '220px',
                                                     textAlign: 'left',
                                                     zIndex: 200,

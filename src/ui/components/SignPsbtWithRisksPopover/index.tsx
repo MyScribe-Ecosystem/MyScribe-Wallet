@@ -63,8 +63,8 @@ export const SignPsbtWithRisksPopover: React.FC<SignPsbtWithRisksPopoverProps> =
                         <Column
                             key={`risk_${index}`}
                             style={{
-                                border: `1px solid ${colors.border}`,
-                                borderRadius: 10
+                                border: `1.5px solid ${colors.border}`,
+                                borderRadius: 0
                             }}
                             px="md"
                             py="sm">

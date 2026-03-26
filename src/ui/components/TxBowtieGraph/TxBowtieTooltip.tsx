@@ -20,8 +20,8 @@ interface TxBowtieTooltipProps {
 const tooltipStyles: React.CSSProperties = {
     position: 'absolute',
     background: 'rgba(33, 33, 33, 0.95)',
-    border: '1px solid rgba(243, 116, 19, 0.3)',
-    borderRadius: '8px',
+    border: '1.5px solid rgba(243, 116, 19, 0.3)',
+    borderRadius: '0px',
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.4)',
     padding: '10px 14px',
     pointerEvents: 'none',
@@ -48,7 +48,7 @@ const valueStyles: React.CSSProperties = {
 };
 
 const addressStyles: React.CSSProperties = {
-    color: '#f37413',
+    color: '#C49A3C',
     fontFamily: 'monospace',
     fontSize: '11px',
     wordBreak: 'break-all'
@@ -75,7 +75,7 @@ export function TxBowtieTooltip({
                     ...tooltipStyles,
                     left: tooltipX,
                     top: tooltipY,
-                    border: '1px solid rgba(59, 130, 246, 0.3)' // Blue border for mining fee
+                    border: '1.5px solid rgba(59, 130, 246, 0.3)' // Blue border for mining fee
                 }}
             >
                 <div style={{ marginBottom: '8px' }}>
@@ -104,7 +104,7 @@ export function TxBowtieTooltip({
                     ...tooltipStyles,
                     left: tooltipX,
                     top: tooltipY,
-                    border: '1px solid rgba(168, 85, 247, 0.3)' // Purple border for epoch miner
+                    border: '1.5px solid rgba(168, 85, 247, 0.3)' // Purple border for epoch miner
                 }}
             >
                 <div style={{ marginBottom: '8px' }}>
@@ -135,7 +135,7 @@ export function TxBowtieTooltip({
 
     // Handle consolidated items differently
     // Pink for consolidated inputs, orange for consolidated outputs
-    const consolidatedColor = isInput ? '#ec4899' : '#ee771b';
+    const consolidatedColor = isInput ? '#ec4899' : '#C49A3C';
 
     if (isConsolidated) {
         return (
@@ -158,7 +158,7 @@ export function TxBowtieTooltip({
                     <div style={{
                         width: '8px',
                         height: '8px',
-                        borderRadius: '50%',
+                        borderRadius: '0px',
                         background: consolidatedColor
                     }} />
                     <span style={{
@@ -215,13 +215,13 @@ export function TxBowtieTooltip({
                 <div style={{
                     width: '8px',
                     height: '8px',
-                    borderRadius: '50%',
-                    background: isInput ? '#f37413' : '#ee771b'
+                    borderRadius: '0px',
+                    background: isInput ? '#C49A3C' : '#C49A3C'
                 }} />
                 <span style={{
                     fontSize: '11px',
                     fontWeight: 600,
-                    color: isInput ? '#f37413' : '#ee771b'
+                    color: isInput ? '#C49A3C' : '#C49A3C'
                 }}>
                     {isInput ? 'INPUT' : outputData.isChange ? 'CHANGE OUTPUT' : 'OUTPUT'}
                 </span>
@@ -229,9 +229,9 @@ export function TxBowtieTooltip({
                     <span style={{
                         fontSize: '9px',
                         background: 'rgba(243, 116, 19, 0.2)',
-                        color: '#f37413',
+                        color: '#C49A3C',
                         padding: '2px 6px',
-                        borderRadius: '4px',
+                        borderRadius: '0px',
                         marginLeft: 'auto'
                     }}>
                         TO SIGN

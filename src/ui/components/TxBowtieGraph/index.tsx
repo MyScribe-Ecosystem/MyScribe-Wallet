@@ -36,28 +36,28 @@ interface LineParams {
 // Color scheme matching the wallet theme
 const colors = {
     input: {
-        start: '#f37413', // orange
-        end: '#ee771b'    // gold
+        start: '#C49A3C', // orange
+        end: '#C49A3C'    // gold
     },
     output: {
-        start: '#ee771b',
-        end: '#f37413'
+        start: '#C49A3C',
+        end: '#C49A3C'
     },
     fee: {
-        start: '#ee771b', // orange - transitions to blue
+        start: '#C49A3C', // orange - transitions to blue
         end: '#3b82f6'    // blue - mining fee paid to miners
     },
     epochMiner: {
-        start: '#ee771b', // orange - transitions to purple
+        start: '#C49A3C', // orange - transitions to purple
         end: '#a855f7'    // purple - OPNet epoch miner
     },
     consolidated: {
         start: '#ec4899', // pink
-        end: '#ee771b'    // orange (flows into middle)
+        end: '#C49A3C'    // orange (flows into middle)
     },
     highlight: '#4ade80', // green for user's addresses
     hover: '#ffffff',
-    middle: '#ee771b'
+    middle: '#C49A3C'
 };
 
 export function TxBowtieGraph({

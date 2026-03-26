@@ -11,13 +11,13 @@ import { useWallet } from '@/ui/utils';
 type ExperienceMode = 'simple' | 'expert';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     purple: '#a78bfa'
 };
@@ -106,7 +106,7 @@ export default function UserExperienceModeScreen() {
                                     onClick={() => setSelectedMode(option.mode)}
                                     style={{
                                         background: colors.containerBgFaded,
-                                        borderRadius: '14px',
+                                        borderRadius: '0px',
                                         padding: '16px',
                                         cursor: 'pointer',
                                         border: `2px solid ${isSelected ? option.iconColor : 'transparent'}`,
@@ -130,7 +130,7 @@ export default function UserExperienceModeScreen() {
                                             style={{
                                                 width: 44,
                                                 height: 44,
-                                                borderRadius: '12px',
+                                                borderRadius: '0px',
                                                 background: `${option.iconColor}20`,
                                                 display: 'flex',
                                                 alignItems: 'center',
@@ -160,7 +160,7 @@ export default function UserExperienceModeScreen() {
                                                     style={{
                                                         width: 4,
                                                         height: 4,
-                                                        borderRadius: '50%',
+                                                        borderRadius: '0px',
                                                         background: option.iconColor
                                                     }}
                                                 />

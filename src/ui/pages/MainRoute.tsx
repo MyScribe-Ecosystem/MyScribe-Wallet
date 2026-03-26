@@ -39,7 +39,9 @@ import BoostScreen from './Main/BoostScreen';
 import SettingsTabScreen from './Main/SettingsTabScreen';
 import WalletTabScreen from './Main/WalletTabScreen';
 import WelcomeScreen from './Main/WelcomeScreen';
-import DeployContract from './OpNet/DeployContract';
+import OrdinalsTabScreen from './Main/OrdinalsTabScreen';
+import InscriptionDetailScreen from './Ordinals/InscriptionDetailScreen';
+import SendInscriptionScreen from './Ordinals/SendInscriptionScreen';
 import Mint from './OpNet/Mint';
 import OpNetTokenScreen from './OpNet/OpNetTokenScreen';
 import SendOpNetScreen from './OpNet/SendOpNetScreen';
@@ -221,10 +223,6 @@ export const routes: Routes = {
         path: routePaths[RouteTypes.SendOpNetScreen],
         element: <SendOpNetScreen />
     },
-    [RouteTypes.DeployContract]: {
-        path: routePaths[RouteTypes.DeployContract],
-        element: <DeployContract />
-    },
     [RouteTypes.Mint]: {
         path: routePaths[RouteTypes.Mint],
         element: <Mint />
@@ -244,6 +242,18 @@ export const routes: Routes = {
     [RouteTypes.NFTSendScreen]: {
         path: routePaths[RouteTypes.NFTSendScreen],
         element: <NFTSendScreen />
+    },
+    [RouteTypes.OrdinalsTabScreen]: {
+        path: routePaths[RouteTypes.OrdinalsTabScreen],
+        element: <OrdinalsTabScreen />
+    },
+    [RouteTypes.InscriptionDetailScreen]: {
+        path: routePaths[RouteTypes.InscriptionDetailScreen],
+        element: <InscriptionDetailScreen />
+    },
+    [RouteTypes.SendInscriptionScreen]: {
+        path: routePaths[RouteTypes.SendInscriptionScreen],
+        element: <SendInscriptionScreen />
     },
     [RouteTypes.ImportTokenScreen]: {
         path: routePaths[RouteTypes.ImportTokenScreen],
@@ -413,7 +423,7 @@ const Main = () => {
                     height: '100vh',
                     overflowY: 'auto',
                     overflowX: 'hidden',
-                    backgroundColor: '#212121'
+                    backgroundColor: '#0A1628'
                 }}>
                 <Content justifyCenter itemsCenter>
                     <OPNetLoader size={140} text="Loading" />

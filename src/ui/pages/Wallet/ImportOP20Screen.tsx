@@ -11,16 +11,16 @@ import { Address, AddressTypes, AddressVerificator } from '@btc-vision/transacti
 import { useEffect, useState } from 'react';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444'
 };
@@ -233,9 +233,9 @@ export default function ImportTokenScreen() {
                             style={{
                                 width: '48px',
                                 height: '48px',
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 background: `linear-gradient(135deg, ${colors.main}20 0%, ${colors.main}08 100%)`,
-                                border: `1px solid ${colors.main}25`,
+                                border: `1.5px solid ${colors.main}25`,
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -284,8 +284,8 @@ export default function ImportTokenScreen() {
                                         style={{
                                             width: '100%',
                                             background: `linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)`,
-                                            border: `1px solid rgba(255,255,255,0.06)`,
-                                            borderRadius: '12px',
+                                            border: `1.5px solid rgba(255,255,255,0.06)`,
+                                            borderRadius: '0px',
                                             padding: '12px 14px',
                                             cursor: 'pointer',
                                             transition: 'all 0.2s ease',
@@ -309,7 +309,7 @@ export default function ImportTokenScreen() {
                                                 style={{
                                                     width: '36px',
                                                     height: '36px',
-                                                    borderRadius: '10px',
+                                                    borderRadius: '0px',
                                                     display: 'flex',
                                                     alignItems: 'center',
                                                     justifyContent: 'center',
@@ -352,7 +352,7 @@ export default function ImportTokenScreen() {
                                                 fontWeight: 600,
                                                 background: `${colors.main}12`,
                                                 padding: '4px 10px',
-                                                borderRadius: '6px',
+                                                borderRadius: '0px',
                                                 transition: 'all 0.2s'
                                             }}>
                                             Import
@@ -390,7 +390,7 @@ export default function ImportTokenScreen() {
                     <div
                         style={{
                             background: `linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)`,
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             padding: '14px',
                             border: contractAddress
                                 ? `1px solid ${error ? colors.error + '40' : tokenInfo ? colors.success + '30' : colors.main + '25'}`
@@ -418,8 +418,8 @@ export default function ImportTokenScreen() {
                             onChange={(e) => handleAddressChange(e.target.value)}
                             style={{
                                 background: colors.inputBg,
-                                border: `1px solid ${colors.containerBorder}`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.containerBorder}`,
+                                borderRadius: '0px',
                                 padding: '10px 12px',
                                 fontSize: '13px',
                                 fontFamily: 'monospace'
@@ -434,8 +434,8 @@ export default function ImportTokenScreen() {
                                 textAlign: 'center',
                                 padding: '24px',
                                 background: 'rgba(255,255,255,0.02)',
-                                borderRadius: '14px',
-                                border: '1px solid rgba(255,255,255,0.04)'
+                                borderRadius: '0px',
+                                border: '1.5px solid rgba(255,255,255,0.04)'
                             }}>
                             <OPNetLoader size={50} text="Fetching token" />
                         </div>
@@ -446,9 +446,9 @@ export default function ImportTokenScreen() {
                         <div
                             style={{
                                 background: `linear-gradient(135deg, ${colors.main}08 0%, rgba(255,255,255,0.02) 100%)`,
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '16px',
-                                border: `1px solid ${colors.main}20`,
+                                border: `1.5px solid ${colors.main}20`,
                                 position: 'relative',
                                 overflow: 'hidden'
                             }}>
@@ -460,7 +460,7 @@ export default function ImportTokenScreen() {
                                     right: '-30px',
                                     width: '80px',
                                     height: '80px',
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     background: `radial-gradient(circle, ${colors.main}15 0%, transparent 70%)`,
                                     pointerEvents: 'none'
                                 }}
@@ -482,7 +482,7 @@ export default function ImportTokenScreen() {
                                         background: tokenInfo.icon
                                             ? 'transparent'
                                             : `linear-gradient(135deg, ${colors.main}30 0%, ${colors.main}10 100%)`,
-                                        borderRadius: '14px',
+                                        borderRadius: '0px',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
@@ -498,7 +498,7 @@ export default function ImportTokenScreen() {
                                                 width: '100%',
                                                 height: '100%',
                                                 objectFit: 'cover',
-                                                borderRadius: '14px'
+                                                borderRadius: '0px'
                                             }}
                                         />
                                     ) : (
@@ -537,7 +537,7 @@ export default function ImportTokenScreen() {
                                     gridTemplateColumns: '1fr 1fr',
                                     gap: '1px',
                                     background: 'rgba(255,255,255,0.04)',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     overflow: 'hidden'
                                 }}>
                                 <div
@@ -606,7 +606,7 @@ export default function ImportTokenScreen() {
                                     marginTop: '12px',
                                     padding: '8px 10px',
                                     background: 'rgba(0,0,0,0.15)',
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     gap: '8px'
@@ -643,8 +643,8 @@ export default function ImportTokenScreen() {
                             style={{
                                 padding: '10px 14px',
                                 background: `linear-gradient(135deg, ${colors.error}10 0%, ${colors.error}05 100%)`,
-                                border: `1px solid ${colors.error}25`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.error}25`,
+                                borderRadius: '0px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: '8px'
@@ -653,7 +653,7 @@ export default function ImportTokenScreen() {
                                 style={{
                                     width: '6px',
                                     height: '6px',
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     background: colors.error,
                                     flexShrink: 0
                                 }}
@@ -672,7 +672,7 @@ export default function ImportTokenScreen() {
                                     ? `linear-gradient(135deg, ${colors.main} 0%, #d5640f 100%)`
                                     : colors.buttonBg,
                             border: 'none',
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             color: tokenInfo && !loading ? '#000' : colors.textFaded,
                             fontSize: '14px',
                             fontWeight: 700,

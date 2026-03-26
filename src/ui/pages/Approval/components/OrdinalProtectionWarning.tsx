@@ -69,7 +69,7 @@ export function OrdinalProtectionWarning({ address, utxos, optionalInputs }: Ord
                 padding: '12px',
                 background: '#ef444420',
                 border: '2px solid #ef4444',
-                borderRadius: '10px',
+                borderRadius: '0px',
                 marginBottom: '12px'
             }}>
             <div
@@ -125,7 +125,7 @@ export function OrdinalProtectionWarning({ address, utxos, optionalInputs }: Ord
                 <div
                     style={{
                         background: '#ef444415',
-                        borderRadius: '6px',
+                        borderRadius: '0px',
                         padding: '8px',
                         marginBottom: '8px'
                     }}>

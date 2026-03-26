@@ -1,15 +1,15 @@
 import { CheckCircleOutlined, FileTextOutlined, KeyOutlined, SafetyOutlined, WarningOutlined } from '@ant-design/icons';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
@@ -52,10 +52,10 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     background: colors.containerBg,
-                    borderRadius: '16px',
+                    borderRadius: '0px',
                     width: '90%',
                     maxWidth: '360px',
-                    border: `1px solid ${colors.containerBorder}`,
+                    border: `1.5px solid ${colors.containerBorder}`,
                     boxShadow: '0 10px 40px rgba(0, 0, 0, 0.5)',
                     zIndex: 1000,
                     animation: 'slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
@@ -65,16 +65,16 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                     style={{
                         padding: '20px 20px 0',
                         background: `linear-gradient(135deg, ${colors.main}15 0%, transparent 100%)`,
-                        borderRadius: '16px 16px 0 0'
+                        borderRadius: '0px'
                     }}>
                     {/* Icon */}
                     <div
                         style={{
                             width: '56px',
                             height: '56px',
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             background: `linear-gradient(135deg, ${colors.main}20 0%, ${colors.main}10 100%)`,
-                            border: `1px solid ${colors.main}30`,
+                            border: `1.5px solid ${colors.main}30`,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -118,7 +118,7 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                             padding: '16px',
                             background: `${colors.success}10`,
                             border: `2px solid ${colors.success}40`,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             textAlign: 'left',
                             marginBottom: '12px',
@@ -137,7 +137,7 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                                 style={{
                                     width: '40px',
                                     height: '40px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: `${colors.success}20`,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -163,7 +163,7 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                                             padding: '2px 6px',
                                             background: colors.success,
                                             color: '#fff',
-                                            borderRadius: '4px',
+                                            borderRadius: '0px',
                                             fontWeight: 700
                                         }}>
                                         RECOMMENDED
@@ -201,8 +201,8 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                             width: '100%',
                             padding: '16px',
                             background: colors.containerBgFaded,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '12px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             textAlign: 'left',
                             marginBottom: '16px',
@@ -221,7 +221,7 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                                 style={{
                                     width: '40px',
                                     height: '40px',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     background: `${colors.warning}15`,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -247,7 +247,7 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                                             padding: '2px 6px',
                                             background: `${colors.warning}20`,
                                             color: colors.warning,
-                                            borderRadius: '4px',
+                                            borderRadius: '0px',
                                             fontWeight: 600
                                         }}>
                                         ADVANCED
@@ -270,8 +270,8 @@ export const WalletSetupGuideModal = ({ open, onSelectHD, onSelectWIF, onClose }
                         style={{
                             padding: '10px 12px',
                             background: `${colors.purple}10`,
-                            border: `1px solid ${colors.purple}25`,
-                            borderRadius: '8px'
+                            border: `1.5px solid ${colors.purple}25`,
+                            borderRadius: '0px'
                         }}>
                         <p style={{ fontSize: '11px', color: colors.textFaded, margin: 0, lineHeight: '1.4' }}>
                             <strong style={{ color: colors.purple }}>Why Seed Phrase?</strong> HD wallets automatically

@@ -89,7 +89,7 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
             style={{
                 background: noBorder ? 'transparent' : '#1a1a1a',
                 border: noBorder ? 'none' : `1px solid ${colors.containerBorder}`,
-                borderRadius: noBorder ? '0' : '14px',
+                borderRadius: '0px',
                 padding: noBorder ? '0' : '14px',
                 width: alignLeft ? '100%' : '300px',
                 boxShadow: noBorder ? 'none' : '0 8px 24px rgba(0, 0, 0, 0.4)',
@@ -102,7 +102,7 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
                     gap: '4px',
                     marginBottom: '14px',
                     background: 'rgba(255, 255, 255, 0.04)',
-                    borderRadius: '10px',
+                    borderRadius: '0px',
                     padding: '3px'
                 }}>
                 {visibleTabs.map((tab) => (
@@ -114,7 +114,7 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
                             padding: '7px 10px',
                             background: activeTab === tab.id ? colors.main : 'transparent',
                             border: 'none',
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             transition: 'all 0.2s',
                             fontSize: '11px',
@@ -148,7 +148,7 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
                             style={{
                                 marginBottom: hasCSV75 || hasCSV3 || hasCSV2 || hasCSV1 ? '10px' : '0',
                                 background: 'rgba(255, 255, 255, 0.03)',
-                                borderRadius: '10px',
+                                borderRadius: '0px',
                                 padding: '10px 12px'
                             }}>
                             <div
@@ -191,7 +191,7 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
                                 style={{
                                     marginBottom: hasCSV2 || hasCSV3 || hasCSV75 ? '10px' : '0',
                                     background: 'rgba(255, 255, 255, 0.03)',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     padding: '10px 12px'
                                 }}>
                                 <div
@@ -245,7 +245,7 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
                                 style={{
                                     marginBottom: hasCSV3 || hasCSV75 ? '10px' : '0',
                                     background: 'rgba(255, 255, 255, 0.03)',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     padding: '10px 12px'
                                 }}>
                                 <div
@@ -298,7 +298,7 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
                                 style={{
                                     marginBottom: hasCSV75 ? '10px' : '0',
                                     background: 'rgba(255, 255, 255, 0.03)',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     padding: '10px 12px'
                                 }}>
                                 <div
@@ -350,7 +350,7 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
                             <div
                                 style={{
                                     background: 'rgba(255, 255, 255, 0.03)',
-                                    borderRadius: '10px',
+                                    borderRadius: '0px',
                                     padding: '10px 12px'
                                 }}>
                                 <div
@@ -420,8 +420,8 @@ export const BalanceTabs: React.FC<BalanceTabsProps> = ({
             <div
                 style={{
                     background: `linear-gradient(135deg, ${colors.main}18 0%, ${colors.main}08 100%)`,
-                    border: `1px solid ${colors.main}30`,
-                    borderRadius: '10px',
+                    border: `1.5px solid ${colors.main}30`,
+                    borderRadius: '0px',
                     padding: '10px 12px',
                     marginTop: '10px'
                 }}>

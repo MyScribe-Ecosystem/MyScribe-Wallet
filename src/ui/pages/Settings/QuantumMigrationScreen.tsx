@@ -24,12 +24,12 @@ const EXPECTED_QUANTUM_KEY_BYTES = MLDSA_CONFIG.privateKeySize;
 const EXPECTED_QUANTUM_KEY_HEX_CHARS = EXPECTED_QUANTUM_KEY_BYTES * 2;
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     containerBg: '#252525',
-    containerBorder: '#303030',
+    containerBorder: '#2a4060',
     success: '#4ade80',
-    warning: '#f37413',
+    warning: '#C49A3C',
     error: '#ef4444',
     purple: '#8B5CF6',
     purpleText: '#c4b5fd',
@@ -251,7 +251,7 @@ export default function QuantumMigrationScreen() {
                                 style={{
                                     padding: '12px',
                                     backgroundColor: 'rgba(0, 0, 0, 0.2)',
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     wordBreak: 'break-all',
                                     fontFamily: 'monospace',
                                     fontSize: '12px',
@@ -342,7 +342,7 @@ export default function QuantumMigrationScreen() {
                                 style={{
                                     padding: '12px',
                                     backgroundColor: 'rgba(0, 0, 0, 0.2)',
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     wordBreak: 'break-all',
                                     fontFamily: 'monospace',
                                     fontSize: '12px',
@@ -396,8 +396,8 @@ export default function QuantumMigrationScreen() {
                     <Card
                         style={{
                             backgroundColor: colors.containerBg,
-                            border: '1px solid rgba(139, 92, 246, 0.3)',
-                            borderRadius: '12px',
+                            border: '1.5px solid rgba(139, 92, 246, 0.3)',
+                            borderRadius: '0px',
                             padding: '10px 12px',
                             marginBottom: '12px'
                         }}
@@ -417,8 +417,8 @@ export default function QuantumMigrationScreen() {
                             <div
                                 style={{
                                     background: colors.background,
-                                    border: `1px solid ${colors.containerBorder}`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${colors.containerBorder}`,
+                                    borderRadius: '0px',
                                     padding: '8px 10px',
                                     marginTop: '2px'
                                 }}
@@ -449,8 +449,8 @@ export default function QuantumMigrationScreen() {
                 <Card
                     style={{
                         background: 'linear-gradient(135deg, rgba(243,116,19,0.12) 0%, rgba(239,68,68,0.08) 100%)',
-                        border: '1px solid rgba(243, 116, 19, 0.25)',
-                        borderRadius: '12px',
+                        border: '1.5px solid rgba(243, 116, 19, 0.25)',
+                        borderRadius: '0px',
                         padding: '10px 12px',
                         marginBottom: '12px'
                     }}
@@ -474,8 +474,8 @@ export default function QuantumMigrationScreen() {
                         <div
                             style={{
                                 backgroundColor: 'rgba(139, 92, 246, 0.1)',
-                                border: '1px solid rgba(139, 92, 246, 0.25)',
-                                borderRadius: '12px',
+                                border: '1.5px solid rgba(139, 92, 246, 0.25)',
+                                borderRadius: '0px',
                                 padding: '12px',
                                 cursor: 'pointer',
                                 transition: 'all 0.15s'
@@ -495,7 +495,7 @@ export default function QuantumMigrationScreen() {
                                     style={{
                                         width: '36px',
                                         height: '36px',
-                                        borderRadius: '10px',
+                                        borderRadius: '0px',
                                         background: 'rgba(139, 92, 246, 0.25)',
                                         display: 'flex',
                                         alignItems: 'center',
@@ -525,7 +525,7 @@ export default function QuantumMigrationScreen() {
                                     gap="sm"
                                     style={{
                                         background: 'rgba(0, 0, 0, 0.2)',
-                                        borderRadius: '8px',
+                                        borderRadius: '0px',
                                         padding: '8px 10px',
                                         marginTop: 12,
                                         alignItems: 'flex-start'
@@ -549,8 +549,8 @@ export default function QuantumMigrationScreen() {
                             <div
                                 style={{
                                     backgroundColor: 'rgba(74, 222, 128, 0.1)',
-                                    border: '1px solid rgba(74, 222, 128, 0.25)',
-                                    borderRadius: '12px',
+                                    border: '1.5px solid rgba(74, 222, 128, 0.25)',
+                                    borderRadius: '0px',
                                     padding: '12px',
                                     marginTop: '12px',
                                     cursor: 'pointer',
@@ -571,7 +571,7 @@ export default function QuantumMigrationScreen() {
                                         style={{
                                             width: '36px',
                                             height: '36px',
-                                            borderRadius: '10px',
+                                            borderRadius: '0px',
                                             background: 'rgba(74, 222, 128, 0.25)',
                                             display: 'flex',
                                             alignItems: 'center',
@@ -598,8 +598,8 @@ export default function QuantumMigrationScreen() {
                     <Card
                         style={{
                             backgroundColor: colors.containerBg,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '12px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             padding: '12px'
                         }}
                     >
@@ -638,8 +638,8 @@ export default function QuantumMigrationScreen() {
                                 <Card
                                     style={{
                                         backgroundColor: 'rgba(239, 68, 68, 0.1)',
-                                        border: '1px solid rgba(239, 68, 68, 0.3)',
-                                        borderRadius: '8px',
+                                        border: '1.5px solid rgba(239, 68, 68, 0.3)',
+                                        borderRadius: '0px',
                                         padding: '10px',
                                         marginTop: 8
                                     }}

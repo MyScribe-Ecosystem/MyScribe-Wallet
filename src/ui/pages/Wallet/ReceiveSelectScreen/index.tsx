@@ -34,8 +34,8 @@ function OptionCard({ option, address, loading, onCopy, onQRClick }: OptionCardP
                 display: 'flex',
                 alignItems: 'center',
                 padding: '14px 16px',
-                borderRadius: '12px',
-                border: `1px solid ${isHovered ? option.iconColor : colors.border}`,
+                borderRadius: '0px',
+                border: `1.5px solid ${isHovered ? option.iconColor : colors.border}`,
                 background: isHovered ? `${option.iconColor}08` : 'transparent',
                 transition: 'all 0.2s',
                 gap: '14px'
@@ -45,7 +45,7 @@ function OptionCard({ option, address, loading, onCopy, onQRClick }: OptionCardP
                 style={{
                     width: '40px',
                     height: '40px',
-                    borderRadius: '10px',
+                    borderRadius: '0px',
                     background: option.iconBg,
                     display: 'flex',
                     alignItems: 'center',
@@ -87,7 +87,7 @@ function OptionCard({ option, address, loading, onCopy, onQRClick }: OptionCardP
                     style={{
                         width: '36px',
                         height: '36px',
-                        borderRadius: '8px',
+                        borderRadius: '0px',
                         background: colors.bg3,
                         display: 'flex',
                         alignItems: 'center',
@@ -114,7 +114,7 @@ function OptionCard({ option, address, loading, onCopy, onQRClick }: OptionCardP
                     style={{
                         width: '36px',
                         height: '36px',
-                        borderRadius: '8px',
+                        borderRadius: '0px',
                         background: colors.bg3,
                         display: 'flex',
                         alignItems: 'center',
@@ -205,7 +205,7 @@ export default function ReceiveSelectScreen() {
                 <div
                     style={{
                         background: colors.bg2,
-                        borderRadius: '14px',
+                        borderRadius: '0px',
                         padding: '8px',
                         display: 'flex',
                         flexDirection: 'column',
@@ -229,8 +229,8 @@ export default function ReceiveSelectScreen() {
                         marginTop: '16px',
                         padding: '12px',
                         background: `${colors.warning}10`,
-                        border: `1px solid ${colors.warning}30`,
-                        borderRadius: '10px'
+                        border: `1.5px solid ${colors.warning}30`,
+                        borderRadius: '0px'
                     }}>
                     <div
                         style={{

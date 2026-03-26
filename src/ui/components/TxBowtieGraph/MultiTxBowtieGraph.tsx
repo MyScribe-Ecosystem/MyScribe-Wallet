@@ -5,8 +5,8 @@ import { TxInput, TxOutput } from './types';
 
 // Colors matching the wallet theme
 const colors = {
-    main: '#f37413',
-    connector: '#f37413',
+    main: '#C49A3C',
+    connector: '#C49A3C',
     background: '#1a1a1a',
     border: '#333',
     text: '#dbdbdb',
@@ -48,9 +48,9 @@ export function MultiTxBowtieGraph({
                     <div
                         style={{
                             background: colors.background,
-                            borderRadius: '8px',
+                            borderRadius: '0px',
                             padding: '12px',
-                            border: `1px solid ${colors.border}`
+                            border: `1.5px solid ${colors.border}`
                         }}>
                         {/* Transaction Header */}
                         <div

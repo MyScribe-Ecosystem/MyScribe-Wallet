@@ -4,15 +4,15 @@ import { WalletHealthCheck } from '@/ui/pages/Main/WalletTabScreen/health';
 import { CSSProperties, useState } from 'react';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     error: '#ef4444',
     warning: '#fbbf24'
 };
@@ -52,12 +52,12 @@ const modalStyle: CSSProperties = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     background: colors.containerBg,
-    borderRadius: '16px',
+    borderRadius: '0px',
     width: '90%',
     maxWidth: '340px',
     maxHeight: 'calc(100vh - 80px)',
     overflow: 'hidden',
-    border: `1px solid ${colors.containerBorder}`,
+    border: `1.5px solid ${colors.containerBorder}`,
     boxShadow: '0 10px 40px rgba(0, 0, 0, 0.5)',
     zIndex: 1000,
     animation: 'walletHealthSlideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
@@ -68,14 +68,14 @@ const mainDivStyle: CSSProperties = {
     top: '8px',
     right: 0,
     background: colors.containerBgFaded,
-    borderRadius: '4px',
+    borderRadius: '0px',
     borderWidth: '1px',
     padding: '4px',
-    border: `1px solid ${colors.containerBorder}`
+    border: `1.5px solid ${colors.containerBorder}`
 };
 
 const iconStyle: CSSProperties = {
-    borderRadius: '4px',
+    borderRadius: '0px',
 }
 
 const circleStyle: CSSProperties = {
@@ -85,7 +85,7 @@ const circleStyle: CSSProperties = {
     position: 'absolute',
     borderColor: colors.error,
     borderWidth: '1px',
-    borderRadius: '24px',
+    borderRadius: '0px',
     background: colors.containerBgFaded,
     textAlign: 'center',
     width: 12,
@@ -116,15 +116,15 @@ export const LowBalancePopup = ({ onClose }: LowBalancePopupProps) => {
                     style={{
                         padding: '20px 20px 0',
                         background: `linear-gradient(135deg, ${colors.warning}15 0%, transparent 100%)`,
-                        borderRadius: '16px 16px 0 0'
+                        borderRadius: '0px'
                     }}>
                     <div
                         style={{
                             width: '56px',
                             height: '56px',
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             background: `linear-gradient(135deg, ${colors.warning}20 0%, ${colors.warning}10 100%)`,
-                            border: `1px solid ${colors.warning}30`,
+                            border: `1.5px solid ${colors.warning}30`,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -136,7 +136,7 @@ export const LowBalancePopup = ({ onClose }: LowBalancePopupProps) => {
                             style={{
                                 position: 'absolute',
                                 inset: '-1px',
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '1px',
                                 background: `linear-gradient(135deg, ${colors.warning}40 0%, transparent 100%)`,
                                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
@@ -179,8 +179,8 @@ export const LowBalancePopup = ({ onClose }: LowBalancePopupProps) => {
                             gap: '8px',
                             padding: '10px',
                             background: `${colors.warning}10`,
-                            border: `1px solid ${colors.warning}25`,
-                            borderRadius: '10px',
+                            border: `1.5px solid ${colors.warning}25`,
+                            borderRadius: '0px',
                             marginBottom: '20px'
                         }}>
                         <WarningOutlined
@@ -198,7 +198,7 @@ export const LowBalancePopup = ({ onClose }: LowBalancePopupProps) => {
                             padding: '12px',
                             background: colors.main,
                             border: 'none',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             color: '#fff',
                             fontSize: '14px',
                             fontWeight: 600,
@@ -245,15 +245,15 @@ export const CsvFundsWarningPopup = ({ hasCsv1, hasCsv2, hasCsv3, hasCsv75, onCl
                     style={{
                         padding: '20px 20px 0',
                         background: `linear-gradient(135deg, ${colors.warning}15 0%, transparent 100%)`,
-                        borderRadius: '16px 16px 0 0'
+                        borderRadius: '0px'
                     }}>
                     <div
                         style={{
                             width: '56px',
                             height: '56px',
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             background: `linear-gradient(135deg, ${colors.warning}20 0%, ${colors.warning}10 100%)`,
-                            border: `1px solid ${colors.warning}30`,
+                            border: `1.5px solid ${colors.warning}30`,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -265,7 +265,7 @@ export const CsvFundsWarningPopup = ({ hasCsv1, hasCsv2, hasCsv3, hasCsv75, onCl
                             style={{
                                 position: 'absolute',
                                 inset: '-1px',
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '1px',
                                 background: `linear-gradient(135deg, ${colors.warning}40 0%, transparent 100%)`,
                                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
@@ -309,8 +309,8 @@ export const CsvFundsWarningPopup = ({ hasCsv1, hasCsv2, hasCsv3, hasCsv75, onCl
                                 gap: '8px',
                                 padding: '10px',
                                 background: `${colors.warning}10`,
-                                border: `1px solid ${colors.warning}25`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.warning}25`,
+                                borderRadius: '0px',
                                 marginBottom: '10px'
                             }}>
                             <LockOutlined
@@ -342,8 +342,8 @@ export const CsvFundsWarningPopup = ({ hasCsv1, hasCsv2, hasCsv3, hasCsv75, onCl
                                 gap: '8px',
                                 padding: '10px',
                                 background: `${colors.error}10`,
-                                border: `1px solid ${colors.error}25`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.error}25`,
+                                borderRadius: '0px',
                                 marginBottom: '10px'
                             }}>
                             <ExclamationCircleOutlined
@@ -375,8 +375,8 @@ export const CsvFundsWarningPopup = ({ hasCsv1, hasCsv2, hasCsv3, hasCsv75, onCl
                                 gap: '8px',
                                 padding: '10px',
                                 background: `${colors.main}10`,
-                                border: `1px solid ${colors.main}25`,
-                                borderRadius: '10px',
+                                border: `1.5px solid ${colors.main}25`,
+                                borderRadius: '0px',
                                 marginBottom: '10px'
                             }}>
                             <WalletOutlined
@@ -406,7 +406,7 @@ export const CsvFundsWarningPopup = ({ hasCsv1, hasCsv2, hasCsv3, hasCsv75, onCl
                             padding: '10px',
                             background: colors.main,
                             border: 'none',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             color: '#fff',
                             fontSize: '13px',
                             fontWeight: 600,
@@ -468,7 +468,7 @@ export const LowUtxoPopup = ({ onClose }: LowUtxoPopupProps) => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        borderRadius: '6px',
+                        borderRadius: '0px',
                         transition: 'background 0.15s'
                     }}
                     onMouseEnter={(e) => {
@@ -484,15 +484,15 @@ export const LowUtxoPopup = ({ onClose }: LowUtxoPopupProps) => {
                     style={{
                         padding: '20px 20px 0',
                         background: `linear-gradient(135deg, ${colors.main}15 0%, transparent 100%)`,
-                        borderRadius: '16px 16px 0 0'
+                        borderRadius: '0px'
                     }}>
                     <div
                         style={{
                             width: '56px',
                             height: '56px',
-                            borderRadius: '14px',
+                            borderRadius: '0px',
                             background: `linear-gradient(135deg, ${colors.main}20 0%, ${colors.main}10 100%)`,
-                            border: `1px solid ${colors.main}30`,
+                            border: `1.5px solid ${colors.main}30`,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -504,7 +504,7 @@ export const LowUtxoPopup = ({ onClose }: LowUtxoPopupProps) => {
                             style={{
                                 position: 'absolute',
                                 inset: '-1px',
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '1px',
                                 background: `linear-gradient(135deg, ${colors.main}40 0%, transparent 100%)`,
                                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
@@ -544,17 +544,17 @@ export const LowUtxoPopup = ({ onClose }: LowUtxoPopupProps) => {
                     <div
                         style={{
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             padding: '14px',
                             marginBottom: '16px',
-                            border: `1px solid ${colors.containerBorder}`
+                            border: `1.5px solid ${colors.containerBorder}`
                         }}>
                         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                             <div
                                 style={{
                                     width: '36px',
                                     height: '36px',
-                                    borderRadius: '8px',
+                                    borderRadius: '0px',
                                     background: `${colors.warning}20`,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -592,7 +592,7 @@ export const LowUtxoPopup = ({ onClose }: LowUtxoPopupProps) => {
                             padding: '12px',
                             background: colors.main,
                             border: 'none',
-                            borderRadius: '10px',
+                            borderRadius: '0px',
                             color: '#fff',
                             fontSize: '14px',
                             fontWeight: 600,

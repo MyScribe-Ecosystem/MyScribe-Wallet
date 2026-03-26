@@ -15,15 +15,15 @@ import {
 import { Tabs } from 'webextension-polyfill';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -62,8 +62,8 @@ function SiteItem({ site, isCurrentSite, onRemove }: SiteItemProps) {
             <div
                 style={{
                     background: colors.buttonHoverBg,
-                    border: `1px solid ${colors.error}40`,
-                    borderRadius: '12px',
+                    border: `1.5px solid ${colors.error}40`,
+                    borderRadius: '0px',
                     padding: '12px',
                     marginBottom: '8px'
                 }}>
@@ -85,8 +85,8 @@ function SiteItem({ site, isCurrentSite, onRemove }: SiteItemProps) {
                             flex: 1,
                             padding: '6px',
                             background: colors.containerBgFaded,
-                            border: `1px solid ${colors.containerBorder}`,
-                            borderRadius: '6px',
+                            border: `1.5px solid ${colors.containerBorder}`,
+                            borderRadius: '0px',
                             color: colors.text,
                             fontSize: '11px',
                             fontWeight: 500,
@@ -108,7 +108,7 @@ function SiteItem({ site, isCurrentSite, onRemove }: SiteItemProps) {
                             padding: '6px',
                             background: colors.error,
                             border: 'none',
-                            borderRadius: '6px',
+                            borderRadius: '0px',
                             color: '#fff',
                             fontSize: '11px',
                             fontWeight: 600,
@@ -142,8 +142,8 @@ function SiteItem({ site, isCurrentSite, onRemove }: SiteItemProps) {
                     : isHovered
                       ? colors.buttonBg
                       : colors.buttonHoverBg,
-                border: `1px solid ${isCurrentSite ? `${colors.main}30` : 'transparent'}`,
-                borderRadius: '12px',
+                border: `1.5px solid ${isCurrentSite ? `${colors.main}30` : 'transparent'}`,
+                borderRadius: '0px',
                 marginBottom: '8px',
                 transition: 'all 0.15s',
                 cursor: 'default'
@@ -160,7 +160,7 @@ function SiteItem({ site, isCurrentSite, onRemove }: SiteItemProps) {
                         bottom: 0,
                         width: '3px',
                         background: colors.main,
-                        borderRadius: '12px 0 0 12px'
+                        borderRadius: '0px'
                     }}
                 />
             )}
@@ -170,7 +170,7 @@ function SiteItem({ site, isCurrentSite, onRemove }: SiteItemProps) {
                 style={{
                     width: '40px',
                     height: '40px',
-                    borderRadius: '10px',
+                    borderRadius: '0px',
                     background: colors.containerBgFaded,
                     display: 'flex',
                     alignItems: 'center',
@@ -248,9 +248,9 @@ function SiteItem({ site, isCurrentSite, onRemove }: SiteItemProps) {
                 style={{
                     width: '32px',
                     height: '32px',
-                    borderRadius: '8px',
+                    borderRadius: '0px',
                     background: 'transparent',
-                    border: `1px solid ${colors.containerBorder}`,
+                    border: `1.5px solid ${colors.containerBorder}`,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -327,7 +327,7 @@ export default function ConnectedSitesScreen() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '10px',
+                        borderRadius: '0px',
                         padding: '10px',
                         marginBottom: '16px',
                         display: 'flex',
@@ -377,7 +377,7 @@ export default function ConnectedSitesScreen() {
                                 style={{
                                     width: '40px',
                                     height: '40px',
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     background: colors.buttonHoverBg,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -423,14 +423,14 @@ export default function ConnectedSitesScreen() {
                             minHeight: '200px',
                             padding: '20px',
                             background: colors.containerBgFaded,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             textAlign: 'center'
                         }}>
                         <div
                             style={{
                                 width: '60px',
                                 height: '60px',
-                                borderRadius: '50%',
+                                borderRadius: '0px',
                                 background: colors.buttonHoverBg,
                                 display: 'flex',
                                 alignItems: 'center',

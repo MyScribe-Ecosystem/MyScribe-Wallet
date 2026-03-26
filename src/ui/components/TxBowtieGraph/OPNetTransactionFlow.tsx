@@ -20,10 +20,10 @@ export interface DeserializedPreSignedData {
 }
 
 const colors = {
-    main: '#f37413',
+    main: '#C49A3C',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    containerBg: '#292929',
+    containerBg: '#122240',
     success: '#4ade80',
     epochMiner: '#ff6b6b'
 };
@@ -198,9 +198,9 @@ export function OPNetTransactionFlow({
         <div
             style={{
                 background: 'rgba(0, 0, 0, 0.2)',
-                borderRadius: '12px',
+                borderRadius: '0px',
                 padding: '12px',
-                border: `1px solid ${colors.main}20`
+                border: `1.5px solid ${colors.main}20`
             }}>
             {/* Header */}
             <div
@@ -234,7 +234,7 @@ export function OPNetTransactionFlow({
                     style={{
                         background: preSignedData ? `${colors.success}20` : `${colors.main}20`,
                         padding: '4px 8px',
-                        borderRadius: '6px',
+                        borderRadius: '0px',
                         fontSize: '10px',
                         color: preSignedData ? colors.success : colors.main,
                         fontWeight: 600
@@ -264,7 +264,7 @@ export function OPNetTransactionFlow({
                             color: colors.success,
                             background: `${colors.success}10`,
                             padding: '6px 10px',
-                            borderRadius: '6px'
+                            borderRadius: '0px'
                         }}>
                         <SafetyCertificateOutlined style={{ fontSize: 12 }} />
                         <span>Safe - will not broadcast until approved</span>

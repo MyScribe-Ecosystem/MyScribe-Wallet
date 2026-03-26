@@ -15,16 +15,16 @@ import { Address } from '@btc-vision/transaction';
 import { useState } from 'react';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
-    inputBg: '#292828',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
+    inputBg: '#122240',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24'
@@ -105,7 +105,7 @@ export default function TxSuccessScreen() {
                                 style={{
                                     position: 'absolute',
                                     inset: 0,
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     background: `linear-gradient(135deg, ${colors.success}20 0%, ${colors.success}10 100%)`,
                                     animation: 'pulse 2s ease-in-out infinite'
                                 }}
@@ -120,7 +120,7 @@ export default function TxSuccessScreen() {
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    borderRadius: '50%',
+                                    borderRadius: '0px',
                                     background: `linear-gradient(135deg, ${colors.success}30 0%, ${colors.success}15 100%)`,
                                     border: `2px solid ${colors.success}40`
                                 }}>
@@ -165,7 +165,7 @@ export default function TxSuccessScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 padding: '16px',
                                 marginBottom: '12px'
                             }}>
@@ -213,8 +213,8 @@ export default function TxSuccessScreen() {
                                         style={{
                                             padding: '6px',
                                             background: copiedTx ? colors.success : 'transparent',
-                                            border: `1px solid ${copiedTx ? colors.success : colors.containerBorder}`,
-                                            borderRadius: '6px',
+                                            border: `1.5px solid ${copiedTx ? colors.success : colors.containerBorder}`,
+                                            borderRadius: '0px',
                                             cursor: 'pointer',
                                             display: 'flex',
                                             alignItems: 'center',
@@ -234,7 +234,7 @@ export default function TxSuccessScreen() {
                                             padding: '6px',
                                             background: colors.main,
                                             border: 'none',
-                                            borderRadius: '6px',
+                                            borderRadius: '0px',
                                             cursor: 'pointer',
                                             display: 'flex',
                                             alignItems: 'center',
@@ -260,7 +260,7 @@ export default function TxSuccessScreen() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '12px',
+                                borderRadius: '0px',
                                 padding: '16px',
                                 marginBottom: '24px'
                             }}>
@@ -308,8 +308,8 @@ export default function TxSuccessScreen() {
                                         style={{
                                             padding: '6px',
                                             background: copiedContract ? colors.success : 'transparent',
-                                            border: `1px solid ${copiedContract ? colors.success : colors.containerBorder}`,
-                                            borderRadius: '6px',
+                                            border: `1.5px solid ${copiedContract ? colors.success : colors.containerBorder}`,
+                                            borderRadius: '0px',
                                             cursor: 'pointer',
                                             display: 'flex',
                                             alignItems: 'center',
@@ -329,7 +329,7 @@ export default function TxSuccessScreen() {
                                             padding: '6px',
                                             background: colors.main,
                                             border: 'none',
-                                            borderRadius: '6px',
+                                            borderRadius: '0px',
                                             cursor: 'pointer',
                                             display: 'flex',
                                             alignItems: 'center',
@@ -356,8 +356,8 @@ export default function TxSuccessScreen() {
                             width: '100%',
                             padding: '12px',
                             background: 'transparent',
-                            border: `1px solid ${colors.main}40`,
-                            borderRadius: '10px',
+                            border: `1.5px solid ${colors.main}40`,
+                            borderRadius: '0px',
                             color: colors.main,
                             fontSize: '13px',
                             fontWeight: 600,
@@ -389,7 +389,7 @@ export default function TxSuccessScreen() {
                             padding: '14px',
                             background: colors.main,
                             border: 'none',
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             color: colors.background,
                             fontSize: '14px',
                             fontWeight: 600,

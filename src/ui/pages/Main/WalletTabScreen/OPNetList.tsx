@@ -35,20 +35,20 @@ interface TokenWithBalance extends OPTokenInfo {
 }
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
 
-    headerBG: '#313131',
-    headerBorder: '#444746'
+    headerBG: '#152a45',
+    headerBorder: '#2a4060'
 };
 
 const tokenButtonStyle: React.CSSProperties = {
@@ -61,10 +61,10 @@ const tokenButtonStyle: React.CSSProperties = {
     gap: '8px',
     height: '36px',
     padding: '0 14px',
-    border: `1px solid ${colors.containerBorder}`,
+    border: `1.5px solid ${colors.containerBorder}`,
     background: colors.containerBgFaded,
     transition: 'all 0.2s',
-    borderRadius: '10px',
+    borderRadius: '0px',
     cursor: 'pointer',
     fontFamily: 'Inter-Regular, serif',
     fontWeight: 600
@@ -474,10 +474,6 @@ export function OPNetList() {
                                 <FontAwesomeIcon icon={faPlus} style={{ fontSize: 12 }} />
                                 <span>Import</span>
                             </button>
-                            <button style={tokenButtonStyle}>
-                                <FontAwesomeIcon icon={faPencil} style={{ fontSize: 12 }} />
-                                <span>Deploy</span>
-                            </button>
                             <button style={tokenRefreshButtonStyle}>
                                 <FontAwesomeIcon icon={faRefresh} style={{ fontSize: 14, color: 'white' }} />
                             </button>
@@ -485,13 +481,13 @@ export function OPNetList() {
                         <div
                             style={{
                                 background: colors.containerBgFaded,
-                                borderRadius: '14px',
+                                borderRadius: '0px',
                                 padding: '40px 20px',
                                 textAlign: 'center',
                                 marginBottom: '12px'
                             }}>
                             <Text text="No tokens found" color="text" size="md" style={{ marginBottom: 8 }} />
-                            <Text text="Import or deploy a token to get started" color="textDim" size="sm" />
+                            <Text text="Import a token to get started" color="textDim" size="sm" />
                         </div>
                     </div>
 
@@ -548,25 +544,6 @@ export function OPNetList() {
                     }}>
                     <FontAwesomeIcon icon={faPlus} style={{ fontSize: 10 }} />
                     <span>Import</span>
-                </button>
-
-                <button
-                    style={{ ...tokenButtonStyle, flex: '0 0 auto', height: '30px', fontSize: '11px' }}
-                    onClick={async () => {
-                        await browser.tabs.create({
-                            url: browser.runtime.getURL('/index.html#/opnet/deploy-contract')
-                        });
-                    }}
-                    onMouseOver={(e) => {
-                        e.currentTarget.style.borderColor = colors.main;
-                        e.currentTarget.style.color = colors.text;
-                    }}
-                    onMouseOut={(e) => {
-                        e.currentTarget.style.borderColor = colors.containerBorder;
-                        e.currentTarget.style.color = colors.textFaded;
-                    }}>
-                    <FontAwesomeIcon icon={faPencil} style={{ fontSize: 10 }} />
-                    <span>Deploy</span>
                 </button>
 
                 <button
@@ -641,8 +618,8 @@ export function OPNetList() {
                                     fontWeight: 600,
                                     color: currentPage === 1 ? colors.textFaded : colors.text,
                                     background: 'transparent',
-                                    border: `1px solid ${currentPage === 1 ? colors.containerBorder : colors.main}`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${currentPage === 1 ? colors.containerBorder : colors.main}`,
+                                    borderRadius: '0px',
                                     cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
                                     transition: 'all 0.2s',
                                     opacity: currentPage === 1 ? 0.5 : 1
@@ -684,8 +661,8 @@ export function OPNetList() {
                                                 fontWeight: isActive ? 700 : 500,
                                                 color: isActive ? colors.background : colors.text,
                                                 background: isActive ? colors.main : 'transparent',
-                                                border: `1px solid ${isActive ? colors.main : colors.containerBorder}`,
-                                                borderRadius: '6px',
+                                                border: `1.5px solid ${isActive ? colors.main : colors.containerBorder}`,
+                                                borderRadius: '0px',
                                                 cursor: isActive ? 'default' : 'pointer',
                                                 transition: 'all 0.2s'
                                             }}
@@ -704,8 +681,8 @@ export function OPNetList() {
                                     fontWeight: 600,
                                     color: currentPage === totalPages ? colors.textFaded : colors.text,
                                     background: 'transparent',
-                                    border: `1px solid ${currentPage === totalPages ? colors.containerBorder : colors.main}`,
-                                    borderRadius: '8px',
+                                    border: `1.5px solid ${currentPage === totalPages ? colors.containerBorder : colors.main}`,
+                                    borderRadius: '0px',
                                     cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
                                     transition: 'all 0.2s',
                                     opacity: currentPage === totalPages ? 0.5 : 1
@@ -721,14 +698,14 @@ export function OPNetList() {
                 <div
                     style={{
                         background: colors.containerBgFaded,
-                        borderRadius: '14px',
-                        border: `1px solid ${colors.containerBorder}`,
+                        borderRadius: '0px',
+                        border: `1.5px solid ${colors.containerBorder}`,
                         padding: '32px 20px',
                         textAlign: 'center',
                         marginBottom: '12px'
                     }}>
                     <Text text="No tokens found" color="text" size="md" style={{ marginBottom: 4 }} />
-                    <Text text="Import or deploy a token to get started" color="textDim" size="sm" />
+                    <Text text="Import a token to get started" color="textDim" size="sm" />
                 </div>
             )}
 
@@ -742,8 +719,8 @@ export function OPNetList() {
                         fontWeight: 600,
                         color: colors.main,
                         background: 'transparent',
-                        border: `1px solid ${colors.main}`,
-                        borderRadius: '10px',
+                        border: `1.5px solid ${colors.main}`,
+                        borderRadius: '0px',
                         cursor: 'pointer',
                         transition: 'all 0.2s',
                         display: 'flex',
@@ -798,13 +775,13 @@ export function OPNetList() {
                     },
                     container: {
                         background: colors.containerBg,
-                        border: `1px solid ${colors.containerBorder}`,
-                        borderRadius: '14px'
+                        border: `1.5px solid ${colors.containerBorder}`,
+                        borderRadius: '0px'
                     },
                     header: {
                         background: colors.containerBg,
                         borderBottom: `1px solid ${colors.containerBorder}`,
-                        borderRadius: '14px 14px 0 0'
+                        borderRadius: '0px'
                     },
                     body: {
                         background: colors.containerBg,
@@ -833,8 +810,8 @@ export function OPNetList() {
                                     gap: '10px',
                                     padding: '12px',
                                     background: colors.buttonHoverBg,
-                                    border: `1px solid ${colors.containerBorder}`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${colors.containerBorder}`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     transition: 'all 0.2s'
                                 }}
@@ -865,8 +842,8 @@ export function OPNetList() {
                                     gap: '10px',
                                     padding: '12px',
                                     background: colors.buttonHoverBg,
-                                    border: `1px solid ${colors.containerBorder}`,
-                                    borderRadius: '10px',
+                                    border: `1.5px solid ${colors.containerBorder}`,
+                                    borderRadius: '0px',
                                     cursor: 'pointer',
                                     transition: 'all 0.2s'
                                 }}

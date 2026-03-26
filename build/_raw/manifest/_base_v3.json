@@ -20,22 +20,24 @@
         },
         "default_title": "__MSG_appName__"
     },
-    "author": "https://opnet.org",
+    "author": "https://myscribe.io",
     "background": {
         "service_worker": "background.js",
         "type": "module"
     },
-    "homepage_url": "https://opnet.org",
+    "homepage_url": "https://myscribe.io",
     "permissions": ["storage", "unlimitedStorage", "activeTab", "sidePanel", "webNavigation", "tabs"],
     "host_permissions": [
         "*://*.btc/*",
         "https://ipfs.opnet.org/*",
         "https://*.ipfs.io/*",
         "https://dweb.link/*",
-        "https://gateway.pinata.cloud/*"
+        "https://gateway.pinata.cloud/*",
+        "https://ordinals.com/*",
+        "https://mempool.space/*"
     ],
     "omnibox": {
-        "keyword": "op"
+        "keyword": "ms"
     },
     "side_panel": {
         "default_path": "index.html"

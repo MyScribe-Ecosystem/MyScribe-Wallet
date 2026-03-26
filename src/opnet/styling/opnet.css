@@ -1,9 +1,9 @@
 :root {
-    --op-orange: #ee771b; /* Orange color */
+    --op-orange: #C49A3C; /* Gold accent */
 
-    --op-button-bg: #434343; /* Default background color */
+    --op-button-bg: #1a3050; /* Default background color */
     --op-button-text: #dbdbdb; /* Default text color */
-    --op-background-color: #222121;
+    --op-background-color: #0A1628;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 
 .ant-tabs-nav-wrap {
     background: var(--op-background-color);
-    background: linear-gradient(180deg, rgba(34, 33, 33, 1) 0%, rgba(67, 67, 67, 0.5) 100%);
+    background: linear-gradient(180deg, rgba(10, 22, 40, 1) 0%, rgba(26, 48, 80, 0.5) 100%);
     border-bottom: 1px solid var(--op-button-bg);
     padding: 0 24px;
     -webkit-box-shadow: 0 7px 11px -6px rgba(0, 0, 0, 0.75);
@@ -47,7 +47,7 @@ body {
 
 .ant-tabs-tab.ant-tabs-tab-active {
     padding: 8px 12px !important;
-    background: linear-gradient(180deg, rgba(34, 33, 33, 0) 70%, rgba(238, 119, 27, 0.4) 100%);
+    background: linear-gradient(180deg, rgba(10, 22, 40, 0) 70%, rgba(196, 154, 60, 0.4) 100%);
 }
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
@@ -66,7 +66,7 @@ body {
     background: var(--op-button-bg);
     border: 2px solid var(--op-button-bg);
     color: var(--op-button-text);
-    border-radius: 17px;
+    border-radius: 0px;
     font-size: 12px;
     font-weight: bold;
     flex: 0 0 calc(25% - 6px);
@@ -87,7 +87,7 @@ body {
 
 .action-button:hover {
     border: 2px solid var(--op-button-text);
-    background: #2d2c2c; /* or a color you prefer */
+    background: #152a45; /* or a color you prefer */
     -webkit-box-shadow: 0 1px 15px -6px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 1px 15px -6px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 15px -6px rgba(0, 0, 0, 0.25);
@@ -96,7 +96,7 @@ body {
 .icon-wrapper {
     margin-top: -16px;
     background: var(--op-button-text);
-    border-radius: 12px;
+    border-radius: 0px;
     height: 48px;
     width: 48px;
     display: flex;
@@ -118,13 +118,13 @@ body {
     justify-content: space-between;
     background-color: var(--op-button-bg);
     color: var(--op-button-text);
-    border-radius: 17px;
+    border-radius: 0px;
     transition: background 0.3s,
     color 0.3s;
 }
 
 .address_profile_container:hover {
-    background-color: #2d2c2c; /* or a color you prefer */
+    background-color: #152a45; /* or a color you prefer */
 }
 
 .address_profile_col_1 {
@@ -177,7 +177,7 @@ body {
 .pubkey_col_1 {
     background-color: #262525;
     color: var(--op-button-text);
-    border-radius: 17px;
+    border-radius: 0px;
     padding: 5px 12px;
 }
 
@@ -236,7 +236,7 @@ button.op_action_button {
     height: 32px;
     background: var(--op-button-bg);
     color: var(--op-button-text);
-    border-radius: 17px;
+    border-radius: 0px;
     padding: 0 15px;
     font-size: 12px;
     font-weight: 500;
@@ -255,7 +255,7 @@ button.op_action_button.icon {
 }
 
 button.op_action_button:hover {
-    background: #2d2c2c;
+    background: #152a45;
     border: 2px solid var(--op-button-text);
 }
 
@@ -263,18 +263,18 @@ button.op_action_button:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #292929;
+    background-color: #122240;
     color: var(--op-button-text);
-    border-radius: 14px;
-    border: 1px solid #303030;
+    border-radius: 0px;
+    border: 1.5px solid #3a5575;
     padding: 4px 6px 4px 4px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .op_token_container:hover {
-    background-color: #333333;
-    border-color: #444746;
+    background-color: #1a3050;
+    border-color: #3a5575;
 }
 
 .op_token_col_1 {
@@ -290,7 +290,7 @@ button.op_action_button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 0px;
     background: transparent;
     flex-shrink: 0;
 }
@@ -307,7 +307,7 @@ button.op_action_button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 0px;
     transition: all 0.2s;
     color: rgba(219, 219, 219, 0.3);
 }
@@ -343,21 +343,21 @@ button.op_action_button:hover {
     gap: 8px;
     height: 32px;
     padding: 0 12px;
-    border: 1px solid #444746;
-    background: #313131;
+    border: 1.5px solid #3a5575;
+    background: #152a45;
     transition: background-color 0.3s,
     border 0.3s;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 .OP_token_button:hover {
-    background-color: #212121;
+    background-color: #0A1628;
 }
 
 .asyncImage {
     transition: opacity 0.3s ease;
     opacity: 0.5;
-    background: #434343;
+    background: #1a3050;
 }
 
 .asyncImage.loaded {

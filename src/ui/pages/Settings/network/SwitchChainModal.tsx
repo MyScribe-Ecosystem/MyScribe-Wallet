@@ -20,15 +20,15 @@ import {
 import { AddCustomNetworkModal } from './CustomNetworkModalComponent';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#dbdbdb',
     textFaded: 'rgba(219, 219, 219, 0.7)',
-    buttonBg: '#434343',
+    buttonBg: '#1a3050',
     buttonHoverBg: 'rgba(85, 85, 85, 0.3)',
-    containerBg: '#434343',
-    containerBgFaded: '#292929',
-    containerBorder: '#303030',
+    containerBg: '#1a3050',
+    containerBgFaded: '#122240',
+    containerBorder: '#2a4060',
     success: '#4ade80',
     error: '#ef4444',
     warning: '#fbbf24',
@@ -104,7 +104,7 @@ function ChainItem(props: {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        borderRadius: '50%',
+                        borderRadius: '0px',
                         background: selected ? `${colors.main}20` : 'transparent',
                         position: 'relative'
                     }}>
@@ -125,7 +125,7 @@ function ChainItem(props: {
                                 fontSize: 14,
                                 color: colors.main,
                                 background: colors.background,
-                                borderRadius: '50%'
+                                borderRadius: '0px'
                             }}
                         />
                     )}
@@ -167,7 +167,7 @@ function ChainItem(props: {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        borderRadius: '6px',
+                        borderRadius: '0px',
                         transition: 'all 0.15s'
                     }}
                     onClick={(e) => {
@@ -209,10 +209,10 @@ function ChainGroup(props: {
         return (
             <div
                 style={{
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     overflow: 'hidden',
                     marginBottom: '8px',
-                    border: `1px solid ${colors.containerBorder}`
+                    border: `1.5px solid ${colors.containerBorder}`
                 }}>
                 <ChainItem chainType={group.chain.enum} onClose={props.onClose} hideDisabled={props.hideDisabled} />
             </div>
@@ -236,9 +236,9 @@ function ChainGroup(props: {
         <div
             style={{
                 marginBottom: '8px',
-                borderRadius: '12px',
+                borderRadius: '0px',
                 overflow: 'hidden',
-                border: `1px solid ${hasSelectedItem && !folded ? colors.main : colors.containerBorder}`
+                border: `1.5px solid ${hasSelectedItem && !folded ? colors.main : colors.containerBorder}`
             }}>
             <div
                 style={{
@@ -265,7 +265,7 @@ function ChainGroup(props: {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            borderRadius: '50%',
+                            borderRadius: '0px',
                             background: hasSelectedItem && !folded ? `${colors.main}15` : 'transparent'
                         }}>
                         <Image src={group.icon} size={28} />
@@ -298,7 +298,7 @@ function ChainGroup(props: {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        borderRadius: '6px',
+                        borderRadius: '0px',
                         background: colors.containerBgFaded
                     }}>
                     {folded ? (
@@ -423,7 +423,7 @@ export const SwitchChainModal = ({ onClose }: { onClose: () => void }) => {
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                borderRadius: '8px',
+                                borderRadius: '0px',
                                 transition: 'all 0.15s'
                             }}
                             onClick={onClose}
@@ -464,7 +464,7 @@ export const SwitchChainModal = ({ onClose }: { onClose: () => void }) => {
                                 padding: '8px 10px',
                                 marginBottom: '12px',
                                 background: colors.containerBgFaded,
-                                borderRadius: '8px',
+                                borderRadius: '0px',
                                 cursor: 'pointer',
                                 transition: 'all 0.15s'
                             }}>
@@ -535,10 +535,10 @@ export const SwitchChainModal = ({ onClose }: { onClose: () => void }) => {
                                 <div
                                     key={chain.enum}
                                     style={{
-                                        borderRadius: '12px',
+                                        borderRadius: '0px',
                                         overflow: 'hidden',
                                         marginBottom: '8px',
-                                        border: `1px solid ${colors.containerBorder}`
+                                        border: `1.5px solid ${colors.containerBorder}`
                                     }}>
                                     <ChainItem
                                         chainType={chain.enum}
@@ -560,7 +560,7 @@ export const SwitchChainModal = ({ onClose }: { onClose: () => void }) => {
                             padding: '12px',
                             background: colors.buttonHoverBg,
                             border: `1px dashed ${colors.main}50`,
-                            borderRadius: '12px',
+                            borderRadius: '0px',
                             cursor: 'pointer',
                             transition: 'all 0.15s',
                             display: 'flex',

@@ -21,13 +21,13 @@ import {
 } from '@ant-design/icons';
 
 const colors = {
-    main: '#f37413',
-    background: '#212121',
+    main: '#C49A3C',
+    background: '#0A1628',
     text: '#ffffff',
     textSecondary: '#dbdbdb',
     textFaded: 'rgba(255, 255, 255, 0.5)',
-    cardBg: '#2a2a2a',
-    buttonPrimary: '#f37413',
+    cardBg: '#122240',
+    buttonPrimary: '#C49A3C',
     buttonSecondary: '#3a3a3a',
     border: 'rgba(255, 255, 255, 0.08)',
     success: '#4ade80',
@@ -163,7 +163,7 @@ function CalldataSection({ tx }: { tx: TransactionHistoryItem }) {
         <div
             style={{
                 background: colors.cardBg,
-                borderRadius: 12,
+                borderRadius: 0,
                 padding: '12px 14px'
             }}>
             <div style={{ fontSize: 12, color: colors.textFaded, marginBottom: 8 }}>
@@ -180,7 +180,7 @@ function CalldataSection({ tx }: { tx: TransactionHistoryItem }) {
                 <div
                     style={{
                         background: 'rgba(255,255,255,0.03)',
-                        borderRadius: 8,
+                        borderRadius: 0,
                         padding: 10,
                         maxHeight: 120,
                         overflow: 'auto'
@@ -307,7 +307,7 @@ export default function TransactionDetailScreen() {
                     <div
                         style={{
                             background: colors.cardBg,
-                            borderRadius: 12,
+                            borderRadius: 0,
                             padding: 20,
                             textAlign: 'center'
                         }}>
@@ -329,7 +329,7 @@ export default function TransactionDetailScreen() {
                     <div
                         style={{
                             background: colors.cardBg,
-                            borderRadius: 12,
+                            borderRadius: 0,
                             padding: '4px 14px'
                         }}>
                         <DetailRow
@@ -365,7 +365,7 @@ export default function TransactionDetailScreen() {
                     <div
                         style={{
                             background: colors.cardBg,
-                            borderRadius: 12,
+                            borderRadius: 0,
                             padding: '4px 14px'
                         }}>
                         <DetailRow
@@ -403,7 +403,7 @@ export default function TransactionDetailScreen() {
                         <div
                             style={{
                                 background: colors.cardBg,
-                                borderRadius: 12,
+                                borderRadius: 0,
                                 padding: '4px 14px'
                             }}>
                             {tx.amount && (
@@ -424,7 +424,7 @@ export default function TransactionDetailScreen() {
                         <div
                             style={{
                                 background: colors.cardBg,
-                                borderRadius: 12,
+                                borderRadius: 0,
                                 padding: '4px 14px'
                             }}>
                             <div
@@ -448,7 +448,7 @@ export default function TransactionDetailScreen() {
                                         <img
                                             src={tx.origin.siteIcon}
                                             alt=""
-                                            style={{ width: 16, height: 16, borderRadius: 3 }}
+                                            style={{ width: 16, height: 16, borderRadius: 0 }}
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).style.display = 'none';
                                             }}
@@ -476,8 +476,8 @@ export default function TransactionDetailScreen() {
                             width: '100%',
                             padding: 14,
                             background: colors.buttonSecondary,
-                            border: `1px solid ${colors.border}`,
-                            borderRadius: 10,
+                            border: `1.5px solid ${colors.border}`,
+                            borderRadius: 0,
                             color: colors.textSecondary,
                             fontSize: 14,
                             fontWeight: 600,

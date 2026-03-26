@@ -16,7 +16,7 @@
 .onboarding__progress-segment {
   flex: 1;
   height: 3px;
-  border-radius: 2px;
+  border-radius: 0px;
   background: var(--color-container-border);
   transition: background var(--transition-slow);
 }
@@ -73,7 +73,7 @@
 .tos__tab {
   flex: 1 1 0;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-container-border);
+  border: 1.5px solid var(--color-container-border);
   background: var(--color-container-faded);
   padding: var(--space-10) var(--space-10);
   display: flex;
@@ -104,8 +104,8 @@
   justify-content: center;
   width: 16px;
   height: 16px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0px;
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
   background: rgba(0, 0, 0, 0.20);
   flex: 0 0 auto;
   font-size: 11px;
@@ -124,7 +124,7 @@
   min-height: 0;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-container-border);
+  border: 1.5px solid var(--color-container-border);
   background: var(--color-container-faded);
   margin-bottom: var(--space-10);
 }
@@ -155,8 +155,8 @@
   bottom: 10px;
   width: 36px;
   height: 36px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0px;
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
   background: rgba(0, 0, 0, 0.40);
   color: rgba(255, 255, 255, 0.90);
   display: flex;
@@ -280,7 +280,7 @@
 .experience__card-dot {
   width: 4px;
   height: 4px;
-  border-radius: 50%;
+  border-radius: 0px;
   flex-shrink: 0;
 }
 
@@ -454,7 +454,7 @@
   font-weight: var(--font-weight-semibold);
   color: #4ade80;
   background: rgba(74, 222, 128, 0.12);
-  border: 1px solid rgba(74, 222, 128, 0.25);
+  border: 1.5px solid rgba(74, 222, 128, 0.25);
   border-radius: var(--radius-md);
   padding: 2px 8px;
 }
@@ -508,7 +508,7 @@
 .utxo__card-dot {
   width: 4px;
   height: 4px;
-  border-radius: 50%;
+  border-radius: 0px;
   flex-shrink: 0;
 }
 
