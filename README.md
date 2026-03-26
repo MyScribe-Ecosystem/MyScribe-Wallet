@@ -67,9 +67,9 @@ npm run dev:chrome
 
 Requires Node.js 24+.
 
-## Upstream
+## Security & Upstream
 
-MyScribe Wallet is built on top of [OP_WALLET](https://github.com/btc-vision/opwallet), which was audited by [Verichains](https://verichains.io). MyScribe-specific changes have not been independently audited.
+MyScribe Wallet is a UI skin and feature extension of [OP_WALLET](https://github.com/btc-vision/opwallet), which was audited by [Verichains](https://verichains.io). No core wallet logic, key management, transaction signing, or OPNet smart contract code has been modified. MyScribe changes are limited to branding/aesthetics and restoring Ordinals browsing support (originally present in UniSat, removed by OP_WALLET). OPNet upstream updates are synced automatically.
 
 ### Vulnerabilities
 
