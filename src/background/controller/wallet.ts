@@ -1036,29 +1036,6 @@ export class WalletController {
     // createTmpKeyringWithKeystone and createKeyringWithKeystone methods removed
 
     /**
-     * Change the active addressType for a keyring. This can refresh the derived addresses, etc.
-     * @throws WalletControllerError
-     */
-    public changeAddressType = async (addressType: AddressTypes): Promise<void> => {
-        try {
-            const currentAccount = await this.getCurrentAccount();
-            const currentKeyringIndex = preferenceService.getCurrentKeyringIndex();
-            await keyringService.changeAddressType(currentKeyringIndex, addressType);
-
-            // Invalidate cache since address type changed
-            this.invalidateKeyringCache();
-
-            const keyring = await this.getCurrentKeyring();
-            if (!keyring) throw new WalletControllerError('No current keyring');
-            this.changeKeyring(keyring, currentAccount?.index || 0);
-        } catch (err) {
-            throw new WalletControllerError(`Failed to change address type: ${String(err)}`, {
-                addressType
-            });
-        }
-    };
-
-    /**
      * Check if the current keyring has rotation mode (privacy mode) enabled.
      * This is a permanent setting chosen during wallet creation.
      */

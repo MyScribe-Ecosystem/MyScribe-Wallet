@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { ADDRESS_TYPES, GITHUB_URL, KEYRING_TYPE, TELEGRAM_URL, TWITTER_URL } from '@/shared/constant';
+import { GITHUB_URL, TELEGRAM_URL, TWITTER_URL } from '@/shared/constant';
 import { getCurrentTab } from '@/shared/utils/browser-tabs';
 import { Column, Content, Footer, Header, Layout } from '@/ui/components';
 import { useTools } from '@/ui/components/ActionComponent';
@@ -30,7 +30,6 @@ import {
     SettingOutlined,
     UserSwitchOutlined,
     WarningOutlined,
-    WifiOutlined,
     XOutlined
 } from '@ant-design/icons';
 
@@ -73,15 +72,6 @@ const SettingList: Setting[] = [
         icon: <GlobalOutlined />,
         action: 'networkType',
         route: '/settings/network-type',
-        right: true
-    },
-    {
-        label: 'Address Type',
-        value: 'Taproot',
-        desc: 'Change address format',
-        icon: <WifiOutlined />,
-        action: 'addressType',
-        route: '/settings/address-type',
         right: true
     },
     {
@@ -198,15 +188,6 @@ export default function SettingsTabScreen() {
         void run();
     }, [wallet]);
 
-    const isCustomHdPath = useMemo(() => {
-        const item = ADDRESS_TYPES.find((t) => t.value === currentKeyring.addressType);
-        return (
-            currentKeyring.hdPath !== '' &&
-            item?.hdPath !== currentKeyring.hdPath &&
-            currentKeyring.type !== KEYRING_TYPE.HdKeyring
-        );
-    }, [currentKeyring]);
-
     const toRenderSettings = SettingList.filter((v) => {
         if (v.action == 'connected-sites') {
             v.value = connected ? 'Connected' : 'Not connected';
@@ -214,13 +195,6 @@ export default function SettingsTabScreen() {
 
         if (v.action == 'networkType') {
             v.value = chain.label;
-        }
-
-        if (v.action == 'addressType') {
-            const item = ADDRESS_TYPES.find((t) => t.value === currentKeyring.addressType);
-            if (item) {
-                v.value = item.name;
-            }
         }
 
         if (v.action == 'experience-mode') {
@@ -248,17 +222,6 @@ export default function SettingsTabScreen() {
 
         if (item.action == 'networkType') {
             setSwitchChainModalVisible(true);
-            return;
-        }
-
-        if (item.action == 'addressType') {
-            if (isCustomHdPath) {
-                tools.showTip(
-                    'The wallet currently uses a custom HD path and does not support switching address types.'
-                );
-                return;
-            }
-            navigate('/settings/address-type');
             return;
         }
 

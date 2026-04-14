@@ -46,7 +46,6 @@ import Mint from './OpNet/Mint';
 import OpNetTokenScreen from './OpNet/OpNetTokenScreen';
 import SendOpNetScreen from './OpNet/SendOpNetScreen';
 import AddressRotationScreen from './Settings/AddressRotationScreen';
-import AddressTypeScreen from './Settings/AddressTypeScreen';
 import AdvancedScreen from './Settings/AdvancedScreen';
 import ChangePasswordScreen from './Settings/ChangePasswordScreen';
 import ColdStorageWithdrawScreen from './Settings/ColdStorageWithdrawScreen';
@@ -202,10 +201,6 @@ export const routes: Routes = {
     [RouteTypes.UpgradeNoticeScreen]: {
         path: routePaths[RouteTypes.UpgradeNoticeScreen],
         element: <UpgradeNoticeScreen />
-    },
-    [RouteTypes.AddressTypeScreen]: {
-        path: routePaths[RouteTypes.AddressTypeScreen],
-        element: <AddressTypeScreen />
     },
     [RouteTypes.EditAccountNameScreen]: {
         path: routePaths[RouteTypes.EditAccountNameScreen],

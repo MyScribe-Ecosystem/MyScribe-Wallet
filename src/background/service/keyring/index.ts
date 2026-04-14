@@ -376,14 +376,6 @@ class KeyringService extends EventEmitter {
         return keyring;
     };
 
-    changeAddressType = async (keyringIndex: number, addressType: AddressTypes) => {
-        this.addressTypes[keyringIndex] = addressType;
-        await this.persistAllKeyrings();
-        this._updateMemStoreKeyrings();
-        this.fullUpdate();
-        return this.keyrings[keyringIndex];
-    };
-
     setLocked = (): MemStoreState => {
         this.password = null;
         this.memStore.updateState({ isUnlocked: false });

@@ -10,7 +10,6 @@ export const WALLET_CONTROLLER_METHODS = [
     'boot',
     'broadcast',
     'cancelTransaction',
-    'changeAddressType',
     'changeKeyring',
     'changePassword',
     'checkForDuplicates',

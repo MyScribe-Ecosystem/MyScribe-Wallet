@@ -226,8 +226,6 @@ export interface WalletController {
 
     setKeyringAlianName(keyring: WalletKeyring, name: string): Promise<WalletKeyring>;
 
-    changeAddressType(addressType: AddressTypes): Promise<void>;
-
     setAccountAlianName(account: Account, name: string): Promise<Account>;
 
     getBtcPrice(): Promise<number>;
