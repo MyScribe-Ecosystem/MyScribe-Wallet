@@ -16,7 +16,7 @@ MyScribe Wallet is an open-source, non-custodial Bitcoin browser extension built
 
 MyScribe Wallet is a community fork of [OP_WALLET](https://github.com/btc-vision/opwallet) that extends the OPNet ecosystem with:
 
-- **Ordinals support restored** — Inscriptions fetched via `ordinals.com` + `mempool.space` APIs. Inline preview rendering via `ordinals.com/preview/{id}`. No Hiro dependency.
+- **Ordinals support restored** — Inscriptions fetched via `ordinals.com` + `mempool.space` APIs. Inline preview rendering via `ordinals.com/preview/{id}`. Inscription sending/receiving and PSBT-based inscribing for both Bitcoin and Fractal Bitcoin are on the roadmap.
 - **Fractal Bitcoin Mainnet** — First-class network support out of the box. Send, receive, and inscribe large file types on Fractal Bitcoin's fast, low-fee chain.
 - **Consumer-focused UX** — Taproot-only wallet creation, always-on UTXO protection for Ordinals, simplified onboarding. Advanced developer features (contract deployment) removed for clarity.
 - **MyScribe branding** — Sharp corners, gold gradient accents, visible container borders, custom logo and iconography.
