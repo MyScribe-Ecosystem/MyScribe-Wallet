@@ -23,6 +23,7 @@ export interface MyScribeProfile {
 }
 
 interface CachedProfile {
+    key: string;
     profile: MyScribeProfile;
     resolvedAt: number;
     expiresAt: number;
@@ -49,20 +50,14 @@ class MyScribeProfileServiceClass {
             if (entries) {
                 const now = Date.now();
                 for (const entry of entries) {
-                    const key = this.getCacheKeyFromEntry(entry);
-                    if (key && entry.expiresAt > now) {
-                        this.cache.set(key, entry);
+                    if (entry.key && entry.expiresAt > now) {
+                        this.cache.set(entry.key, entry);
                     }
                 }
             }
         } catch {
             // Storage unavailable (e.g. in content script context) — run without persistence
         }
-    }
-
-    private getCacheKeyFromEntry(_entry: CachedProfile): string | null {
-        // Entries are stored with their key in the Map; we reconstruct from storage
-        return null;
     }
 
     private getCacheKey(chainType: string, address: string): string {
@@ -176,6 +171,7 @@ class MyScribeProfileServiceClass {
     private cacheResult(key: string, profile: MyScribeProfile): void {
         const now = Date.now();
         const entry: CachedProfile = {
+            key,
             profile,
             resolvedAt: now,
             expiresAt: now + CACHE_TTL_MS
