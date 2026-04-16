@@ -167,8 +167,8 @@ class MyScribeProfileServiceClass {
             return profile;
         } catch (err) {
             console.warn('[MyScribeProfile] Failed to fetch profile:', err);
-            // Cache failure as null to avoid hammering the RPC
-            this.cacheResult(cacheKey, { avatarInscId: null, username: null, displayName: null });
+            // Do NOT cache RPC failures — Web3API may not be initialized yet
+            // (e.g. popup just reopened). Next call will retry.
             return null;
         }
     }

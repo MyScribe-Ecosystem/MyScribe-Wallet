@@ -22,23 +22,25 @@ export function useMyScribeProfile(quantumPublicKeyHash: string | undefined) {
         let cancelled = false;
         setLoading(true);
 
-        MyScribeProfileService.getProfile(quantumPublicKeyHash)
-            .then((result) => {
+        const fetchWithRetry = async () => {
+            // First attempt
+            let result = await MyScribeProfileService.getProfile(quantumPublicKeyHash).catch(() => null);
+
+            // If null and not cached (Web3API might not be ready yet), retry after 2s
+            if (!result && !cancelled) {
+                await new Promise((r) => setTimeout(r, 2000));
                 if (!cancelled) {
-                    setProfile(result);
+                    result = await MyScribeProfileService.getProfile(quantumPublicKeyHash).catch(() => null);
                 }
-            })
-            .catch((err) => {
-                console.warn('[useMyScribeProfile] lookup failed:', err);
-                if (!cancelled) {
-                    setProfile(null);
-                }
-            })
-            .finally(() => {
-                if (!cancelled) {
-                    setLoading(false);
-                }
-            });
+            }
+
+            if (!cancelled) {
+                setProfile(result);
+                setLoading(false);
+            }
+        };
+
+        void fetchWithRetry();
 
         return () => {
             cancelled = true;
