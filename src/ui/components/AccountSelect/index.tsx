@@ -29,12 +29,6 @@ const AccountSelect = ({ rightExtra }: AccountSelectProps) => {
 
     const { avatarInscId } = useMyScribeProfile(currentAccount?.quantumPublicKeyHash);
     const [needsQuantumMigration, setNeedsQuantumMigration] = useState(false);
-    const [pfpError, setPfpError] = useState(false);
-
-    // Reset pfp error state when address changes
-    useEffect(() => {
-        setPfpError(false);
-    }, [currentAccount?.address]);
 
     // Check if quantum migration is needed
     useEffect(() => {
@@ -86,22 +80,23 @@ const AccountSelect = ({ rightExtra }: AccountSelectProps) => {
                 navigate(RouteTypes.SwitchAccountScreen);
             }}>
             <div className="op_account_col_1">
-                <div className="op_account_icon_holder">
-                    {avatarInscId && !pfpError ? (
+                <div className="op_account_icon_holder" style={avatarInscId ? { width: 40, height: 40 } : undefined}>
+                    {avatarInscId ? (
                         <iframe
+                            key={avatarInscId}
                             src={`https://ordinals.com/preview/${avatarInscId}`}
                             title="pfp"
                             sandbox="allow-scripts"
                             scrolling="no"
                             style={{
-                                width: 28,
-                                height: 28,
+                                width: 40,
+                                height: 40,
                                 borderRadius: 0,
                                 border: '1px solid #3a5575',
                                 overflow: 'hidden',
-                                pointerEvents: 'none'
+                                pointerEvents: 'none',
+                                display: 'block'
                             }}
-                            onError={() => setPfpError(true)}
                         />
                     ) : (
                         <Icon icon="user" size={20} />
