@@ -18,6 +18,7 @@ MyScribe Wallet is a community fork of [OP_WALLET](https://github.com/btc-vision
 
 - **Ordinals support restored** — Inscriptions fetched via `ordinals.com` + `mempool.space` APIs. Inline preview rendering via `ordinals.com/preview/{id}`. Inscription sending/receiving and PSBT-based inscribing for both Bitcoin and Fractal Bitcoin are on the roadmap.
 - **Fractal Bitcoin Mainnet** — First-class network support out of the box. Send, receive, and inscribe large file types on Fractal Bitcoin's fast, low-fee chain.
+- **MyScribe profile integration** — If you have a MyScribe account on OPNet, your profile picture (Ordinals inscription) renders as the wallet avatar automatically. Visible on the main screen and account switcher, cached locally for instant loading.
 - **Consumer-focused UX** — Taproot-only wallet creation, always-on UTXO protection for Ordinals, simplified onboarding. Advanced developer features (contract deployment) removed for clarity.
 - **MyScribe branding** — Sharp corners, gold gradient accents, visible container borders, custom logo and iconography.
 - **OPNet WalletConnect integration** — Detects as `window.myscribe` for dApp connectivity via `@btc-vision/walletconnect`. [PR #23](https://github.com/btc-vision/walletconnect/pull/23) adds MyScribe to the official wallet connect modal.
@@ -33,6 +34,7 @@ MyScribe Wallet is a community fork of [OP_WALLET](https://github.com/btc-vision
 | **Networks** | Bitcoin Mainnet, Fractal Bitcoin Mainnet, OPNet Testnet, Regtest |
 | **Ordinals** | Browse inscriptions via ordinals.com |
 | **OPNet** | OP20 tokens, MotoSwap, .btc domains, smart contract interaction |
+| **MyScribe Profile** | On-chain avatar (Ordinals inscription) renders as wallet PFP |
 | **UTXO Protection** | Always-on filtering of inscription UTXOs (< 1000 sats) |
 | **UTXO Management** | Consolidation, visualization, RBF cancel |
 | **Address Rotation** | Quantum-resistant via non-reuse |
