@@ -80,7 +80,7 @@ const AccountSelect = ({ rightExtra }: AccountSelectProps) => {
                 navigate(RouteTypes.SwitchAccountScreen);
             }}>
             <div className="op_account_col_1">
-                <div className="op_account_icon_holder" style={avatarInscId ? { width: 40, height: 40 } : undefined}>
+                <div className="op_account_icon_holder">
                     {avatarInscId ? (
                         <iframe
                             key={avatarInscId}
@@ -89,10 +89,10 @@ const AccountSelect = ({ rightExtra }: AccountSelectProps) => {
                             sandbox="allow-scripts"
                             scrolling="no"
                             style={{
-                                width: 40,
-                                height: 40,
+                                width: 48,
+                                height: 48,
                                 borderRadius: 0,
-                                border: '1px solid #3a5575',
+                                border: '1.5px solid #3a5575',
                                 overflow: 'hidden',
                                 pointerEvents: 'none',
                                 display: 'block'
@@ -102,6 +102,7 @@ const AccountSelect = ({ rightExtra }: AccountSelectProps) => {
                         <Icon icon="user" size={20} />
                     )}
                 </div>
+                <div style={{ width: 8, flexShrink: 0 }} />
                 <div className="op_account_details">
                     <div className="op_account_name_row">
                         <span className="op_account_name">{shortAddress(currentAccount?.alianName, 8)}</span>
