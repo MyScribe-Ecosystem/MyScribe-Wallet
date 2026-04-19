@@ -1,4 +1,5 @@
 import Connect from './Connect';
+import MultiSignPsbt from './MultiSignPsbt';
 import SendBitcoin from './SendBitcoin';
 import SignData from './SignData';
 import SignDeployment from './SignDeployment';
@@ -11,6 +12,7 @@ import CancelTransaction from './CancelTransaction';
 
 export {
     Connect,
+    MultiSignPsbt,
     SendBitcoin,
     SignData,
     SignDeployment,
@@ -30,6 +32,7 @@ export const ApprovalComponents = {
     'SignInteraction': SignInteraction,
     'CancelTransaction': CancelTransaction,
     'SignPsbt': SignPsbt,
+    'MultiSignPsbt': MultiSignPsbt,
     'SignText': SignText,
     'SwitchChain': SwitchChain,
     'SwitchNetwork': SwitchNetwork,

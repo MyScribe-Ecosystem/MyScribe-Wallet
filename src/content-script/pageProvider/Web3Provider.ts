@@ -1,6 +1,7 @@
 import { BroadcastedTransaction } from 'opnet';
 
 import { OpnetProvider } from '@/content-script/pageProvider/index.js';
+import { SignPsbtOptions } from '@/shared/types';
 import {
     BitcoinTransferBase,
     CancelledTransaction,
@@ -45,14 +46,10 @@ export class Web3Provider {
 
     /**
      * Sign a PSBT (Partially Signed Bitcoin Transaction).
-     *
-     * NOT IMPLEMENTED YET.
+     * Returns the signed PSBT in hex format. Delegates to the root provider's signPsbt.
      */
-    // eslint-disable-next-line @typescript-eslint/require-await
-    public async signPsbt(_psbtHex: string, _options?: object): Promise<string> {
-        throw new Error(
-            'signPsbt is not implemented yet in the Web3Provider. Use signInteraction for contract calls.'
-        );
+    public async signPsbt(psbtHex: string, options?: SignPsbtOptions): Promise<string> {
+        return this.provider.signPsbt(psbtHex, options);
     }
 
     public async signAndBroadcastInteraction(

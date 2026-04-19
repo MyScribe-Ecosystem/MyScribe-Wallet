@@ -130,7 +130,6 @@ export default function MultiSignPsbt({
     if (!handleConfirm) {
         handleConfirm = () => {
             resolveApproval({
-                // @ts-expect-error ?????????? thx unisat
                 psbtHexs: txInfo.psbtHexs
             });
         };

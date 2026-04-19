@@ -48,6 +48,7 @@ export enum ApprovalType {
     SignInteraction = 'SignInteraction',
     CancelTransaction = 'CancelTransaction',
     SignPsbt = 'SignPsbt',
+    MultiSignPsbt = 'MultiSignPsbt',
     SignText = 'SignText',
     SwitchChain = 'SwitchChain',
     SwitchNetwork = 'SwitchNetwork',
@@ -65,6 +66,8 @@ export type ApprovalComponentParams<T extends ApprovalType> = T extends Approval
           ? SignInteractionApprovalParams
           : T extends ApprovalType.SignPsbt
             ? SignPsbtApprovalParams
+            : T extends ApprovalType.MultiSignPsbt
+              ? MultiSignPsbtApprovalParams
             : T extends ApprovalType.SignText
               ? SignTextApprovalParams
               : T extends ApprovalType.SwitchChain
@@ -85,6 +88,7 @@ export type ApprovalResponse =
     | SwitchNetworkApprovalResponse
     | SwitchChainApprovalResponse
     | SignPsbtApprovalResponse
+    | MultiSignPsbtApprovalResponse
     | SignInteractionApprovalResponse
     | SignDeploymentApprovalResponse
     | SignTextApprovalResponse
@@ -107,6 +111,11 @@ export type SwitchChainApprovalResponse = BaseApprovalResponse | undefined;
 export interface SignPsbtApprovalResponse extends BaseApprovalResponse {
     psbtHex: string;
     signed: boolean;
+}
+
+export interface MultiSignPsbtApprovalResponse extends BaseApprovalResponse {
+    psbtHexs: string[];
+    signed?: boolean;
 }
 
 export type SignInteractionApprovalResponse = BaseApprovalResponse | undefined;
@@ -158,6 +167,14 @@ export interface SignPsbtApprovalParams {
         psbtHex: string;
         options?: SignPsbtOptions;
         rawTxInfo?: RawTxInfo;
+    };
+    session?: Session;
+}
+
+export interface MultiSignPsbtApprovalParams {
+    data: {
+        psbtHexs: string[];
+        options?: SignPsbtOptions[];
     };
     session?: Session;
 }

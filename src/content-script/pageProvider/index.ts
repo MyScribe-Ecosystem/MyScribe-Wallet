@@ -2,6 +2,7 @@ import { EventEmitter } from 'events';
 import { BroadcastedTransaction } from 'opnet';
 import { toHex } from '@btc-vision/bitcoin';
 
+import { Inscription } from '@/shared/services/OrdinalsAPI';
 import { SignPsbtOptions, TxType } from '@/shared/types';
 import { RequestParams } from '@/shared/types/Request.js';
 import BroadcastChannelMessage from '@/shared/utils/message/broadcastChannelMessage';
@@ -431,6 +432,59 @@ export class OpnetProvider extends EventEmitter {
                 rawtx
             }
         });
+    };
+
+    /**
+     * Sign a PSBT (Partially Signed Bitcoin Transaction). Opens an approval popup.
+     * Returns the (finalized if options.autoFinalized !== false) PSBT in hex.
+     */
+    signPsbt = async (psbtHex: string, options?: SignPsbtOptions): Promise<string> => {
+        return (await this._request({
+            method: 'signPsbt',
+            params: {
+                psbtHex,
+                options
+            }
+        })) as string;
+    };
+
+    /**
+     * Sign multiple PSBTs in a single approval flow.
+     */
+    signPsbts = async (psbtHexs: string[], options?: SignPsbtOptions[]): Promise<string[]> => {
+        return (await this._request({
+            method: 'signPsbts',
+            params: {
+                psbtHexs,
+                options
+            }
+        })) as string[];
+    };
+
+    /**
+     * Broadcast an already-signed PSBT. SAFE — no additional approval,
+     * since the user already approved when they signed.
+     */
+    pushPsbt = async (psbtHex: string): Promise<string> => {
+        return (await this._request({
+            method: 'pushPsbt',
+            params: {
+                psbtHex
+            }
+        })) as string;
+    };
+
+    /**
+     * Retrieve inscriptions for the current account.
+     */
+    getInscriptions = async (cursor = 0, size = 20): Promise<Inscription[]> => {
+        return (await this._request({
+            method: 'getInscriptions',
+            params: {
+                cursor,
+                size
+            }
+        })) as Inscription[];
     };
 
     getVersion = async () => {

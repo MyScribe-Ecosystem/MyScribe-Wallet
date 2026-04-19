@@ -12,6 +12,8 @@ import { getChainInfo } from '@/shared/utils';
 import Web3API, { getBitcoinLibJSNetwork } from '@/shared/web3/Web3API';
 import { DetailedInteractionParameters } from '@/shared/web3/interfaces/DetailedInteractionParameters';
 import { amountToSatoshis } from '@/shared/utils/btc-utils';
+import { getInscriptionsByAddress } from '@/shared/services/OrdinalsAPI';
+import { SignPsbtOptions } from '@/shared/types';
 import { Psbt, toHex } from '@btc-vision/bitcoin';
 import {
     ICancelTransactionParametersWithoutSigner,
@@ -712,34 +714,47 @@ export class ProviderController {
         return psbt.toHex();
     };
 
-    // The below handler is commented as it's not used for now and breaks the matching between approval types and approval components
-    // @Reflect.metadata('APPROVAL', ['MultiSignPsbt', (req: {data: {params: {psbtHexs: string[]}}}) => {
-    //     const { data: { params: { psbtHexs } } } = req;
+    @Reflect.metadata('APPROVAL', [
+        ApprovalType.MultiSignPsbt,
+        (req: { data: { params: { psbtHexs: string[] } } }) => {
+            const {
+                data: {
+                    params: { psbtHexs }
+                }
+            } = req;
+            req.data.params.psbtHexs = psbtHexs.map((psbtHex) => formatPsbtHex(psbtHex));
+        }
+    ])
+    signPsbts = async ({
+        data: {
+            params: { psbtHexs, options }
+        },
+        approvalRes
+    }: {
+        data: {
+            params: {
+                psbtHexs: string[];
+                options?: SignPsbtOptions[];
+            };
+        };
+        approvalRes?: { signed?: boolean; psbtHexs?: string[] };
+    }) => {
+        if (approvalRes?.signed && approvalRes.psbtHexs) {
+            return approvalRes.psbtHexs;
+        }
 
-    //     req.data.params.psbtHexs = psbtHexs.map(psbtHex => formatPsbtHex(psbtHex));
-    // }])
-    // multiSignPsbt = async ({ data: { params: { psbtHexs, options } } }: {
-    //     data: {
-    //         params: {
-    //             psbtHexs: string[],
-    //             options: { autoFinalized: boolean }[]
-    //         }
-    //     }
-    // }) => {
-    //     const account = await wallet.getCurrentAccount();
-    //     if (!account) throw new Error('No account');
-    //     const networkType = wallet.getNetworkType();
-    //     const psbtNetwork = toNetwork(networkTypeToOPNet(networkType));
-    //     const result: string[] = [];
-    //     for (let i = 0; i < psbtHexs.length; i++) {
-    //         const psbt = bitcoin.Psbt.fromHex(psbtHexs[i], { network: psbtNetwork });
-    //         const autoFinalized = options?.[i]?.autoFinalized ?? true;
-    //         const toSignInputs = await wallet.formatOptionsToSignInputs(psbtHexs[i], options[i]);
-    //         await wallet.signPsbt(psbt, toSignInputs, autoFinalized);
-    //         result.push(psbt.toHex());
-    //     }
-    //     return result;
-    // };
+        const networkType = wallet.getNetworkType();
+        const psbtNetwork = getBitcoinLibJSNetwork(networkType, wallet.getChainType());
+        const result: string[] = [];
+        for (let i = 0; i < psbtHexs.length; i++) {
+            const psbt = Psbt.fromHex(psbtHexs[i], { network: psbtNetwork });
+            const autoFinalized = options?.[i]?.autoFinalized ?? true;
+            const toSignInputs = await wallet.formatOptionsToSignInputs(psbtHexs[i], options?.[i]);
+            await wallet.signPsbt(psbt, toSignInputs, autoFinalized);
+            result.push(psbt.toHex());
+        }
+        return result;
+    };
 
     @Reflect.metadata('SAFE', true)
     pushPsbt = async ({
@@ -771,6 +786,47 @@ export class ProviderController {
             console.error(e);
             return [];
         }
+    };
+
+    @Reflect.metadata('SAFE', true)
+    getInscriptions = async ({
+        data: {
+            params: { cursor = 0, size = 20 } = {}
+        }
+    }: {
+        data: { params?: { cursor?: number; size?: number } };
+    }) => {
+        const account = await wallet.getCurrentAccount();
+        if (!account) return [];
+
+        const chainType = wallet.getChainType();
+
+        // Map each chain to the appropriate ordinals source.
+        // ordinals.com only indexes Bitcoin mainnet and (via mempool.space/signet)
+        // the Signet testnet. Other chains (Fractal, Dogecoin, Litecoin, etc.)
+        // have no ordinals support on ordinals.com — return empty.
+        const mainnetChains: ChainType[] = [ChainType.BITCOIN_MAINNET];
+        const signetChains: ChainType[] = [
+            ChainType.BITCOIN_SIGNET,
+            ChainType.BITCOIN_TESTNET,
+            ChainType.BITCOIN_TESTNET4,
+            ChainType.BITCOIN_REGTEST,
+            ChainType.OPNET_TESTNET
+        ];
+
+        let isTestnet: boolean;
+        if (mainnetChains.includes(chainType)) {
+            isTestnet = false;
+        } else if (signetChains.includes(chainType)) {
+            isTestnet = true;
+        } else {
+            // Fractal Bitcoin, Dogecoin, Litecoin, Bitcoin Cash, Dash etc. —
+            // ordinals.com doesn't index these chains, return empty.
+            return [];
+        }
+
+        const response = await getInscriptionsByAddress(account.address, cursor, size, isTestnet);
+        return response.results;
     };
 }
 
